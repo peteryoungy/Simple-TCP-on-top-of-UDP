@@ -22,10 +22,10 @@ MSS  = 576
 
 class Receiver:
 
-    def __init__(self, file = 'receiver.txt',
-                 listening_port = 10027,
+    def __init__(self, file = 'files/write_to.txt',
+                 listening_port = 12112,
                  dest_ip = '192.168.192.1',
-                 dest_port = 10001):
+                 dest_port = 12114):
 
         self.file_path = file
         self.recv_port = listening_port
@@ -35,10 +35,10 @@ class Receiver:
         self.client_address = (dest_ip, dest_port)
 
         # constant
-        self.UN_4BYTES_MOD = 2 ^ 32
+        self.UN_4BYTES_MOD = 4294967296
 
         # receive
-        self.src_port = 10000
+        self.src_port = 11113
         self.client_address = (dest_ip, dest_port)
         self.data_recv = None
 
@@ -54,26 +54,31 @@ class Receiver:
         self.server_socket.bind(('', self.recv_port))
 
         # open the file
-        self.file_handle = open('text.txt','r')
+        self.file_handle = open(self.file_path,'w+')
 
         # logger
         self._logger = logging.getLogger()
 
+        print("Init finished")
+
+
     def recv_handler(self):
+        print("Server handler starts")
         while not self.is_fin:
             self.recv()
 
     def recv(self):
 
+        print("Wait for receiving...")
         # self.data_recv, client_send_address = self.server_socket.recvfrom(MSS + 20)
         self.data_recv = self.server_socket.recv(MSS + 20)
 
         if self.is_corrupt():
-            self._logger.debug("The packet is corrupt.")
+            print("The packet is corrupt.")
             self.send_ack("")
 
-            self._logger.debug("Send ACK with number: {ack_num}".format(
-                ack_num = hex(self.expected_seq_num)
+            print("Send ACK with number: {ack_num}".format(
+                ack_num = self.expected_seq_num
             ))
             return
 
@@ -86,8 +91,8 @@ class Receiver:
             self._logger.debug("Receive a FIN")
             self.is_fin = 1
             self.send_ack("")
-            self._logger.debug("Send ACK with number: {ack_num}".format(
-                ack_num = hex(self.expected_seq_num)
+            print("Send ACK with number: {ack_num}".format(
+                ack_num = self.expected_seq_num
             ))
             self.close()
             return
@@ -96,31 +101,31 @@ class Receiver:
         if cur_seq_num < self.expected_seq_num:
             self.send_ack("")
 
-            self._logger.debug("Send ACK with number: {ack_num}".format(
-                ack_num = hex(self.expected_seq_num)
+            print("Send ACK with number: {ack_num}".format(
+                ack_num = self.expected_seq_num
             ))
 
         elif cur_seq_num == self.expected_seq_num:
 
-            self._logger.debug("Sequence number hit")
+            print("Sequence number hit: {seq_num}".format(seq_num = cur_seq_num))
             # write in file
-            self.file_handle.write(content)
+            self.write(content)
             # update self.expected_seq_num
             self.expected_seq_num += len(payload)
             self.expected_seq_num = self.expected_seq_num % self.UN_4BYTES_MOD
             # send ack
             self.send_ack("")
 
-            self._logger.debug("Send ACK with number: {ack_num}".format(
-                ack_num = hex(self.expected_seq_num)
+            print("Send ACK with number: {ack_num}".format(
+                ack_num = self.expected_seq_num
             ))
         else:
             # discard packets when cur_seq_num > self.expected_seq_num
-            self._logger.debug("Receiver reorder segments...")
+            print("Receiver reorder segments...")
             self.send_ack("")
 
-            self._logger.debug("Send ACK with number: {ack_num}".format(
-                ack_num = hex(self.expected_seq_num)
+            print("Send ACK with number: {ack_num}".format(
+                ack_num = self.expected_seq_num
             ))
 
 
@@ -170,17 +175,21 @@ class Receiver:
         checksum = (checksum >> 16) + (checksum & 0xffff)
         checksum += (checksum >> 16)
 
-        self._logger.debug("checksum is {checksum}".format(checksum = hex(checksum)))
+        print("checksum is {checksum}".format(checksum = hex(checksum)))
         if checksum == 0xFFFF:
-            return True
-        return False
+            return False
+        return True
 
+    def write(self, s):
+        print("write to file...")
+        self.file_handle.write(s)
+        self.file_handle.flush()
 
     def close(self):
         self.file_handle.close()
         # no connect
 
-        self._logger.debug("Close file {}".format(self.file_path))
+        print("Close file {}".format(self.file_path))
 
 
 

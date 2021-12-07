@@ -135,58 +135,56 @@ from collections import deque
 # print(type(c))
 # print(c)
 
-# # multi-thread test
-# class A:
-#
-#     def __init__(self):
-#         self.a = 1
-#         self.b = 2
-#         print("init")
-#
-#     def t1(self):
-#         self.a = 100
-#         time.sleep(2)
-#         print(self.a, self.b)
-#
-#     def t2(self):
-#         self.b = 200
-#
-#
-# def test_multi_thread():
-#     obj = A()
-#
-#     t1 = Thread(target=obj.t1)
-#     t1.setDaemon(True)
-#
-#     t2 = Thread(target=obj.t2)
-#     t2.setDaemon(True)
-#
-#     t1.start()
-#     t2.start()
-#
-# test_multi_thread()
+# multi-thread test
+class A:
+
+    def __init__(self):
+        self.send_logger = open('../logger/send_logger.txt', 'w')
+        self.ack_logger = open('../logger/ack_logger.txt', 'w')
+        print("init")
+
+    def t1(self):
+        self.send_logger.write("send_logger")
+
+    def t2(self):
+        self.ack_logger.write("ack_logger")
 
 
-# # read() test
-def read_file():
-    file = open('sender.txt','r')
-    counter = 0
-    while 1:
-        content = file.read(100)
-        counter += 1
-        if content:
-            print(content)
+def test_multi_thread():
+    obj = A()
 
-        if content == "":
-            print("content is "".")
+    t1 = Thread(target=obj.t1)
+    # t1.setDaemon(True)
 
-        if not content:
-            print("not content")
+    t2 = Thread(target=obj.t2)
+    # t2.setDaemon(True)
 
-        if counter == 50:
-            break
+    t1.start()
+    t2.start()
 
-read_file()
+test_multi_thread()
+
+
+# # # read() test
+# def read_file():
+#     file = open('sender.txt','r')
+#     counter = 0
+#     while 1:
+#         content = file.read(100)
+#         counter += 1
+#         if content:
+#             print(content)
+#
+#         if content == "":
+#             print("content is "".")
+#
+#         if not content:
+#             print("not content")
+#
+#         if counter == 50:
+#             break
+#
+# read_file()
 
 
 # # dict test

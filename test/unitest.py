@@ -1,5 +1,6 @@
-import tcpclient
-import tcpserver
+from src import tcpclient, tcpserver
+
+
 # file = sys.argv[1]  #
 # address_of_udpl = sys.argv[2]  # 192.168.192.134
 # port_number_of_udpl = int(sys.argv[3])  # 41192
@@ -7,7 +8,7 @@ import tcpserver
 # ack_port_number = sys.argv[5]  # 10027
 
 def get_checksum_check():
-    sender = tcpclient.Sender('sender.txt',
+    sender = tcpclient.Sender('../sender.txt',
                               '192.168.192.134',
                               41192,
                               576 * 5,
@@ -20,7 +21,7 @@ def get_checksum_check():
     print(hex(sender.get_checksum(h_len,payload)))
 
 def generate_tcp_seg_test():
-    sender = tcpclient.Sender('sender.txt',
+    sender = tcpclient.Sender('../sender.txt',
                               '192.168.192.134',
                               41192,
                               576 * 5,
