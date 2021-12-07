@@ -80,6 +80,10 @@ FIN
 #timer
 TIMER_ON
 time_start_time
+
+# retrans
+need_retrans = 0
+dup_num = 0
 ```
 
 
@@ -192,7 +196,7 @@ use a queue, save sequence number and the already sent but not acked packet, mak
 
 when ack arrives, poll from the queue
 
-whenever send a packet, push to the 
+whenever send a packet, push to the queue
 
 when retransmit, use queue.peek()
 
@@ -205,34 +209,46 @@ event trigger
 ```python
 while(receive data){
 
-	check if corrupt(),if corrput exit
-	
-	check if ack,if not exit
-	
+	recv_data = 
+    	
 	fetch the ack number y from data
+    
+    fetch the fin 
+    
+    if fin:
+    	file.close()
+    	return
+    	
+    else:
 	
-	if y <= sendBase:
-		exit
+        if y <= sendBase:
+            # add dup_num
+
+            # if dup_num == 3
+            need_retrans = 1
+
+        if(y > sendBase){
+            #deal with windows size
+            sendBase = y
+            compute boundry, deal with overflow
+
+            #reset dup_num
+            dup_num = 0
+
+            #deal with sampling
+
+            # deal with packets pool
+            poll packets from queue until the queue.peek.sequence_number > y
+
+            # check if need restart time
+            if there are currently not-yet ack segments:
+
+                restart timer
+		
+        
 	
-	if(y > sendBase){
-		#deal with windows size
-		sendBase = y
-	    compute boundry, deal with overflow
-	    
-        #deal with sampling
-        
-        # deal with packets pool
-		poll packets from queue until the queue.peek.sequence_number > y
-        
-        # check if need restart timer
-		if(there are currently not-yet ack segments)		{
 		
-            restart timer
-		}
-        
-	}
-		
-}
+
 ```
 
 ##### deal with sampling()
@@ -244,5 +260,51 @@ check seq_no in the hashmap, it not, exit
 else
 get current time
 compute sampleRTT, estimeted RTT, devRTT, timeoutInterval
+```
+
+
+
+
+
+## receiver
+
+```
+tcpserver file listening_port address_for_acks port_for_acks
+```
+
+
+
+parameters
+
+```
+expected_ack_num
+
+```
+
+receive
+
+```
+recv data
+
+check checksum 
+	if wrong, resend the expected_ack_num
+	if right 
+
+check fin:
+	if fin:
+		update the expected_ack_num
+		send the ack_fin packet
+		return 
+	else: 
+		do nothing
+check the seq_num
+	if < expected_ack_num 
+		resend the expected_ack_num ACK
+	if == expected_ack_num 
+        write the content to local file 
+        update the expected_ack_num
+        seng the expected_ack_num ACK
+	if > expected_ack_num
+		resend the expected_ack_num ACK
 ```
 

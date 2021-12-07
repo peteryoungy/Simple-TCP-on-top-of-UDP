@@ -1,7 +1,8 @@
 import sys
 import time
-
-
+from threading import Thread
+import queue
+from collections import deque
 # def test():
 #     a = int(sys.argv[1])
 #     b = int(sys.argv[2])
@@ -127,8 +128,150 @@ import time
 # # test hex
 # # print(bytes.fromhex('12').decode('utf-8'))
 
-a = b'11'
-b = "hello"
-c = a + b
-print(type(c))
-print(c)
+# # string and bytes
+# a = b'11'
+# b = "hello"
+# c = a + b
+# print(type(c))
+# print(c)
+
+# # multi-thread test
+# class A:
+#
+#     def __init__(self):
+#         self.a = 1
+#         self.b = 2
+#         print("init")
+#
+#     def t1(self):
+#         self.a = 100
+#         time.sleep(2)
+#         print(self.a, self.b)
+#
+#     def t2(self):
+#         self.b = 200
+#
+#
+# def test_multi_thread():
+#     obj = A()
+#
+#     t1 = Thread(target=obj.t1)
+#     t1.setDaemon(True)
+#
+#     t2 = Thread(target=obj.t2)
+#     t2.setDaemon(True)
+#
+#     t1.start()
+#     t2.start()
+#
+# test_multi_thread()
+
+
+# # read() test
+def read_file():
+    file = open('sender.txt','r')
+    counter = 0
+    while 1:
+        content = file.read(100)
+        counter += 1
+        if content:
+            print(content)
+
+        if content == "":
+            print("content is "".")
+
+        if not content:
+            print("not content")
+
+        if counter == 50:
+            break
+
+read_file()
+
+
+# # dict test
+#
+# dict = {}
+# dict[1] = 1
+#
+# if 2 not in dict.keys():
+#     print("2 does not exist")
+#
+# del dict[1]
+# if 1 not in dict.keys():
+#     print("1 does not exist")
+
+
+# # test tuple
+# a = (1,2)
+#
+# # a1,a2 = a
+# # print(a1,a2)
+# a1 = a[0]
+# print(a1)
+
+
+# # test Queue
+# q = queue.Queue()
+# q.put(5)
+# q.put(7)
+#
+# """
+# dir() is helpful if you don't want to read the documentation
+# and just want a quick reminder of what attributes are in your object
+# It shows us there is an attribute named queue in the Queue class
+# """
+# for attr in dir(q):
+#     print(attr)
+
+
+# # Print first element in queue
+# print("\nLooking at the first element")
+# print(q.queue[0])
+#
+# print("\nGetting the first element")
+# print(q.get())
+#
+# print("\nLooking again at the first element")
+# print(q.queue[0])
+
+
+
+# # test deque
+#
+# q = deque()
+# q. appendleft(3)
+# q. appendleft(2)
+# q. appendleft(1)
+#
+# q. append(4)
+# q. append(5)
+#
+# print(len(q))
+#
+# print(q[4])
+# print(q[2])
+#
+# print(len(q))
+
+
+# # test write file
+# file = open('receiver.txt','w')
+# data = "test write"
+# data = data.encode()
+# file.write(data)
+# file.close()
+
+
+
+# # test bytes slicing
+# # slicing: [startIndex, endIndex )
+# origin_content = "test write"
+# payload = origin_content.encode()
+# print(len(payload))
+# content = payload[0:].decode()
+# print(content)
+#
+# file = open('receiver.txt','w')
+# file.write(content)
+# file.close()
