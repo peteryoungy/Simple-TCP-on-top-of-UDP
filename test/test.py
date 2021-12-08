@@ -135,34 +135,34 @@ from collections import deque
 # print(type(c))
 # print(c)
 
-# multi-thread test
-class A:
-
-    def __init__(self):
-        self.send_logger = open('../logger/send_logger.txt', 'w')
-        self.ack_logger = open('../logger/ack_logger.txt', 'w')
-        print("init")
-
-    def t1(self):
-        self.send_logger.write("send_logger")
-
-    def t2(self):
-        self.ack_logger.write("ack_logger")
-
-
-def test_multi_thread():
-    obj = A()
-
-    t1 = Thread(target=obj.t1)
-    # t1.setDaemon(True)
-
-    t2 = Thread(target=obj.t2)
-    # t2.setDaemon(True)
-
-    t1.start()
-    t2.start()
-
-test_multi_thread()
+# # multi-thread test
+# class A:
+#
+#     def __init__(self):
+#         self.send_logger = open('../logger/send_logger.txt', 'w')
+#         self.ack_logger = open('../logger/ack_logger.txt', 'w')
+#         print("init")
+#
+#     def t1(self):
+#         self.send_logger.write("send_logger")
+#
+#     def t2(self):
+#         self.ack_logger.write("ack_logger")
+#
+#
+# def test_multi_thread():
+#     obj = A()
+#
+#     t1 = Thread(target=obj.t1)
+#     # t1.setDaemon(True)
+#
+#     t2 = Thread(target=obj.t2)
+#     # t2.setDaemon(True)
+#
+#     t1.start()
+#     t2.start()
+#
+# test_multi_thread()
 
 
 # # # read() test
@@ -187,17 +187,17 @@ test_multi_thread()
 # read_file()
 
 
-# # dict test
-#
-# dict = {}
-# dict[1] = 1
-#
-# if 2 not in dict.keys():
-#     print("2 does not exist")
-#
-# del dict[1]
-# if 1 not in dict.keys():
-#     print("1 does not exist")
+# dict test
+
+dict = {}
+dict[1] = 1
+
+if 2 not in dict.keys():
+    print("2 does not exist")
+
+del dict[1]
+if 1 not in dict.keys():
+    print("1 does not exist")
 
 
 # # test tuple

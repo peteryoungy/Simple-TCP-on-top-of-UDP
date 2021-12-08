@@ -3,35 +3,8 @@ import sys
 from threading import Thread
 import time
 import struct
-# import queue
 from collections import deque
-import logging
 
-# note: set source ip/port
-# hostname = socket.gethostname()
-# local_ip = socket.gethostbyname(hostname)
-#
-# print(hostname, local_ip)
-# serverPort = 10025
-
-#
-# def send():
-#
-#     # serverAddress = ('192.168.192.134', 41192)
-#
-#     serverAddress = (address_of_udpl, port_number_of_udpl)
-#
-#     # establish a UDP socket
-#     clientSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-#
-#     # send
-#
-#     clientSocket.sendto("hello".encode(), serverAddress)
-#     print("The first message has been sent")
-#     # print(clientSocket.recvfrom(512)[0].decode())
-#
-#
-#     clientSocket.close()
 
 MSS = 576
 
@@ -40,6 +13,8 @@ def get_local_time():
     local_time = time.localtime()
     return "{0}/{1}/{2} {3}:{4}:{5} ".format(local_time[0], local_time[1], local_time[2],
                                              local_time[3], local_time[4], local_time[5])
+
+
 class Sender:
 
     def __init__(self,file_path = 'files/read_from.txt',
@@ -55,15 +30,16 @@ class Sender:
         self.recv_port = recv_port
 
         self.dest_address = (self.dest_ip, self.dest_port)
+
         # constant
         self.UN_4BYTES_MOD = 4294967296  # max seq_num is 2^32-1
         self.header_length = 5  # 5
         self.MSS = 576
-        self. full_tcp_seg_size = self.MSS + 20
+        self.full_tcp_seg_size = self.MSS + 20
         self.ALPHA = 0.125
         self.BETA = 0.25
 
-        # window
+        # window parameter
         self.send_base = 0
         self.next_seq_num = 0
         # can not reach boundary
@@ -81,17 +57,13 @@ class Sender:
 
         # tcp header
         self.src_port = 10025
-        # self.src_port = 0  #
-        # self.dest_port = dest_port
-        # NextSeqNum
-        # nextAckNum???
         self.is_ack = 0
         self.is_fin = 0
         self.fin_ack = 0
         # value of header length + ack + fin 16bit
         # self.h_len = 0
 
-        # helper data structure
+        # buffer
         self.buffer_q = deque()
 
         # timer
@@ -101,25 +73,27 @@ class Sender:
         # sample
         self.sample_tuple = (-1,-1)
 
-
         # retrans
         self.dup_retrans = 0
         self.dup_num = 0
 
-        # init
+        # statistic
+        self.is_first = True
+        self.first_recv_time = 0
+        self.prog_running_time = 0
+
+        # init file
         self.file_handle = open(file_path, 'r+')
 
         # initialize the client socket
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.client_socket.bind(('', self.recv_port))
 
-        #logger
-        self._logger = logging.getLogger()
-
         # init logger
-        self.send_logger = open('logger/send_logger.txt', 'w+')
-        self.ack_logger = open('logger/ack_logger.txt', 'w+')
-        # self._logger.debug("Init finished")
+        self.send_logger_path = 'logger/send_logger.txt'
+        self.ack_logger_path = 'logger/ack_logger.txt'
+        self.send_logger = open(self.send_logger_path, 'w+')
+        self.ack_logger = open(self.ack_logger_path, 'w+')
 
         self.logger_write('s', "Init finished")
 
@@ -139,7 +113,8 @@ class Sender:
         return
 
     def send_handler(self):
-        self.logger_write('s', "Send Handler: Send Handler starts")
+
+        print("Send Handler starts")
         while self.is_fin == 0 or len(self.buffer_q) != 0:
             self.send_worker()
 
@@ -166,8 +141,8 @@ class Sender:
             content = self.file_handle.read(self.MSS)
             payload = content.encode() # default: utf8'
 
-            self.logger_write('s', "Send Handler: content is {content}".format(content = content))
-            self.logger_write('s', "Send Handler: payload is {payload}".format(payload = payload.hex()))
+            # self.logger_write('s', "Send Handler: content is {content}".format(content = content))
+            # self.logger_write('s', "Send Handler: payload is {payload}".format(payload = payload.hex()))
 
             # if waiting fin
             if not payload and self.send_base != self.next_seq_num:
@@ -338,16 +313,16 @@ class Sender:
         self.timer_start_time = time.time()
 
         if model == 's':
-            self.logger_write('s', "Start timer, the current time is {}".format(
-                self.timer_start_time))
+            self.logger_write('s', "Start timer with timeout_interval = {time_out_interval}".format(
+                time_out_interval = self.timeout_interval))
         else:
-            self.logger_write('a', "Start timer, the current time is {}".format(
-                self.timer_start_time))
+            self.logger_write('a', "Start timer with timeout_interval = {time_out_interval}".format(
+                time_out_interval = self.timeout_interval))
 
 
     def ack_handler(self):
 
-        self.logger_write('a', "ACK handler: ACK Handler starts")
+        print("ACK Handler starts")
         while not self.fin_ack:
             self.ack_worker()
 
@@ -371,19 +346,30 @@ class Sender:
                 self.logger_write('a', "ACK Handler: receive fin_ack from server, ack_handler exit")
                 self.fin_ack = True
                 # clear the buffer_q
-                counter = 0
+                # counter = 0
                 while len(self.buffer_q) != 0:
                     self.buffer_q.popleft()
-                    counter += 1
-                print(f"counter = {counter}")
+                    # counter += 1
+                # print(f"counter = {counter}")
                 return
 
-            self.logger_write('a', 'Receive packets from server')
-            # a > send_base
-            if (ack_num - self.send_base + 1 < self.windowsize and
-                    ack_num - self.send_base + 1 > 0 ) or \
-                    self.UN_4BYTES_MOD - self.send_base + ack_num < self.windowsize :
+            self.logger_write('a', 'Receive packets from server with ack_num = {ack_num}'.format(
+                ack_num = ack_num
+            ))
 
+            # dup: a <= send_base
+            if ack_num == self.send_base:
+                self.dup_num += 1
+                self.logger_write('a', "ACK Handler: Receive {ack_num} {dup_num} times".format(
+                    ack_num = ack_num, dup_num = self.dup_num))
+                if self.dup_num == 3:
+                    self.dup_retrans = 1
+                    self.logger_write('a', "ACK Handler: Need dup retrans")
+
+            # a > send_base
+            # if (self.windowsize > ack_num - self.send_base + 1 > 0) or \
+            #         self.UN_4BYTES_MOD - self.send_base + ack_num < self.windowsize:
+            else:
                 # update send_base and send_boundary
                 self.send_base = ack_num
                 self.boundary = (self.send_base + self.windowsize) % self.UN_4BYTES_MOD
@@ -396,13 +382,13 @@ class Sender:
                 self.dup_num = 0
 
                 # lookup for a sample hit
-                if ack_num == self.sample_tuple[0]:
+                if self.sample_tuple[0] != -1 and ack_num >= self.sample_tuple[0]:
                     cur_time = time.time()
                     sample_rtt = cur_time - self.sample_tuple[1]
                     self.update_timeout_interval(sample_rtt)
 
-                    self.logger_write('a', "ACK Handler: hit sample_tuple: {seq_num}, {cur_time}".format(
-                        seq_num = self.sample_tuple[0], cur_time = self.sample_tuple[1]
+                    self.logger_write('a', "ACK Handler: sample hit: ack_num = {ack_num}, seq_num = {seq_num}".format(
+                        ack_num = ack_num, seq_num = self.sample_tuple[0],
                     ))
                     # clear self.sample_tuple
                     self.sample_tuple = (-1, -1)
@@ -421,28 +407,25 @@ class Sender:
                 else:
                     self.is_timer_on = False
 
-            # dup: a <= send_base
-            else:
-                self.dup_num += 1
-                self.logger_write('a', "ACK Handler: Receive duplicate {dup_num} times".format(
-                    dup_num = self.dup_num))
-                if self.dup_num == 3:
-                    self.dup_retrans = 1
-                    self.logger_write('a', "ACK Handler: Need dup retrans")
+
 
 
     # why I set a default value?
     def update_timeout_interval(self, sample_rtt):
 
-        if not self.dup_retrans:
+        if sample_rtt != -1:  # not retrans
             self.estimated_rtt = (1 - self.ALPHA) * self.estimated_rtt + self.ALPHA * sample_rtt
             self.dev_rtt = (1 - self.BETA) * self.dev_rtt + self.BETA * abs(sample_rtt - self.estimated_rtt)
             self.timeout_interval = self.estimated_rtt + 4 * self.dev_rtt
+            if self.timeout_interval > 3:
+                self.timeout_interval = 3
 
             self.logger_write('a', "ACK Handler: Update timeout_interval: {timeout_interval}".format(
                 timeout_interval = self.timeout_interval))
         else:
             self.timeout_interval = 2 * self.timeout_interval
+            if self.timeout_interval > 3:
+                self.timeout_interval = 3
 
             self.logger_write('s', "Retransmit: Update timeout_interval: {timeout_interval}".format(
                 timeout_interval = self.timeout_interval))
@@ -454,34 +437,36 @@ class Sender:
         self.file_handle.close()
         self.logger_write('a', "Close the timer.")
         self.is_timer_on = False
-        print("ACK Handler exit")
+        print("ACK Handler exits")
 
     def sender_exit(self):
+
         self.logger_write('s', "Close Logger")
         self.send_logger.close()
         self.ack_logger.close()
-        print("Send Handler exit.")
+
+        print("Send Handler exits.")
 
 
 
 
 if __name__ == '__main__':
 
-    # # tcpclient sender.txt 192.168.192.129 41192 2880 10001
-    # file = sys.argv[1]  # 'sender.txt'
-    # address_of_udpl = sys.argv[2]  # 192.168.192.129
-    # port_number_of_udpl = int(sys.argv[3])  # 41192
-    # windowsize = sys.argv[4]  # 2880
-    # ack_port_number = sys.argv[5]  # 10001
-    #
-    # sender = Sender(file,
-    #                 address_of_udpl,
-    #                 int(port_number_of_udpl),
-    #                 int(windowsize),
-    #                 int(ack_port_number)
-    #                 )
+    # # tcpclient files/read_from.txt 192.168.192.134 41192 2880 12114
+    file = sys.argv[1]
+    address_of_udpl = sys.argv[2]
+    port_number_of_udpl = int(sys.argv[3])
+    windowsize = sys.argv[4]
+    ack_port_number = sys.argv[5]
 
-    sender = Sender()
+    sender = Sender(file,
+                    address_of_udpl,
+                    int(port_number_of_udpl),
+                    int(windowsize),
+                    int(ack_port_number)
+                    )
+
+    # sender = Sender()
 
     send_thread = Thread(target=sender.send_handler)
     # send_thread.setDaemon(True)

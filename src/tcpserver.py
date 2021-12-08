@@ -1,24 +1,10 @@
 import socket
 import sys
-from threading import Thread
 import time
 import struct
-# import queue
-import logging
-from collections import deque
 
-# # create udp socket
-# serverPort = 10027
-# serverSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-# serverSocket.bind(('', serverPort))
-# print("The server is ready to receive")
-#
-# # receive sth
-# message, clientAddress = serverSocket.recvfrom(1024)
-# print(message, clientAddress)
 
 MSS  = 576
-
 
 class Receiver:
 
@@ -41,6 +27,7 @@ class Receiver:
         self.src_port = 11113
         self.client_address = (dest_ip, dest_port)
         self.data_recv = None
+        self.buffer_d = {}
 
         # header
         self.header_length = 5
@@ -48,6 +35,13 @@ class Receiver:
         self.is_fin = 0
 
         self.expected_seq_num = 0
+
+        # statistic
+        self.is_first = True
+        self.first_recv_time = 0
+        self.prog_running_time = 0
+
+        self.bytes_received = 0
 
         # initialize socket
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -57,27 +51,33 @@ class Receiver:
         self.file_handle = open(self.file_path,'w+')
 
         # logger
-        self._logger = logging.getLogger()
 
         print("Init finished")
 
 
     def recv_handler(self):
-        print("Server handler starts")
+        print("Server starts...")
         while not self.is_fin:
-            self.recv()
+            self.recv_worker()
 
-    def recv(self):
+        self.recv_exit()
+
+    def recv_worker(self):
 
         print("Wait for receiving...")
         # self.data_recv, client_send_address = self.server_socket.recvfrom(MSS + 20)
         self.data_recv = self.server_socket.recv(MSS + 20)
 
+        # snapshot the first recv time
+        if self.is_first:
+            self.is_first = False
+            self.first_recv_time = time.time()
+
         if self.is_corrupt():
             print("The packet is corrupt.")
             self.send_ack("")
 
-            print("Send ACK with number: {ack_num}".format(
+            print("Send ACK with ack_num = {ack_num}".format(
                 ack_num = self.expected_seq_num
             ))
             return
@@ -88,43 +88,64 @@ class Receiver:
 
         # fin bit is 1
         if header[4] % 2:
-            self._logger.debug("Receive a FIN")
+            print("Receive a FIN packet")
             self.is_fin = 1
             self.send_ack("")
-            print("Send ACK with number: {ack_num}".format(
+            print("Send ACK with ack_num = {ack_num}".format(
                 ack_num = self.expected_seq_num
             ))
-            self.close()
+
             return
 
         cur_seq_num = header[2]
         if cur_seq_num < self.expected_seq_num:
             self.send_ack("")
 
-            print("Send ACK with number: {ack_num}".format(
+            print("Send ACK with ack_num = {ack_num}".format(
                 ack_num = self.expected_seq_num
             ))
 
         elif cur_seq_num == self.expected_seq_num:
 
-            print("Sequence number hit: {seq_num}".format(seq_num = cur_seq_num))
+            print("Get a sequence number hit with seq_num = {seq_num}".format(
+                seq_num = cur_seq_num))
             # write in file
             self.write(content)
+
             # update self.expected_seq_num
             self.expected_seq_num += len(payload)
             self.expected_seq_num = self.expected_seq_num % self.UN_4BYTES_MOD
+
+            # look for a buffer hit
+            while self.expected_seq_num in self.buffer_d.keys():
+
+                print("Get a buffer hit with seq_num = {seq_num}".format(
+                    seq_num = self.expected_seq_num))
+
+                content = self.buffer_d[self.expected_seq_num]
+                self.write(content)
+                del self.buffer_d[self.expected_seq_num]
+
+                self.expected_seq_num += len(content.encode())
+                self.expected_seq_num = self.expected_seq_num % self.UN_4BYTES_MOD
+
             # send ack
             self.send_ack("")
 
-            print("Send ACK with number: {ack_num}".format(
+            print("Send ACK with ack_num = {ack_num}".format(
                 ack_num = self.expected_seq_num
             ))
         else:
-            # discard packets when cur_seq_num > self.expected_seq_num
-            print("Receiver reorder segments...")
+            # Store the packets in a buffer when the cur_seq_num > expected_seq_num
+            self.buffer_d[cur_seq_num] = content
+
+            print("Store reorder seg with seq_num = {seq_num}".format(
+                seq_num = cur_seq_num
+            ))
+
             self.send_ack("")
 
-            print("Send ACK with number: {ack_num}".format(
+            print("Send ACK with ack_num = {ack_num}".format(
                 ack_num = self.expected_seq_num
             ))
 
@@ -158,10 +179,9 @@ class Receiver:
         return ack_seg
 
 
-    def is_corrupt(self, test_recv = None):
+    def is_corrupt(self):
 
         temp = self.data_recv
-        # temp = test_recv
 
         byte_len = len(temp)
         if byte_len % 2:
@@ -181,29 +201,39 @@ class Receiver:
         return True
 
     def write(self, s):
-        print("write to file...")
+        print("writing to file...")
         self.file_handle.write(s)
         self.file_handle.flush()
 
-    def close(self):
+        # update bytes_received
+        self.bytes_received += len(s.encode())
+
+    def recv_exit(self):
         self.file_handle.close()
-        # no connect
 
         print("Close file {}".format(self.file_path))
 
+        # record the running time
+        self.prog_running_time = time.time() - self.first_recv_time
+        print("Server receives {bytes_received} bytes in {prog_running_time} seconds".format(
+            bytes_received = self.bytes_received, prog_running_time = self.prog_running_time
+        ))
+
+        print("Server exits.")
 
 
 
 
 if __name__ == '__main__':
 
-    # # tcpserver recerver.txt 10027 192.168.192.1 10001
-    # file = sys.argv[1]  # 'receiver.txt'
-    # listening_port = int(sys.argv[2])  # 10027
-    # dest_ip = sys.argv[3]  # '192.168.192.1'
-    # dest_port = int(sys.argv[4])  # 10001
-    #
-    # receiver = Receiver(file, listening_port, dest_ip, dest_port)
+    # tcpserver files/write_to.txt 12112 192.168.192.1 12114
+    file = sys.argv[1]
+    listening_port = int(sys.argv[2])
+    dest_ip = sys.argv[3]
+    dest_port = int(sys.argv[4])
 
-    receiver = Receiver()
+    receiver = Receiver(file, listening_port, dest_ip, dest_port)
+
+    # receiver = Receiver()
+
     receiver.recv_handler()

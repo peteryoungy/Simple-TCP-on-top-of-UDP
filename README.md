@@ -1,6 +1,31 @@
-### Introduction
+### Overview
 
 CSEE4119 project.
+
+
+
+## Run
+
+Client
+
+```
+tcpclient 
+```
+
+Server
+
+```bash
+tcpserver files/write_to.txt 12112 192.168.192.1 12114
+```
+
+newudpl
+
+```bash
+./newudpl -i 192.168.192.1:* -o 192.168.192.134:12112 -L 50 -O 50 -B 10
+
+```
+
+
 
 ### Demands
 
@@ -303,8 +328,18 @@ check the seq_num
 	if == expected_ack_num 
         write the content to local file 
         update the expected_ack_num
-        seng the expected_ack_num ACK
+        
+        while could find expected_ack_num in the dict
+        get the content
+        write the content to local file
+        del the entry in the dict
+        update the expected_ack_num
+        
+        send the expected_ack_num ACK
 	if > expected_ack_num
+		store(seq_num, content) in a dict
 		resend the expected_ack_num ACK
 ```
+
+
 
