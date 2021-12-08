@@ -45,7 +45,7 @@ class Sender:
         self.send_base = 0
         self.next_seq_num = 0
         # can not reach boundary
-        self.boundary = (self.send_base + self.windowsize) % self.UN_4BYTES_MOD
+        self.boundary = self.windowsize
         self.next_ack_num = 0
 
         self.total_seg_sent = 0
@@ -85,7 +85,15 @@ class Sender:
         self.prog_running_time = 0
 
         # lock
-        self.sample_timeout_lock = Lock()
+        self.sample_tuple_lock = Lock()         # lock
+        self.timeout_interval_lock = Lock()
+        self.timer_start_time_lock = Lock()
+
+        self.dup_lock = Lock()  # lock of dup_num and dup_retrans
+        self.window_lock = Lock()   # lock of send_base and boundary
+
+        self.is_timer_on_lock = Lock()
+
 
         # init file
         self.file_handle = open(file_path, 'r+')
@@ -134,7 +142,7 @@ class Sender:
             self.send_worker()
 
             # print("exit from send_worker")
-            if self.is_timeout() or self.dup_retrans:
+            if self.is_timeout() or self.get_dup_retrans():
                 self.retransmit()
 
         self.sender_exit()
@@ -146,7 +154,7 @@ class Sender:
         :return:
         """
 
-        while (self.next_seq_num + self.MSS) % self.UN_4BYTES_MOD <= self.boundary and \
+        while (self.next_seq_num + self.MSS) % self.UN_4BYTES_MOD <= self.get_boundary() and \
                 self.is_fin == 0:
 
             # 1. get content from file
@@ -157,12 +165,12 @@ class Sender:
             # self.logger_write('s', "Send Handler: payload is {payload}".format(payload = payload.hex()))
 
             # Waiting until all the segments are successfully received by the server
-            if not payload and self.send_base != self.next_seq_num:
+            if not payload and self.get_send_base() != self.next_seq_num:
                 self.waiting_fin = 1
                 break
 
             # File transmission finished, send a FIN packet
-            if not payload and self.send_base == self.next_seq_num:
+            if not payload and self.get_send_base() == self.next_seq_num:
                 self.waiting_fin = 0
                 self.is_fin = 1
 
@@ -182,13 +190,14 @@ class Sender:
             ))
 
             # 3. check if need start the timer
-            if not self.is_timer_on:
-                self.start_timer('s')
-                self.is_timer_on = True
+            with self.is_timer_on_lock:
+                if not self.is_timer_on:
+                    self.start_timer('s')
+                    self.is_timer_on = True
 
             # 4. check if need sampling. When there's no segments being sampled currently,
             # do a new sampling.
-            with self.sample_timeout_lock:
+            with self.sample_tuple_lock:
                 if self.sample_tuple[0] == -1 and not self.is_fin:
                     self.sample_tuple = (self.next_seq_num, time.time())
 
@@ -215,7 +224,7 @@ class Sender:
 
 
             # each time after send a packet, check if there's a retransmission
-            if self.is_timeout() or self.dup_retrans:
+            if self.is_timeout() or self.get_dup_retrans():
                 self.logger_write('s', "Send Handler: Timeout.")
                 break
 
@@ -289,22 +298,23 @@ class Sender:
         :return:
         """
         self.logger_write('s', "Retransmit: Retransmit tcp_seg {seq_num}".format(
-            seq_num=self.send_base))
+            seq_num=self.get_send_base()))
 
         # 1. get the original data to be retransmitted
         seq_num, retrans_seg = self.buffer_q.queue[0]
 
         # 2. double the time_interval and restart timer
-        with self.sample_timeout_lock:
-            self.update_timeout_interval(-1)
+        self.update_timeout_interval(-1)
         self.start_timer('s')
 
         # 3. retransmit the data
         self.client_socket.sendto(retrans_seg, self.dest_address)
 
         # 4. clear the retransmission status
-        self.dup_retrans = 0
-        self.dup_num = 0
+        with self.dup_lock:
+            self.dup_retrans = 0
+            self.dup_num = 0
+        # self.set_dup_num(0)
 
 
     def is_timeout(self):
@@ -312,12 +322,12 @@ class Sender:
         Check if timeout occurs.
         :return: if timeout, return True, otherwise return False
         """
-        if self.is_timer_on is False:
+        if self.get_is_timer_on() is False:
             return False
 
         cur_time = time.time()
 
-        if cur_time - self.timer_start_time > self.timeout_interval:
+        if cur_time - self.timer_start_time > self.get_timeout_interval():
             return True
         return False
 
@@ -326,20 +336,23 @@ class Sender:
         """
         Start the timer by updating the self.timer_start_time
         :param model: same as the self.logger_write. 's' means this thread is called by
-        thesender_handler, while 'a' means this method is called by the ack_handler
+        the sender_handler, while 'a' means this method is called by the ack_handler
         :return:
         """
+
         if model != 's' and model != 'a':
             print("start_timer: Model Error")
 
-        self.timer_start_time = time.time()
+        with self.timer_start_time_lock:
+            self.timer_start_time = time.time()
+
 
         if model == 's':
             self.logger_write('s', "Start timer with timeout_interval = {time_out_interval}".format(
-                time_out_interval = self.timeout_interval))
+                time_out_interval = self.get_timeout_interval()))
         else:
             self.logger_write('a', "Start timer with timeout_interval = {time_out_interval}".format(
-                time_out_interval = self.timeout_interval))
+                time_out_interval = self.get_timeout_interval()))
 
 
     def ack_handler(self):
@@ -387,13 +400,15 @@ class Sender:
             ))
 
             # 2.2 If receive duplicate ACKs, fast retransmit
-            if ack_num == self.send_base:
-                self.dup_num += 1
-                self.logger_write('a', "ACK Handler: Receive {ack_num} {dup_num} times".format(
-                    ack_num = ack_num, dup_num = self.dup_num))
-                if self.dup_num == 3:
-                    self.dup_retrans = 1
-                    self.logger_write('a', "ACK Handler: Need dup retrans")
+            if ack_num == self.get_send_base():
+                with self.dup_lock:
+                    self.dup_num += 1
+                    # self.set_dup_num(self.get_dup_num() + 1)
+                    self.logger_write('a', "ACK Handler: Receive {ack_num} {dup_num} times".format(
+                        ack_num = ack_num, dup_num = self.dup_num))
+                    if self.dup_num == 3:
+                        self.dup_retrans = 1
+                        self.logger_write('a', "ACK Handler: Need dup retrans")
 
             # 2.3 If receive segments with sequence number equal to or larger than the expected
             # sequence number.
@@ -401,17 +416,18 @@ class Sender:
             #         self.UN_4BYTES_MOD - self.send_base + ack_num < self.windowsize:
             else:
                 # 1. update send_base and send_boundary
-                self.send_base = ack_num
-                self.boundary = (self.send_base + self.windowsize) % self.UN_4BYTES_MOD
-                self.logger_write('a', "Update send_base = {send_base}, Update boundary = {boundary}".format(
-                    send_base = self.send_base, boundary = self.boundary
-                ))
+                with self.window_lock:
+                    self.send_base = ack_num
+                    self.boundary = (self.send_base + self.windowsize) % self.UN_4BYTES_MOD
+                    self.logger_write('a', "Update send_base = {send_base}, Update boundary = {boundary}".format(
+                        send_base = self.send_base, boundary = self.boundary
+                    ))
 
                 # 2. reset the duplicate number
-                self.dup_num = 0
+                self.set_dup_num(0)
 
                 # 3. lookup for a sample hit. Check whether this segment is sampled before
-                with self.sample_timeout_lock:
+                with self.sample_tuple_lock:
                     if self.sample_tuple[0] != -1 and ack_num >= self.sample_tuple[0]:
                         cur_time = time.time()
                         sample_rtt = cur_time - self.sample_tuple[1]
@@ -432,10 +448,10 @@ class Sender:
                     self.buffer_q.get()
 
                 # 5. check if we need restart timer
-                if self.send_base != self.next_seq_num:
+                if self.get_send_base() != self.next_seq_num:
                     self.start_timer('a')
                 else:
-                    self.is_timer_on = False
+                    self.set_is_timer_on(False)
 
 
     def update_timeout_interval(self, sample_rtt):
@@ -445,22 +461,24 @@ class Sender:
         :param sample_rtt: sampleRTT
         :return:
         """
-        if sample_rtt != -1:  # not retrans
-            self.estimated_rtt = (1 - self.ALPHA) * self.estimated_rtt + self.ALPHA * sample_rtt
-            self.dev_rtt = (1 - self.BETA) * self.dev_rtt + self.BETA * abs(sample_rtt - self.estimated_rtt)
-            self.timeout_interval = self.estimated_rtt + 4 * self.dev_rtt
-            if self.timeout_interval > 3:
-                self.timeout_interval = 3
 
-            self.logger_write('a', "ACK Handler: Update timeout_interval: {timeout_interval}".format(
-                timeout_interval = self.timeout_interval))
-        else:
-            self.timeout_interval = 2 * self.timeout_interval
-            if self.timeout_interval > 3:
-                self.timeout_interval = 3
+        with self.timeout_interval_lock:
+            if sample_rtt != -1:  # not retrans
+                self.estimated_rtt = (1 - self.ALPHA) * self.estimated_rtt + self.ALPHA * sample_rtt
+                self.dev_rtt = (1 - self.BETA) * self.dev_rtt + self.BETA * abs(sample_rtt - self.estimated_rtt)
+                self.timeout_interval = self.estimated_rtt + 4 * self.dev_rtt
+                if self.timeout_interval > 3:
+                    self.timeout_interval = 3
 
-            self.logger_write('s', "Retransmit: Update timeout_interval: {timeout_interval}".format(
-                timeout_interval = self.timeout_interval))
+                self.logger_write('a', "ACK Handler: Update timeout_interval: {timeout_interval}".format(
+                    timeout_interval = self.timeout_interval))
+            else:
+                self.timeout_interval = 2 * self.timeout_interval
+                if self.timeout_interval > 3:
+                    self.timeout_interval = 3
+
+                self.logger_write('s', "Retransmit: Update timeout_interval: {timeout_interval}".format(
+                    timeout_interval = self.timeout_interval))
 
 
 
@@ -474,7 +492,7 @@ class Sender:
         self.file_handle.close()
 
         self.logger_write('a', "Close the timer.")
-        self.is_timer_on = False
+        self.set_is_timer_on(False)
         print("ACK Handler exits")
 
     def sender_exit(self):
@@ -490,6 +508,38 @@ class Sender:
         print("Send Handler exits.")
 
 
+############some lock functions###################################################
+    def get_timeout_interval(self):
+        with self.timeout_interval_lock:
+            return self.timeout_interval
+
+    # def get_dup_num(self):
+    #     with self.dup_num_lock:
+    #         return self.dup_num
+
+    def set_dup_num(self, num):
+        with self.dup_lock:
+            self.dup_num = num
+
+    def get_dup_retrans(self):
+        with self.dup_lock:
+            return self.dup_retrans
+
+    def get_send_base(self):
+        with self.window_lock:
+            return self.send_base
+
+    def get_boundary(self):
+        with self.window_lock:
+            return self.boundary
+
+    def set_is_timer_on(self, flag):
+        with self.is_timer_on_lock:
+            self.is_timer_on = flag
+
+    def get_is_timer_on(self):
+        with self.is_timer_on_lock:
+            return self.is_timer_on
 
 
 if __name__ == '__main__':
