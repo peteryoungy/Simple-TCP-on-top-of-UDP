@@ -2,27 +2,48 @@
 
 CSEE4119 project.
 
+### File Structure
 
-
-## Run
-
-Client
+```bash
+├── src					 
+│   ├── tcpclient.py              # source code of tcp client
+│   ├── tcpserver.py			  # source code of tcp server
+├── files							
+│   ├── read_from_5000.txt		  # txt file to be sent, 5000 bytes
+│   ├── read_from.txt			  # txt file to be sent, 110000 bytes
+│   ├── write_to.txt			  # server write content to this file
+├── logger
+│   ├── send_logger.txt			  # log file of thread send_handler in tcpclient.py
+│   ├── ack_logger.txt			  # log file of thread ack_handler in tcpclient.py
+├── test
+│   ├── test.py					  # some little test methods for learning 
+│   ├── unitest.py				  # simple unitest of some methods in src/
+├── SUMMARY.md				 	  # summary of the overall progr
+└── README.md				      # README	
+```
 
 ```
-tcpclient 
+└── .gitignore
 ```
 
-Server
+### Test Command
+
+##### Client
+
+```bash
+tcpclient files/read_from.txt 192.168.192.134 41192 2880 12114
+```
+
+##### Server
 
 ```bash
 tcpserver files/write_to.txt 12112 192.168.192.1 12114
 ```
 
-newudpl
+##### newudpl
 
 ```bash
-./newudpl -i 192.168.192.1:* -o 192.168.192.134:12112 -L 50 -O 50 -B 10
-
+./ newudpl -i 192.168.192.1:* -o 192.168.192.134:12112 -L 10 -O 10 -B 10
 ```
 
 
@@ -342,4 +363,32 @@ check the seq_num
 ```
 
 
+
+#### Thread Synchronized
+
+shared memory
+
+```
+dup_num   getter setter
+dup_retrans   getter setter
+
+update_timeout_interval???
+start_timer
+
+is_timer_on
+
+self.buffer_q
+sample_tuple
+
+
+send_base 
+boundary   
+
+
+
+
+
+
+
+```
 

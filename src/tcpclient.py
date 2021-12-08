@@ -82,6 +82,9 @@ class Sender:
         self.first_recv_time = 0
         self.prog_running_time = 0
 
+        # lock
+
+
         # init file
         self.file_handle = open(file_path, 'r+')
 
@@ -99,7 +102,13 @@ class Sender:
 
 
     def logger_write(self, model, s):
-
+        """
+        Thread sender_handler write logs to logger/send_logger.txt
+        Thread ack_handler write logs to logger/ack_logger.txt
+        :param model: model == 's', called by sender_handler, model == 'a', called by ack_handler
+        :param s: log content
+        :return:
+        """
         if model != "s" and model != "a":
             print("logger_write: Model error")
 
@@ -113,7 +122,11 @@ class Sender:
         return
 
     def send_handler(self):
-
+        """
+        Thread send_handler works on this method. It calls self.send_worker() and self.retransmit()
+        to be mainly responsible for packets sending and retransmission.
+        :return:
+        """
         print("Send Handler starts")
         while self.is_fin == 0 or len(self.buffer_q) != 0:
             self.send_worker()
@@ -125,31 +138,28 @@ class Sender:
         self.sender_exit()
 
     def send_worker(self):
-        # testonly
-        # print("entering sender_worker")
-        # print(self.next_seq_num)
-        # print((self.next_seq_num + self.MSS) % self.UN_4BYTES_MOD)
-        # print(self.boundary)
-        # print(self.is_fin)
+        """
+        Send the next segments in the window.
+        Each time after a packet was sent, check if there's retransmission.
+        :return:
+        """
 
         while (self.next_seq_num + self.MSS) % self.UN_4BYTES_MOD <= self.boundary and \
                 self.is_fin == 0:
 
-            # print("entering while")
-
-            # 1. get payload
+            # 1. get content from file
             content = self.file_handle.read(self.MSS)
             payload = content.encode() # default: utf8'
 
             # self.logger_write('s', "Send Handler: content is {content}".format(content = content))
             # self.logger_write('s', "Send Handler: payload is {payload}".format(payload = payload.hex()))
 
-            # if waiting fin
+            # Waiting until all the segments are successfully received by the server
             if not payload and self.send_base != self.next_seq_num:
                 self.waiting_fin = 1
                 break
 
-            # if fin
+            # File transmission finished, send a FIN packet
             if not payload and self.send_base == self.next_seq_num:
                 self.waiting_fin = 0
                 self.is_fin = 1
@@ -161,7 +171,7 @@ class Sender:
 
             self.logger_write('s', "Send Handler: Generate_tcp_seg.")
 
-            # 2. cache the tcp segment in a queue
+            # 2. cache the tcp segment in a queue, for faster retransmission
             tcp_seg_tuple = (self.next_seq_num, tcp_seg)
             self.buffer_q.append(tcp_seg_tuple)
 
@@ -170,13 +180,12 @@ class Sender:
             ))
 
             # 3. check if need start the timer
-            # print("self.is_time_on is {is_timer_on}".format(
-            #     is_timer_on = self.is_timer_on))
             if not self.is_timer_on:
                 self.start_timer('s')
                 self.is_timer_on = True
 
-            # check if need sampling
+            # 4. check if need sampling. When there's no segments being sampled currently,
+            # do a new sampling.
             if self.sample_tuple[0] == -1 and not self.is_fin:
                 self.sample_tuple = (self.next_seq_num, time.time())
 
@@ -184,12 +193,12 @@ class Sender:
                     seq_num = self.sample_tuple[0], cur_time = self.sample_tuple[1]
                 ))
 
-            # 4. send data by UDP
+            # 5. send data by UDP
             self.client_socket.sendto(tcp_seg, self.dest_address)
 
             self.logger_write('s', "Send handler: Send the tcp_seg")
 
-            # 5.1 update window parameter
+            # 6.1 update window parameter
             self.next_seq_num += (len(tcp_seg) -20)
             self.next_seq_num = self.next_seq_num % self.UN_4BYTES_MOD
 
@@ -197,26 +206,24 @@ class Sender:
                 seq_num = self.next_seq_num
             ))
 
-            # 5.2 update total number
+            # 6.2 update total number
             if not self.is_fin:
                 self.total_seg_sent += 1
 
 
-            # each time after send a packet, check if there's a timeout
+            # each time after send a packet, check if there's a retransmission
             if self.is_timeout() or self.dup_retrans:
                 self.logger_write('s', "Send Handler: Timeout.")
-                # why break first and
-                # self.retransmit()  # could comment out here
                 break
 
 
     def generate_tcp_seg(self, payload):
         """
-        generate the tcp_seg based on the current status
-        :param payload: data
-        :return:
+        Generate the tcp_seg based on the payload.
+        :param payload: bytes form of the file content string
+        :return: TCP segment to be sent
         """
-        # 1. generate the h_len value
+        # 1. generate the h_len value, 16bits which contains header_length, ACK and FIN
         h_len = (self.header_length << 12) + (self.is_ack << 4) + self.is_fin
 
         # 2. after specify the h_len, we can compute the checksum
@@ -231,29 +238,31 @@ class Sender:
 
         return tcp_segment
 
-        # else:
-        #     # set fin to 1 and send a fin packet
-        #
-        #     return
 
 
-    def get_checksum(self, h_len, payload, test_bytes = None):
+    def get_checksum(self, h_len, payload):
+        """
+        Compute the checksum of the segment.
+
+        :param h_len: 16bits value corresponding to the header_length, ACK, FIN parts in the TCP header
+        :param payload: bytes form of the file content string
+        :return: the checksum of the TCP segment
+        """
 
         checksum = 0
 
+        # 1. get the header sum
         header_sum = self.src_port + self.dest_port + \
                      (self.next_seq_num >> 16) + (self.next_seq_num & 0xFFFF) + \
                      (self.next_ack_num >> 16) + (self.next_ack_num & 0xFFFF) + \
                      h_len
         checksum += header_sum
-
         # print("headersum: {sum}".format(sum = hex(header_sum)))
 
         # 2. get the payload sum
         seg_len = len(payload)
-        # print("seg_len : {length}".format(length = seg_len))  # 18
 
-        # \x00 is a temporary change, the payload is still odd
+        # for odd length of payload, add a byte \x00, because checksum is computed based on 16 bits
         if seg_len % 2:
             seg_len += 1
         seg_stream = struct.pack('!' + str(seg_len) + 's', payload)
@@ -261,6 +270,7 @@ class Sender:
         for short in struct.unpack('!' + str(seg_len // 2) + 'H', seg_stream):
             checksum += short
 
+        # 3. add the overflow bits
         checksum = (checksum >> 16) + (checksum & 0xffff)
         checksum += (checksum >> 16)
 
@@ -270,13 +280,16 @@ class Sender:
 
 
     def retransmit(self):
-
+        """
+        In TCP, retransmit the unACKed segment with the smallest sequence number, which is actually the
+        self.send_base
+        :return:
+        """
         self.logger_write('s', "Retransmit: Retransmit tcp_seg {seq_num}".format(
             seq_num=self.send_base))
 
-        # 1. get the original data
+        # 1. get the original data to be retransmitted
         seq_num, retrans_seg = self.buffer_q[0]
-
 
         # 2. double the time_interval and restart timer
         self.update_timeout_interval(-1)
@@ -285,15 +298,15 @@ class Sender:
         # 3. retransmit the data
         self.client_socket.sendto(retrans_seg, self.dest_address)
 
-        # clear the retrans status
+        # 4. clear the retransmission status
         self.dup_retrans = 0
         self.dup_num = 0
 
 
     def is_timeout(self):
         """
-        check if timeout occurs
-        :return: whether it is timeout
+        Check if timeout occurs.
+        :return: if timeout, return True, otherwise return False
         """
         if self.is_timer_on is False:
             return False
@@ -306,7 +319,12 @@ class Sender:
 
 
     def start_timer(self, model):
-
+        """
+        Start the timer by updating the self.timer_start_time
+        :param model: same as the self.logger_write. 's' means this thread is called by
+        thesender_handler, while 'a' means this method is called by the ack_handler
+        :return:
+        """
         if model != 's' and model != 'a':
             print("start_timer: Model Error")
 
@@ -321,7 +339,11 @@ class Sender:
 
 
     def ack_handler(self):
-
+        """
+        Thread ack_handler works on this method. It calls self.ack_worker() to handle
+        ACKs from the server.
+        :return:
+        """
         print("ACK Handler starts")
         while not self.fin_ack:
             self.ack_worker()
@@ -330,18 +352,22 @@ class Sender:
 
 
     def ack_worker(self):
+        """
+        Handle ACKs from the server.
+        :return:
+        """
 
-        # 1. recv data
-        # recv and recvfrom? recv lets you know the client address
+        # blocking here, waiting for receiving data from the server
         data_recv = self.client_socket.recv(20)
 
         if data_recv:
 
+            # 1. extracting header and ACK, FIN bit from the header
             header = struct.unpack('!2H2L4H', data_recv[0:20])
             ack_num = header[3]
             fin_sign = header[4] % 2
 
-            # fin bit = 1
+            # 2.1 if receive a FIN segment, exit
             if fin_sign:
                 self.logger_write('a', "ACK Handler: receive fin_ack from server, ack_handler exit")
                 self.fin_ack = True
@@ -357,7 +383,7 @@ class Sender:
                 ack_num = ack_num
             ))
 
-            # dup: a <= send_base
+            # 2.2 If receive duplicate ACKs, fast retransmit
             if ack_num == self.send_base:
                 self.dup_num += 1
                 self.logger_write('a', "ACK Handler: Receive {ack_num} {dup_num} times".format(
@@ -366,22 +392,22 @@ class Sender:
                     self.dup_retrans = 1
                     self.logger_write('a', "ACK Handler: Need dup retrans")
 
-            # a > send_base
+            # 2.3 If receive segments with sequence number equal to or larger than the expected
+            # sequence number.
             # if (self.windowsize > ack_num - self.send_base + 1 > 0) or \
             #         self.UN_4BYTES_MOD - self.send_base + ack_num < self.windowsize:
             else:
-                # update send_base and send_boundary
+                # 1. update send_base and send_boundary
                 self.send_base = ack_num
                 self.boundary = (self.send_base + self.windowsize) % self.UN_4BYTES_MOD
                 self.logger_write('a', "Update send_base = {send_base}, Update boundary = {boundary}".format(
                     send_base = self.send_base, boundary = self.boundary
                 ))
-                # self.send_base = self.send_base % self.UN_4BYTES_MOD
 
-                # reset dup_num
+                # 2. reset the duplicate number
                 self.dup_num = 0
 
-                # lookup for a sample hit
+                # 3. lookup for a sample hit. Check whether this segment is sampled before
                 if self.sample_tuple[0] != -1 and ack_num >= self.sample_tuple[0]:
                     cur_time = time.time()
                     sample_rtt = cur_time - self.sample_tuple[1]
@@ -393,26 +419,28 @@ class Sender:
                     # clear self.sample_tuple
                     self.sample_tuple = (-1, -1)
 
-                # deal with packets pool
-                # poll packets from queue until the queue.peek.sequence_number > y
+                # 4. deal with packets pool: poll packets from the buffer until the
+                # queue.peek.sequence_number > ack_num
                 while len(self.buffer_q) > 0 and ack_num > self.buffer_q[0][0]:
                     self.logger_write('a', "ack_num = {ack_num}, pop seg {seq_num}".format(
                         ack_num = ack_num, seq_num = self.buffer_q[0][0]
                     ))
                     self.buffer_q.popleft()
 
-                # check if need restart timer
+                # 5. check if we need restart timer
                 if self.send_base != self.next_seq_num:
                     self.start_timer('a')
                 else:
                     self.is_timer_on = False
 
 
-
-
-    # why I set a default value?
     def update_timeout_interval(self, sample_rtt):
-
+        """
+        Update the timeout_interval which is defined in TCP protocol.
+        When it is a retransmission, double the current timeout_interval
+        :param sample_rtt: sampleRTT
+        :return:
+        """
         if sample_rtt != -1:  # not retrans
             self.estimated_rtt = (1 - self.ALPHA) * self.estimated_rtt + self.ALPHA * sample_rtt
             self.dev_rtt = (1 - self.BETA) * self.dev_rtt + self.BETA * abs(sample_rtt - self.estimated_rtt)
@@ -433,14 +461,24 @@ class Sender:
 
 
     def ack_exit(self):
+        """
+        Define things need to do when the ack_handler is about to exit.
+        Close the txt file and turn off the timer.
+        :return:
+        """
         self.logger_write('a', "ACK Handler: Close the file: {}".format(self.file_path))
         self.file_handle.close()
+
         self.logger_write('a', "Close the timer.")
         self.is_timer_on = False
         print("ACK Handler exits")
 
     def sender_exit(self):
-
+        """
+        Define things need to do when the sender_handler is about to exit.
+        Close the logger file
+        :return:
+        """
         self.logger_write('s', "Close Logger")
         self.send_logger.close()
         self.ack_logger.close()
@@ -469,11 +507,9 @@ if __name__ == '__main__':
     # sender = Sender()
 
     send_thread = Thread(target=sender.send_handler)
-    # send_thread.setDaemon(True)
     send_thread.start()
 
     recv_thread = Thread(target=sender.ack_handler)
-    # recv_thread.setDaemon(True)
     recv_thread.start()
 
 
