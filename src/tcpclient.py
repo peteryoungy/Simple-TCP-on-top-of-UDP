@@ -303,6 +303,11 @@ class Sender:
         # 1. get the original data to be retransmitted
         seq_num, retrans_seg = self.buffer_q.queue[0]
 
+        # # if seq_num == sample_tuple[0], set sample_tuple to (-1, -1)
+        # with self.sample_tuple_lock:
+        #     if seq_num == self.sample_tuple[0]:
+        #         self.sample_tuple = (-1, -1)
+
         # 2. double the time_interval and restart timer
         self.update_timeout_interval(-1)
         self.start_timer('s')
@@ -327,7 +332,10 @@ class Sender:
 
         cur_time = time.time()
 
-        if cur_time - self.timer_start_time > self.get_timeout_interval():
+        if cur_time - self.get_timer_start_time() > self.get_timeout_interval():
+            self.send_logger.write("Timeout occurs for seq_num = {seq_num}".format(
+                seq_num = self.get_send_base()
+            ))
             return True
         return False
 
@@ -541,6 +549,9 @@ class Sender:
         with self.is_timer_on_lock:
             return self.is_timer_on
 
+    def get_timer_start_time(self):
+        with self.timer_start_time_lock:
+            return self.timer_start_time
 
 if __name__ == '__main__':
 
