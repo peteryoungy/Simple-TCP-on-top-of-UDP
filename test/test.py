@@ -187,17 +187,17 @@ from collections import deque
 # read_file()
 
 
-# dict test
-
-dict = {}
-dict[1] = 1
-
-if 2 not in dict.keys():
-    print("2 does not exist")
-
-del dict[1]
-if 1 not in dict.keys():
-    print("1 does not exist")
+# # dict test
+#
+# dict = {}
+# dict[1] = 1
+#
+# if 2 not in dict.keys():
+#     print("2 does not exist")
+#
+# del dict[1]
+# if 1 not in dict.keys():
+#     print("1 does not exist")
 
 
 # # test tuple
@@ -209,29 +209,32 @@ if 1 not in dict.keys():
 # print(a1)
 
 
-# # test Queue
-# q = queue.Queue()
-# q.put(5)
-# q.put(7)
-#
-# """
-# dir() is helpful if you don't want to read the documentation
-# and just want a quick reminder of what attributes are in your object
-# It shows us there is an attribute named queue in the Queue class
-# """
-# for attr in dir(q):
-#     print(attr)
+# test Queue
+q = queue.Queue()
+q.put(5)
+q.put(7)
+
+"""
+dir() is helpful if you don't want to read the documentation
+and just want a quick reminder of what attributes are in your object
+It shows us there is an attribute named queue in the Queue class
+"""
+for attr in dir(q):
+    print(attr)
 
 
-# # Print first element in queue
-# print("\nLooking at the first element")
-# print(q.queue[0])
-#
-# print("\nGetting the first element")
-# print(q.get())
-#
-# print("\nLooking again at the first element")
-# print(q.queue[0])
+# Print first element in queue
+print(q.qsize())
+print("\nLooking at the first element")
+print(q.queue[0])
+
+print(q.qsize())
+print("\nGetting the first element")
+print(q.get())
+
+print(q.qsize())
+print("\nLooking again at the first element")
+print(q.queue[0])
 
 
 

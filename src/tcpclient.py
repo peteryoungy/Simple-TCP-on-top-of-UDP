@@ -1,10 +1,12 @@
 import socket
 import sys
+import threading
 from threading import Thread
+from threading import Lock
 import time
 import struct
 from collections import deque
-
+import queue
 
 MSS = 576
 
@@ -64,7 +66,7 @@ class Sender:
         # self.h_len = 0
 
         # buffer
-        self.buffer_q = deque()
+        self.buffer_q = queue.Queue()
 
         # timer
         self.is_timer_on = False
@@ -83,7 +85,7 @@ class Sender:
         self.prog_running_time = 0
 
         # lock
-
+        self.sample_timeout_lock = Lock()
 
         # init file
         self.file_handle = open(file_path, 'r+')
@@ -128,7 +130,7 @@ class Sender:
         :return:
         """
         print("Send Handler starts")
-        while self.is_fin == 0 or len(self.buffer_q) != 0:
+        while self.is_fin == 0 or not self.buffer_q.empty():
             self.send_worker()
 
             # print("exit from send_worker")
@@ -173,7 +175,7 @@ class Sender:
 
             # 2. cache the tcp segment in a queue, for faster retransmission
             tcp_seg_tuple = (self.next_seq_num, tcp_seg)
-            self.buffer_q.append(tcp_seg_tuple)
+            self.buffer_q.put(tcp_seg_tuple)
 
             self.logger_write('s', "Send Handler: append tcp_seg into self.buffer_q with seq_num:{seq_num}".format(
                 seq_num = self.next_seq_num
@@ -186,12 +188,13 @@ class Sender:
 
             # 4. check if need sampling. When there's no segments being sampled currently,
             # do a new sampling.
-            if self.sample_tuple[0] == -1 and not self.is_fin:
-                self.sample_tuple = (self.next_seq_num, time.time())
+            with self.sample_timeout_lock:
+                if self.sample_tuple[0] == -1 and not self.is_fin:
+                    self.sample_tuple = (self.next_seq_num, time.time())
 
-                self.logger_write('s', "Send Handler: Sampling with seq_num = {seq_num}, current time = {cur_time}".format(
-                    seq_num = self.sample_tuple[0], cur_time = self.sample_tuple[1]
-                ))
+                    self.logger_write('s', "Send Handler: Sampling with seq_num = {seq_num}, current time = {cur_time}".format(
+                        seq_num = self.sample_tuple[0], cur_time = self.sample_tuple[1]
+                    ))
 
             # 5. send data by UDP
             self.client_socket.sendto(tcp_seg, self.dest_address)
@@ -289,10 +292,11 @@ class Sender:
             seq_num=self.send_base))
 
         # 1. get the original data to be retransmitted
-        seq_num, retrans_seg = self.buffer_q[0]
+        seq_num, retrans_seg = self.buffer_q.queue[0]
 
         # 2. double the time_interval and restart timer
-        self.update_timeout_interval(-1)
+        with self.sample_timeout_lock:
+            self.update_timeout_interval(-1)
         self.start_timer('s')
 
         # 3. retransmit the data
@@ -371,12 +375,11 @@ class Sender:
             if fin_sign:
                 self.logger_write('a', "ACK Handler: receive fin_ack from server, ack_handler exit")
                 self.fin_ack = True
+
                 # clear the buffer_q
-                # counter = 0
-                while len(self.buffer_q) != 0:
-                    self.buffer_q.popleft()
-                    # counter += 1
-                # print(f"counter = {counter}")
+                while not self.buffer_q.empty():
+                    self.buffer_q.get()
+
                 return
 
             self.logger_write('a', 'Receive packets from server with ack_num = {ack_num}'.format(
@@ -408,24 +411,25 @@ class Sender:
                 self.dup_num = 0
 
                 # 3. lookup for a sample hit. Check whether this segment is sampled before
-                if self.sample_tuple[0] != -1 and ack_num >= self.sample_tuple[0]:
-                    cur_time = time.time()
-                    sample_rtt = cur_time - self.sample_tuple[1]
-                    self.update_timeout_interval(sample_rtt)
+                with self.sample_timeout_lock:
+                    if self.sample_tuple[0] != -1 and ack_num >= self.sample_tuple[0]:
+                        cur_time = time.time()
+                        sample_rtt = cur_time - self.sample_tuple[1]
+                        self.update_timeout_interval(sample_rtt)
 
-                    self.logger_write('a', "ACK Handler: sample hit: ack_num = {ack_num}, seq_num = {seq_num}".format(
-                        ack_num = ack_num, seq_num = self.sample_tuple[0],
-                    ))
-                    # clear self.sample_tuple
-                    self.sample_tuple = (-1, -1)
+                        self.logger_write('a', "ACK Handler: sample hit: ack_num = {ack_num}, seq_num = {seq_num}".format(
+                            ack_num = ack_num, seq_num = self.sample_tuple[0],
+                        ))
+                        # clear self.sample_tuple
+                        self.sample_tuple = (-1, -1)
 
                 # 4. deal with packets pool: poll packets from the buffer until the
                 # queue.peek.sequence_number > ack_num
-                while len(self.buffer_q) > 0 and ack_num > self.buffer_q[0][0]:
+                while not self.buffer_q.empty() and ack_num > self.buffer_q.queue[0][0]:
                     self.logger_write('a', "ack_num = {ack_num}, pop seg {seq_num}".format(
-                        ack_num = ack_num, seq_num = self.buffer_q[0][0]
+                        ack_num = ack_num, seq_num = self.buffer_q.queue[0][0]
                     ))
-                    self.buffer_q.popleft()
+                    self.buffer_q.get()
 
                 # 5. check if we need restart timer
                 if self.send_base != self.next_seq_num:

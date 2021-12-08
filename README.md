@@ -369,20 +369,22 @@ check the seq_num
 shared memory
 
 ```
+send_base  
+boundary 
 dup_num   getter setter
 dup_retrans   getter setter
+is_timer_on
 
-update_timeout_interval???
+update_timeout_interval
 start_timer
 
-is_timer_on
+
 
 self.buffer_q
 sample_tuple
 
 
-send_base 
-boundary   
+  
 
 
 
