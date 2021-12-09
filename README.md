@@ -31,7 +31,7 @@ CSEE4119 project.
 ##### Client
 
 ```bash
-tcpclient files/read_from.txt 192.168.192.134 41192 2880 12114
+tcpclient files/read_from.txt 192.168.192.134 41192 5760 12114
 ```
 
 ##### Server
@@ -43,7 +43,7 @@ tcpserver files/write_to.txt 12112 192.168.192.1 12114
 ##### newudpl
 
 ```bash
-./ newudpl -i 192.168.192.1:* -o 192.168.192.134:12112 -L 10 -O 10 -B 10
+./newudpl -i 192.168.192.1:* -o 192.168.192.134:12112 -L 10 -O 10 -B 10
 ```
 
 

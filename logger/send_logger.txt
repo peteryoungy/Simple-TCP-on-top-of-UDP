@@ -1,1142 +1,1327 @@
-2021/12/8 15:12:13 : Init finished
-2021/12/8 15:12:13 : Send Handler: checksum is 0xe33a
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:0
-2021/12/8 15:12:13 : Start timer with timeout_interval = 1
-2021/12/8 15:12:13 : Send Handler: Sampling with seq_num = 0, current time = 1638994333.0160291
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 576
-2021/12/8 15:12:13 : Send Handler: checksum is 0xb616
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:576
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 1152
-2021/12/8 15:12:13 : Send Handler: checksum is 0x5d45
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:1152
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 1728
-2021/12/8 15:12:13 : Send Handler: checksum is 0xbffa
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:1728
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 2304
-2021/12/8 15:12:13 : Send Handler: checksum is 0x3398
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:2304
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 2880
-2021/12/8 15:12:13 : Send Handler: checksum is 0x81bf
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:2880
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 3456
-2021/12/8 15:12:13 : Send Handler: checksum is 0x3dec
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:3456
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 4032
-2021/12/8 15:12:13 : Send Handler: checksum is 0x9450
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:4032
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 4608
-2021/12/8 15:12:13 : Send Handler: checksum is 0xdfc6
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:4608
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 5184
-2021/12/8 15:12:13 : Send Handler: checksum is 0xc406
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:5184
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 5760
-2021/12/8 15:12:13 : Send Handler: checksum is 0xb952
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:5760
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 6336
-2021/12/8 15:12:13 : Send Handler: checksum is 0xf5c7
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:6336
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 6912
-2021/12/8 15:12:13 : Send Handler: checksum is 0x810c
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:6912
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 7488
-2021/12/8 15:12:13 : Send Handler: checksum is 0x7148
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:7488
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 8064
-2021/12/8 15:12:13 : Send Handler: checksum is 0x2210
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:8064
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 8640
-2021/12/8 15:12:13 : Send Handler: checksum is 0x76db
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:8640
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 9216
-2021/12/8 15:12:13 : Send Handler: checksum is 0x6260
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:9216
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 9792
-2021/12/8 15:12:13 : Send Handler: checksum is 0xdafa
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:9792
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 10368
-2021/12/8 15:12:13 : Send Handler: checksum is 0x7271
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:10368
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 10944
-2021/12/8 15:12:13 : Send Handler: checksum is 0x4342
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:10944
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 11520
-2021/12/8 15:12:13 : Send Handler: checksum is 0x93b
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:11520
-2021/12/8 15:12:13 : Send Handler: Sampling with seq_num = 11520, current time = 1638994333.0360389
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 12096
-2021/12/8 15:12:13 : Send Handler: checksum is 0xbc43
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:12096
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 12672
-2021/12/8 15:12:13 : Send Handler: checksum is 0x8077
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:12672
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 13248
-2021/12/8 15:12:13 : Send Handler: checksum is 0x8bd5
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:13248
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 13824
-2021/12/8 15:12:13 : Send Handler: checksum is 0x69be
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:13824
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 14400
-2021/12/8 15:12:13 : Send Handler: checksum is 0x5427
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:14400
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 14976
-2021/12/8 15:12:13 : Send Handler: checksum is 0x1e36
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:14976
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 15552
-2021/12/8 15:12:13 : Send Handler: checksum is 0xafed
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:15552
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 16128
-2021/12/8 15:12:13 : Send Handler: checksum is 0x4b80
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:16128
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 16704
-2021/12/8 15:12:13 : Send Handler: checksum is 0x3470
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:16704
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 17280
-2021/12/8 15:12:13 : Send Handler: checksum is 0xdf32
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:17280
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 17856
-2021/12/8 15:12:13 : Send Handler: checksum is 0x969e
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:17856
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 18432
-2021/12/8 15:12:13 : Send Handler: checksum is 0x9d67
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:18432
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 19008
-2021/12/8 15:12:13 : Retransmit: Retransmit tcp_seg 7488
-2021/12/8 15:12:13 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:13 : Start timer with timeout_interval = 3
-2021/12/8 15:12:13 : Retransmit: Retransmit tcp_seg 7488
-2021/12/8 15:12:13 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:13 : Start timer with timeout_interval = 3
-2021/12/8 15:12:13 : Retransmit: Retransmit tcp_seg 7488
-2021/12/8 15:12:13 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:13 : Start timer with timeout_interval = 3
-2021/12/8 15:12:13 : Send Handler: checksum is 0x7089
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:19008
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 19584
-2021/12/8 15:12:13 : Retransmit: Retransmit tcp_seg 8064
-2021/12/8 15:12:13 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:13 : Start timer with timeout_interval = 3
-2021/12/8 15:12:13 : Send Handler: checksum is 0xfc66
-2021/12/8 15:12:13 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:13 : Send Handler: append tcp_seg into self.buffer_q with seq_num:19584
-2021/12/8 15:12:13 : Send handler: Send the tcp_seg
-2021/12/8 15:12:13 : Send Handler: Update self.next_seq_num to 20160
-2021/12/8 15:12:16 : Retransmit: Retransmit tcp_seg 8640
-2021/12/8 15:12:16 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:16 : Start timer with timeout_interval = 3
-2021/12/8 15:12:16 : Send Handler: checksum is 0xceba
-2021/12/8 15:12:16 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:16 : Send Handler: append tcp_seg into self.buffer_q with seq_num:20160
-2021/12/8 15:12:16 : Send handler: Send the tcp_seg
-2021/12/8 15:12:16 : Send Handler: Update self.next_seq_num to 20736
-2021/12/8 15:12:19 : Retransmit: Retransmit tcp_seg 9216
-2021/12/8 15:12:19 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:19 : Start timer with timeout_interval = 3
-2021/12/8 15:12:19 : Send Handler: checksum is 0x3f36
-2021/12/8 15:12:19 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:19 : Send Handler: append tcp_seg into self.buffer_q with seq_num:20736
-2021/12/8 15:12:19 : Send handler: Send the tcp_seg
-2021/12/8 15:12:19 : Send Handler: Update self.next_seq_num to 21312
-2021/12/8 15:12:22 : Retransmit: Retransmit tcp_seg 9792
-2021/12/8 15:12:22 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:22 : Start timer with timeout_interval = 3
-2021/12/8 15:12:22 : Send Handler: checksum is 0x7243
-2021/12/8 15:12:22 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:22 : Send Handler: append tcp_seg into self.buffer_q with seq_num:21312
-2021/12/8 15:12:22 : Send handler: Send the tcp_seg
-2021/12/8 15:12:22 : Send Handler: Update self.next_seq_num to 21888
-2021/12/8 15:12:25 : Retransmit: Retransmit tcp_seg 10368
-2021/12/8 15:12:25 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:25 : Start timer with timeout_interval = 3
-2021/12/8 15:12:25 : Send Handler: checksum is 0x89ac
-2021/12/8 15:12:25 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:25 : Send Handler: append tcp_seg into self.buffer_q with seq_num:21888
-2021/12/8 15:12:25 : Send handler: Send the tcp_seg
-2021/12/8 15:12:25 : Send Handler: Update self.next_seq_num to 22464
-2021/12/8 15:12:28 : Retransmit: Retransmit tcp_seg 10944
-2021/12/8 15:12:28 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:28 : Start timer with timeout_interval = 3
-2021/12/8 15:12:28 : Send Handler: checksum is 0xfdc0
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:22464
-2021/12/8 15:12:28 : Start timer with timeout_interval = 3
-2021/12/8 15:12:28 : Send Handler: Sampling with seq_num = 22464, current time = 1638994348.392494
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 23040
-2021/12/8 15:12:28 : Send Handler: checksum is 0x79a5
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:23040
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 23616
-2021/12/8 15:12:28 : Send Handler: checksum is 0x4cbe
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:23616
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 24192
-2021/12/8 15:12:28 : Send Handler: checksum is 0x1990
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:24192
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 24768
-2021/12/8 15:12:28 : Send Handler: checksum is 0x157c
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:24768
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 25344
-2021/12/8 15:12:28 : Send Handler: checksum is 0xf6d4
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:25344
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 25920
-2021/12/8 15:12:28 : Send Handler: checksum is 0xce2f
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:25920
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 26496
-2021/12/8 15:12:28 : Send Handler: checksum is 0xf8cd
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:26496
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 27072
-2021/12/8 15:12:28 : Send Handler: checksum is 0x1b1c
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:27072
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 27648
-2021/12/8 15:12:28 : Send Handler: checksum is 0x8963
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:27648
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 28224
-2021/12/8 15:12:28 : Send Handler: checksum is 0x3be3
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:28224
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 28800
-2021/12/8 15:12:28 : Send Handler: checksum is 0x2581
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:28800
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 29376
-2021/12/8 15:12:28 : Send Handler: checksum is 0x535d
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:29376
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 29952
-2021/12/8 15:12:28 : Send Handler: checksum is 0xd183
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:29952
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 30528
-2021/12/8 15:12:28 : Send Handler: checksum is 0x21f2
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:30528
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 31104
-2021/12/8 15:12:28 : Send Handler: checksum is 0xa560
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:31104
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 31680
-2021/12/8 15:12:28 : Send Handler: checksum is 0xfe3e
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:31680
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 32256
-2021/12/8 15:12:28 : Send Handler: checksum is 0x7244
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:32256
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 32832
-2021/12/8 15:12:28 : Send Handler: checksum is 0x90fc
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:32832
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 33408
-2021/12/8 15:12:28 : Send Handler: checksum is 0x7564
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:33408
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 33984
-2021/12/8 15:12:28 : Send Handler: checksum is 0xcfb6
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:33984
-2021/12/8 15:12:28 : Send Handler: Sampling with seq_num = 33984, current time = 1638994348.4114902
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 34560
-2021/12/8 15:12:28 : Send Handler: checksum is 0x71ed
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:34560
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 35136
-2021/12/8 15:12:28 : Send Handler: checksum is 0x768b
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:35136
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 35712
-2021/12/8 15:12:28 : Send Handler: checksum is 0xafa0
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:35712
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 36288
-2021/12/8 15:12:28 : Send Handler: checksum is 0xdfbd
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:36288
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 36864
-2021/12/8 15:12:28 : Send Handler: checksum is 0xda57
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:36864
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 37440
-2021/12/8 15:12:28 : Send Handler: checksum is 0x861
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:37440
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 38016
-2021/12/8 15:12:28 : Send Handler: checksum is 0xb19a
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:38016
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 38592
-2021/12/8 15:12:28 : Send Handler: checksum is 0x400a
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:38592
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 39168
-2021/12/8 15:12:28 : Send Handler: checksum is 0xf7db
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:39168
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 39744
-2021/12/8 15:12:28 : Send Handler: checksum is 0xab78
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:39744
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 40320
-2021/12/8 15:12:28 : Send Handler: checksum is 0xb9a6
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:40320
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 40896
-2021/12/8 15:12:28 : Send Handler: checksum is 0x6dc
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:40896
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 41472
-2021/12/8 15:12:28 : Retransmit: Retransmit tcp_seg 29952
-2021/12/8 15:12:28 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:28 : Start timer with timeout_interval = 3
-2021/12/8 15:12:28 : Retransmit: Retransmit tcp_seg 29952
-2021/12/8 15:12:28 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:28 : Start timer with timeout_interval = 3
-2021/12/8 15:12:28 : Send Handler: checksum is 0x7684
-2021/12/8 15:12:28 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:28 : Send Handler: append tcp_seg into self.buffer_q with seq_num:41472
-2021/12/8 15:12:28 : Send handler: Send the tcp_seg
-2021/12/8 15:12:28 : Send Handler: Update self.next_seq_num to 42048
-2021/12/8 15:12:31 : Retransmit: Retransmit tcp_seg 30528
-2021/12/8 15:12:31 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:31 : Start timer with timeout_interval = 3
-2021/12/8 15:12:31 : Send Handler: checksum is 0x113a
-2021/12/8 15:12:31 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:31 : Send Handler: append tcp_seg into self.buffer_q with seq_num:42048
-2021/12/8 15:12:31 : Send handler: Send the tcp_seg
-2021/12/8 15:12:31 : Send Handler: Update self.next_seq_num to 42624
-2021/12/8 15:12:34 : Retransmit: Retransmit tcp_seg 31104
-2021/12/8 15:12:34 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:34 : Start timer with timeout_interval = 3
-2021/12/8 15:12:34 : Send Handler: checksum is 0xcd38
-2021/12/8 15:12:34 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:34 : Send Handler: append tcp_seg into self.buffer_q with seq_num:42624
-2021/12/8 15:12:34 : Send handler: Send the tcp_seg
-2021/12/8 15:12:34 : Send Handler: Update self.next_seq_num to 43200
-2021/12/8 15:12:37 : Retransmit: Retransmit tcp_seg 31680
-2021/12/8 15:12:37 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:37 : Start timer with timeout_interval = 3
-2021/12/8 15:12:37 : Send Handler: checksum is 0x257e
-2021/12/8 15:12:37 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:37 : Send Handler: append tcp_seg into self.buffer_q with seq_num:43200
-2021/12/8 15:12:37 : Send handler: Send the tcp_seg
-2021/12/8 15:12:37 : Send Handler: Update self.next_seq_num to 43776
-2021/12/8 15:12:40 : Retransmit: Retransmit tcp_seg 32256
-2021/12/8 15:12:40 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:40 : Start timer with timeout_interval = 3
-2021/12/8 15:12:40 : Send Handler: checksum is 0xff0e
-2021/12/8 15:12:40 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:40 : Send Handler: append tcp_seg into self.buffer_q with seq_num:43776
-2021/12/8 15:12:40 : Send handler: Send the tcp_seg
-2021/12/8 15:12:40 : Send Handler: Update self.next_seq_num to 44352
-2021/12/8 15:12:43 : Retransmit: Retransmit tcp_seg 32832
-2021/12/8 15:12:43 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:43 : Start timer with timeout_interval = 3
-2021/12/8 15:12:43 : Send Handler: checksum is 0xebd9
-2021/12/8 15:12:43 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:43 : Send Handler: append tcp_seg into self.buffer_q with seq_num:44352
-2021/12/8 15:12:43 : Send handler: Send the tcp_seg
-2021/12/8 15:12:43 : Send Handler: Update self.next_seq_num to 44928
-2021/12/8 15:12:46 : Retransmit: Retransmit tcp_seg 33408
-2021/12/8 15:12:46 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:46 : Start timer with timeout_interval = 3
-2021/12/8 15:12:46 : Send Handler: checksum is 0xc2ec
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:44928
-2021/12/8 15:12:46 : Send Handler: Sampling with seq_num = 44928, current time = 1638994366.6130998
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 45504
-2021/12/8 15:12:46 : Send Handler: checksum is 0x8632
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:45504
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 46080
-2021/12/8 15:12:46 : Send Handler: checksum is 0x6ae0
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:46080
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 46656
-2021/12/8 15:12:46 : Send Handler: checksum is 0x2222
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:46656
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 47232
-2021/12/8 15:12:46 : Send Handler: checksum is 0x75ef
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:47232
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 47808
-2021/12/8 15:12:46 : Send Handler: checksum is 0xf055
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:47808
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 48384
-2021/12/8 15:12:46 : Send Handler: checksum is 0xbe79
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:48384
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 48960
-2021/12/8 15:12:46 : Send Handler: checksum is 0xd04c
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:48960
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 49536
-2021/12/8 15:12:46 : Send Handler: checksum is 0x3592
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:49536
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 50112
-2021/12/8 15:12:46 : Send Handler: checksum is 0xec10
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:50112
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 50688
-2021/12/8 15:12:46 : Send Handler: checksum is 0x8afa
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:50688
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 51264
-2021/12/8 15:12:46 : Send Handler: checksum is 0x3c7
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:51264
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 51840
-2021/12/8 15:12:46 : Send Handler: checksum is 0x7084
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:51840
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 52416
-2021/12/8 15:12:46 : Send Handler: checksum is 0xaba3
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:52416
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 52992
-2021/12/8 15:12:46 : Send Handler: checksum is 0xa53f
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:52992
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 53568
-2021/12/8 15:12:46 : Send Handler: checksum is 0x1324
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:53568
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 54144
-2021/12/8 15:12:46 : Send Handler: checksum is 0x3f44
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:54144
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 54720
-2021/12/8 15:12:46 : Send Handler: checksum is 0xe732
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:54720
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 55296
-2021/12/8 15:12:46 : Send Handler: checksum is 0xef56
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:55296
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 55872
-2021/12/8 15:12:46 : Send Handler: checksum is 0x3ac7
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:55872
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 56448
-2021/12/8 15:12:46 : Send Handler: checksum is 0xd102
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:56448
-2021/12/8 15:12:46 : Send Handler: Sampling with seq_num = 56448, current time = 1638994366.6320531
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 57024
-2021/12/8 15:12:46 : Send Handler: checksum is 0xfba6
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:57024
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 57600
-2021/12/8 15:12:46 : Send Handler: checksum is 0x596f
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:57600
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 58176
-2021/12/8 15:12:46 : Send Handler: checksum is 0x2bdb
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:58176
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 58752
-2021/12/8 15:12:46 : Send Handler: checksum is 0xd8a4
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:58752
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 59328
-2021/12/8 15:12:46 : Send Handler: checksum is 0x6f73
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:59328
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 59904
-2021/12/8 15:12:46 : Send Handler: checksum is 0x5d
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:59904
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 60480
-2021/12/8 15:12:46 : Send Handler: checksum is 0xb094
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:60480
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 61056
-2021/12/8 15:12:46 : Send Handler: checksum is 0xa518
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:61056
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 61632
-2021/12/8 15:12:46 : Send Handler: checksum is 0xb210
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:61632
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 62208
-2021/12/8 15:12:46 : Send Handler: checksum is 0xa154
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:62208
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 62784
-2021/12/8 15:12:46 : Send Handler: checksum is 0x313e
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:62784
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 63360
-2021/12/8 15:12:46 : Send Handler: checksum is 0x563d
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:63360
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 63936
-2021/12/8 15:12:46 : Retransmit: Retransmit tcp_seg 52416
-2021/12/8 15:12:46 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:46 : Start timer with timeout_interval = 3
-2021/12/8 15:12:46 : Retransmit: Retransmit tcp_seg 52416
-2021/12/8 15:12:46 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:46 : Start timer with timeout_interval = 3
-2021/12/8 15:12:46 : Send Handler: checksum is 0x31ef
-2021/12/8 15:12:46 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:46 : Send Handler: append tcp_seg into self.buffer_q with seq_num:63936
-2021/12/8 15:12:46 : Send handler: Send the tcp_seg
-2021/12/8 15:12:46 : Send Handler: Update self.next_seq_num to 64512
-2021/12/8 15:12:49 : Retransmit: Retransmit tcp_seg 52992
-2021/12/8 15:12:49 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:49 : Start timer with timeout_interval = 3
-2021/12/8 15:12:49 : Send Handler: checksum is 0xdd2
-2021/12/8 15:12:49 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:49 : Send Handler: append tcp_seg into self.buffer_q with seq_num:64512
-2021/12/8 15:12:49 : Send handler: Send the tcp_seg
-2021/12/8 15:12:49 : Send Handler: Update self.next_seq_num to 65088
-2021/12/8 15:12:52 : Retransmit: Retransmit tcp_seg 53568
-2021/12/8 15:12:52 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:52 : Start timer with timeout_interval = 3
-2021/12/8 15:12:52 : Send Handler: checksum is 0xea59
-2021/12/8 15:12:52 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:52 : Send Handler: append tcp_seg into self.buffer_q with seq_num:65088
-2021/12/8 15:12:52 : Send handler: Send the tcp_seg
-2021/12/8 15:12:52 : Send Handler: Update self.next_seq_num to 65664
-2021/12/8 15:12:55 : Retransmit: Retransmit tcp_seg 54144
-2021/12/8 15:12:55 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:55 : Start timer with timeout_interval = 3
-2021/12/8 15:12:55 : Send Handler: checksum is 0x3f13
-2021/12/8 15:12:55 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:65664
-2021/12/8 15:12:55 : Send handler: Send the tcp_seg
-2021/12/8 15:12:55 : Send Handler: Update self.next_seq_num to 66240
-2021/12/8 15:12:58 : Retransmit: Retransmit tcp_seg 54720
-2021/12/8 15:12:58 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:12:58 : Start timer with timeout_interval = 3
-2021/12/8 15:12:58 : Send Handler: checksum is 0xdfcb
-2021/12/8 15:12:58 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:12:58 : Send Handler: append tcp_seg into self.buffer_q with seq_num:66240
-2021/12/8 15:12:58 : Send handler: Send the tcp_seg
-2021/12/8 15:12:58 : Send Handler: Update self.next_seq_num to 66816
-2021/12/8 15:13:1 : Retransmit: Retransmit tcp_seg 55296
-2021/12/8 15:13:1 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:1 : Start timer with timeout_interval = 3
-2021/12/8 15:13:1 : Send Handler: checksum is 0x9f64
-2021/12/8 15:13:1 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:1 : Send Handler: append tcp_seg into self.buffer_q with seq_num:66816
-2021/12/8 15:13:1 : Send handler: Send the tcp_seg
-2021/12/8 15:13:1 : Send Handler: Update self.next_seq_num to 67392
-2021/12/8 15:13:4 : Retransmit: Retransmit tcp_seg 55872
-2021/12/8 15:13:4 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:4 : Start timer with timeout_interval = 3
-2021/12/8 15:13:4 : Send Handler: checksum is 0xfac1
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:67392
-2021/12/8 15:13:4 : Send Handler: Sampling with seq_num = 67392, current time = 1638994384.8589358
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 67968
-2021/12/8 15:13:4 : Send Handler: checksum is 0xe47e
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:67968
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 68544
-2021/12/8 15:13:4 : Send Handler: checksum is 0x3f6c
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:68544
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 69120
-2021/12/8 15:13:4 : Send Handler: checksum is 0x2e12
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:69120
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 69696
-2021/12/8 15:13:4 : Send Handler: checksum is 0x23c2
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:69696
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 70272
-2021/12/8 15:13:4 : Send Handler: checksum is 0xe432
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:70272
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 70848
-2021/12/8 15:13:4 : Send Handler: checksum is 0x61f8
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:70848
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 71424
-2021/12/8 15:13:4 : Send Handler: checksum is 0x94a9
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:71424
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 72000
-2021/12/8 15:13:4 : Send Handler: checksum is 0xce11
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:72000
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 72576
-2021/12/8 15:13:4 : Send Handler: checksum is 0xcd8c
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:72576
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 73152
-2021/12/8 15:13:4 : Send Handler: checksum is 0x4fce
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:73152
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 73728
-2021/12/8 15:13:4 : Send Handler: checksum is 0x86c6
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:73728
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 74304
-2021/12/8 15:13:4 : Send Handler: checksum is 0x81eb
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:74304
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 74880
-2021/12/8 15:13:4 : Send Handler: checksum is 0x3e29
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:74880
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 75456
-2021/12/8 15:13:4 : Send Handler: checksum is 0x8b21
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:75456
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 76032
-2021/12/8 15:13:4 : Send Handler: checksum is 0xa079
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:76032
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 76608
-2021/12/8 15:13:4 : Send Handler: checksum is 0x2331
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:76608
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 77184
-2021/12/8 15:13:4 : Send Handler: checksum is 0x2b44
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:77184
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 77760
-2021/12/8 15:13:4 : Send Handler: checksum is 0x6b08
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:77760
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 78336
-2021/12/8 15:13:4 : Send Handler: checksum is 0xf6f1
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:78336
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 78912
-2021/12/8 15:13:4 : Send Handler: checksum is 0x6089
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:78912
-2021/12/8 15:13:4 : Send Handler: Sampling with seq_num = 78912, current time = 1638994384.8789473
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 79488
-2021/12/8 15:13:4 : Send Handler: checksum is 0xe02
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:79488
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 80064
-2021/12/8 15:13:4 : Send Handler: checksum is 0xa03d
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:80064
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 80640
-2021/12/8 15:13:4 : Send Handler: checksum is 0xb072
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:80640
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 81216
-2021/12/8 15:13:4 : Send Handler: checksum is 0xae1f
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:81216
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 81792
-2021/12/8 15:13:4 : Send Handler: checksum is 0x9a3
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:81792
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 82368
-2021/12/8 15:13:4 : Send Handler: checksum is 0x1ee1
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:82368
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 82944
-2021/12/8 15:13:4 : Send Handler: checksum is 0xf94a
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:82944
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 83520
-2021/12/8 15:13:4 : Send Handler: checksum is 0xb300
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:83520
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 84096
-2021/12/8 15:13:4 : Send Handler: checksum is 0xfaaa
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:84096
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 84672
-2021/12/8 15:13:4 : Send Handler: checksum is 0x8676
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:84672
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 85248
-2021/12/8 15:13:4 : Send Handler: checksum is 0xe4e9
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:85248
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 85824
-2021/12/8 15:13:4 : Send Handler: checksum is 0xd348
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:85824
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 86400
-2021/12/8 15:13:4 : Retransmit: Retransmit tcp_seg 74880
-2021/12/8 15:13:4 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:4 : Start timer with timeout_interval = 3
-2021/12/8 15:13:4 : Retransmit: Retransmit tcp_seg 74880
-2021/12/8 15:13:4 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:4 : Start timer with timeout_interval = 3
-2021/12/8 15:13:4 : Send Handler: checksum is 0x164d
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:86400
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 86976
-2021/12/8 15:13:4 : Send Handler: checksum is 0x39cb
-2021/12/8 15:13:4 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:4 : Send Handler: append tcp_seg into self.buffer_q with seq_num:86976
-2021/12/8 15:13:4 : Send handler: Send the tcp_seg
-2021/12/8 15:13:4 : Send Handler: Update self.next_seq_num to 87552
-2021/12/8 15:13:7 : Retransmit: Retransmit tcp_seg 76032
-2021/12/8 15:13:7 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:7 : Start timer with timeout_interval = 3
-2021/12/8 15:13:8 : Send Handler: checksum is 0x2537
-2021/12/8 15:13:8 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:8 : Send Handler: append tcp_seg into self.buffer_q with seq_num:87552
-2021/12/8 15:13:8 : Send handler: Send the tcp_seg
-2021/12/8 15:13:8 : Send Handler: Update self.next_seq_num to 88128
-2021/12/8 15:13:11 : Retransmit: Retransmit tcp_seg 76608
-2021/12/8 15:13:11 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:11 : Start timer with timeout_interval = 3
-2021/12/8 15:13:11 : Send Handler: checksum is 0xff32
-2021/12/8 15:13:11 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:88128
-2021/12/8 15:13:11 : Send handler: Send the tcp_seg
-2021/12/8 15:13:11 : Send Handler: Update self.next_seq_num to 88704
-2021/12/8 15:13:14 : Retransmit: Retransmit tcp_seg 77184
-2021/12/8 15:13:14 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:14 : Start timer with timeout_interval = 3
-2021/12/8 15:13:14 : Send Handler: checksum is 0xb9d0
-2021/12/8 15:13:14 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:14 : Send Handler: append tcp_seg into self.buffer_q with seq_num:88704
-2021/12/8 15:13:14 : Send handler: Send the tcp_seg
-2021/12/8 15:13:14 : Send Handler: Update self.next_seq_num to 89280
-2021/12/8 15:13:17 : Retransmit: Retransmit tcp_seg 77760
-2021/12/8 15:13:17 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:17 : Start timer with timeout_interval = 3
-2021/12/8 15:13:17 : Send Handler: checksum is 0x799a
-2021/12/8 15:13:17 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:17 : Send Handler: append tcp_seg into self.buffer_q with seq_num:89280
-2021/12/8 15:13:17 : Send handler: Send the tcp_seg
-2021/12/8 15:13:17 : Send Handler: Update self.next_seq_num to 89856
-2021/12/8 15:13:20 : Retransmit: Retransmit tcp_seg 78336
-2021/12/8 15:13:20 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:20 : Start timer with timeout_interval = 3
-2021/12/8 15:13:20 : Send Handler: checksum is 0x5430
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:89856
-2021/12/8 15:13:20 : Send Handler: Sampling with seq_num = 89856, current time = 1638994400.0901
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 90432
-2021/12/8 15:13:20 : Send Handler: checksum is 0xfed0
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:90432
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 91008
-2021/12/8 15:13:20 : Send Handler: checksum is 0xdacc
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:91008
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 91584
-2021/12/8 15:13:20 : Send Handler: checksum is 0x204c
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:91584
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 92160
-2021/12/8 15:13:20 : Send Handler: checksum is 0xd0d2
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:92160
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 92736
-2021/12/8 15:13:20 : Send Handler: checksum is 0xa722
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:92736
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 93312
-2021/12/8 15:13:20 : Send Handler: checksum is 0x3ca8
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:93312
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 93888
-2021/12/8 15:13:20 : Send Handler: checksum is 0x6b92
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:93888
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 94464
-2021/12/8 15:13:20 : Send Handler: checksum is 0x8acf
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:94464
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 95040
-2021/12/8 15:13:20 : Send Handler: checksum is 0x9ea1
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:95040
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 95616
-2021/12/8 15:13:20 : Send Handler: checksum is 0x5688
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:95616
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 96192
-2021/12/8 15:13:20 : Send Handler: checksum is 0xfecd
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:96192
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 96768
-2021/12/8 15:13:20 : Send Handler: checksum is 0x63
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:96768
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 97344
-2021/12/8 15:13:20 : Send Handler: checksum is 0x4169
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:97344
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 97920
-2021/12/8 15:13:20 : Send Handler: checksum is 0xfcf4
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:97920
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 98496
-2021/12/8 15:13:20 : Send Handler: checksum is 0x1676
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:98496
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 99072
-2021/12/8 15:13:20 : Send Handler: checksum is 0xa9c4
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:99072
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 99648
-2021/12/8 15:13:20 : Send Handler: checksum is 0x342c
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:99648
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 100224
-2021/12/8 15:13:20 : Send Handler: checksum is 0x9456
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:100224
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 100800
-2021/12/8 15:13:20 : Send Handler: checksum is 0x7ff0
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:100800
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 101376
-2021/12/8 15:13:20 : Send Handler: checksum is 0x801d
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:101376
-2021/12/8 15:13:20 : Send Handler: Sampling with seq_num = 101376, current time = 1638994400.1099348
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 101952
-2021/12/8 15:13:20 : Send Handler: checksum is 0x6b3b
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:101952
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 102528
-2021/12/8 15:13:20 : Send Handler: checksum is 0x9c04
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:102528
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 103104
-2021/12/8 15:13:20 : Send Handler: checksum is 0xa055
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:103104
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 103680
-2021/12/8 15:13:20 : Send Handler: checksum is 0x49c7
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:103680
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 104256
-2021/12/8 15:13:20 : Send Handler: checksum is 0x7349
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:104256
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 104832
-2021/12/8 15:13:20 : Send Handler: checksum is 0x87a5
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:104832
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 105408
-2021/12/8 15:13:20 : Send Handler: checksum is 0xebad
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:105408
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 105984
-2021/12/8 15:13:20 : Send Handler: checksum is 0x6140
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:105984
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 106560
-2021/12/8 15:13:20 : Send Handler: checksum is 0x9788
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:106560
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 107136
-2021/12/8 15:13:20 : Send Handler: checksum is 0xda50
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:107136
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 107712
-2021/12/8 15:13:20 : Send Handler: checksum is 0xa0b7
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:107712
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 108288
-2021/12/8 15:13:20 : Send Handler: checksum is 0xfd3e
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:108288
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 108864
-2021/12/8 15:13:20 : Retransmit: Retransmit tcp_seg 97344
-2021/12/8 15:13:20 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:20 : Start timer with timeout_interval = 3
-2021/12/8 15:13:20 : Retransmit: Retransmit tcp_seg 97344
-2021/12/8 15:13:20 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:20 : Start timer with timeout_interval = 3
-2021/12/8 15:13:20 : Send Handler: checksum is 0x78e2
-2021/12/8 15:13:20 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:108864
-2021/12/8 15:13:20 : Send handler: Send the tcp_seg
-2021/12/8 15:13:20 : Send Handler: Update self.next_seq_num to 109440
-2021/12/8 15:13:23 : Retransmit: Retransmit tcp_seg 97920
-2021/12/8 15:13:23 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:23 : Start timer with timeout_interval = 3
-2021/12/8 15:13:23 : Send Handler: checksum is 0xc567
-2021/12/8 15:13:23 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:23 : Send Handler: append tcp_seg into self.buffer_q with seq_num:109440
-2021/12/8 15:13:23 : Send handler: Send the tcp_seg
-2021/12/8 15:13:23 : Send Handler: Update self.next_seq_num to 110016
-2021/12/8 15:13:26 : Retransmit: Retransmit tcp_seg 98496
-2021/12/8 15:13:26 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:26 : Start timer with timeout_interval = 3
-2021/12/8 15:13:26 : Send Handler: checksum is 0x916b
-2021/12/8 15:13:26 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:26 : Send Handler: append tcp_seg into self.buffer_q with seq_num:110016
-2021/12/8 15:13:26 : Send handler: Send the tcp_seg
-2021/12/8 15:13:26 : Send Handler: Update self.next_seq_num to 110592
-2021/12/8 15:13:29 : Retransmit: Retransmit tcp_seg 99072
-2021/12/8 15:13:29 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:29 : Start timer with timeout_interval = 3
-2021/12/8 15:13:29 : Send Handler: checksum is 0xebae
-2021/12/8 15:13:29 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:29 : Send Handler: append tcp_seg into self.buffer_q with seq_num:110592
-2021/12/8 15:13:29 : Send handler: Send the tcp_seg
-2021/12/8 15:13:29 : Send Handler: Update self.next_seq_num to 111168
-2021/12/8 15:13:32 : Retransmit: Retransmit tcp_seg 99648
-2021/12/8 15:13:32 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:32 : Start timer with timeout_interval = 3
-2021/12/8 15:13:32 : Send Handler: checksum is 0xc86a
-2021/12/8 15:13:32 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:32 : Send Handler: append tcp_seg into self.buffer_q with seq_num:111168
-2021/12/8 15:13:32 : Send handler: Send the tcp_seg
-2021/12/8 15:13:32 : Send Handler: Update self.next_seq_num to 111744
-2021/12/8 15:13:35 : Retransmit: Retransmit tcp_seg 100224
-2021/12/8 15:13:35 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:35 : Start timer with timeout_interval = 3
-2021/12/8 15:13:35 : Send Handler: checksum is 0x35c4
-2021/12/8 15:13:35 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:35 : Send Handler: append tcp_seg into self.buffer_q with seq_num:111744
-2021/12/8 15:13:35 : Send handler: Send the tcp_seg
-2021/12/8 15:13:35 : Send Handler: Update self.next_seq_num to 112320
-2021/12/8 15:13:38 : Retransmit: Retransmit tcp_seg 100800
-2021/12/8 15:13:38 : Retransmit: Update timeout_interval: 3
-2021/12/8 15:13:38 : Start timer with timeout_interval = 3
-2021/12/8 15:13:38 : Send Handler: checksum is 0xbcbb
-2021/12/8 15:13:38 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:38 : Send Handler: append tcp_seg into self.buffer_q with seq_num:112320
-2021/12/8 15:13:38 : Send Handler: Sampling with seq_num = 112320, current time = 1638994418.3138938
-2021/12/8 15:13:38 : Send handler: Send the tcp_seg
-2021/12/8 15:13:38 : Send Handler: Update self.next_seq_num to 112896
-2021/12/8 15:13:38 : Send Handler: checksum is 0xd066
-2021/12/8 15:13:38 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:38 : Send Handler: append tcp_seg into self.buffer_q with seq_num:112896
-2021/12/8 15:13:38 : Send handler: Send the tcp_seg
-2021/12/8 15:13:38 : Send Handler: Update self.next_seq_num to 113472
-2021/12/8 15:13:38 : Send Handler: checksum is 0x758e
-2021/12/8 15:13:38 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:38 : Send Handler: append tcp_seg into self.buffer_q with seq_num:113472
-2021/12/8 15:13:38 : Send handler: Send the tcp_seg
-2021/12/8 15:13:38 : Send Handler: Update self.next_seq_num to 114048
-2021/12/8 15:13:38 : Send Handler: checksum is 0x61ef
-2021/12/8 15:13:38 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:38 : Send Handler: append tcp_seg into self.buffer_q with seq_num:114048
-2021/12/8 15:13:38 : Send handler: Send the tcp_seg
-2021/12/8 15:13:38 : Send Handler: Update self.next_seq_num to 114624
-2021/12/8 15:13:38 : Send Handler: checksum is 0xddbf
-2021/12/8 15:13:38 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:38 : Send Handler: append tcp_seg into self.buffer_q with seq_num:114624
-2021/12/8 15:13:38 : Send handler: Send the tcp_seg
-2021/12/8 15:13:38 : Send Handler: Update self.next_seq_num to 114764
-2021/12/8 15:13:38 : Send Handler: Sending a FIN...
-2021/12/8 15:13:38 : Send Handler: checksum is 0x279f
-2021/12/8 15:13:38 : Send Handler: Generate_tcp_seg.
-2021/12/8 15:13:38 : Send Handler: append tcp_seg into self.buffer_q with seq_num:114764
-2021/12/8 15:13:38 : Start timer with timeout_interval = 3
-2021/12/8 15:13:38 : Send handler: Send the tcp_seg
-2021/12/8 15:13:38 : Send Handler: Update self.next_seq_num to 114764
-2021/12/8 15:13:38 : Close Logger
+2021/12/8 20:34:55 : Init finished
+2021/12/8 20:34:55 : Send Handler: checksum is 0xe33a
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:0
+2021/12/8 20:34:55 : Start timer with timeout_interval = 1
+2021/12/8 20:34:55 : Send Handler: Sampling with seq_num = 0, current time = 1639013695.3124163
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 576
+2021/12/8 20:34:55 : Send Handler: checksum is 0xb616
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:576
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 1152
+2021/12/8 20:34:55 : Send Handler: checksum is 0x5d45
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:1152
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 1728
+2021/12/8 20:34:55 : Send Handler: checksum is 0xbffa
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:1728
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 2304
+2021/12/8 20:34:55 : Send Handler: checksum is 0x3398
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:2304
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 2880
+2021/12/8 20:34:55 : Send Handler: checksum is 0x81bf
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:2880
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 3456
+2021/12/8 20:34:55 : Send Handler: checksum is 0x3dec
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:3456
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 4032
+2021/12/8 20:34:55 : Send Handler: checksum is 0x9450
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:4032
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 4608
+2021/12/8 20:34:55 : Send Handler: checksum is 0xdfc6
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:4608
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 5184
+2021/12/8 20:34:55 : Send Handler: checksum is 0xc406
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:5184
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 5760
+2021/12/8 20:34:55 : Send Handler: checksum is 0xb952
+2021/12/8 20:34:55 : Reset timeout_interval: 1
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:5760
+2021/12/8 20:34:55 : Send Handler: Sampling with seq_num = 5760, current time = 1639013695.3311586
+2021/12/8 20:34:55 : Reset timeout_interval: 1
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 6336
+2021/12/8 20:34:55 : Send Handler: checksum is 0xf5c7
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:6336
+2021/12/8 20:34:55 : Reset timeout_interval: 1
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 6912
+2021/12/8 20:34:55 : Send Handler: checksum is 0x810c
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:6912
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 7488
+2021/12/8 20:34:55 : Reset timeout_interval: 1
+2021/12/8 20:34:55 : Send Handler: checksum is 0x7148
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:7488
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 8064
+2021/12/8 20:34:55 : Retransmit: Retransmit tcp_seg 2304
+2021/12/8 20:34:55 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:34:55 : Start timer with timeout_interval = 2
+2021/12/8 20:34:55 : Reset timeout_interval: 1
+2021/12/8 20:34:55 : Send Handler: checksum is 0x2210
+2021/12/8 20:34:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:34:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:8064
+2021/12/8 20:34:55 : Send handler: Send the tcp_seg
+2021/12/8 20:34:55 : Send Handler: Update self.next_seq_num to 8640
+2021/12/8 20:34:55 : Retransmit: Retransmit tcp_seg 2880
+2021/12/8 20:34:55 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:34:55 : Start timer with timeout_interval = 2
+2021/12/8 20:34:57 : Timeout occurs for seq_num = 2880
+2021/12/8 20:34:57 : Retransmit: Retransmit tcp_seg 2880
+2021/12/8 20:34:57 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:34:57 : Start timer with timeout_interval = 4
+2021/12/8 20:35:1 : Timeout occurs for seq_num = 2880
+2021/12/8 20:35:1 : Retransmit: Retransmit tcp_seg 2880
+2021/12/8 20:35:1 : Retransmit: Double the timeout_interval: 8
+2021/12/8 20:35:1 : Start timer with timeout_interval = 8
+2021/12/8 20:35:1 : Reset timeout_interval: 1
+2021/12/8 20:35:1 : Send Handler: checksum is 0x76db
+2021/12/8 20:35:1 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:1 : Send Handler: append tcp_seg into self.buffer_q with seq_num:8640
+2021/12/8 20:35:1 : Send handler: Send the tcp_seg
+2021/12/8 20:35:1 : Send Handler: Update self.next_seq_num to 9216
+2021/12/8 20:35:1 : Send Handler: checksum is 0x6260
+2021/12/8 20:35:1 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:1 : Send Handler: append tcp_seg into self.buffer_q with seq_num:9216
+2021/12/8 20:35:1 : Send handler: Send the tcp_seg
+2021/12/8 20:35:1 : Send Handler: Update self.next_seq_num to 9792
+2021/12/8 20:35:1 : Send Handler: checksum is 0xdafa
+2021/12/8 20:35:1 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:1 : Send Handler: append tcp_seg into self.buffer_q with seq_num:9792
+2021/12/8 20:35:1 : Send handler: Send the tcp_seg
+2021/12/8 20:35:1 : Send Handler: Update self.next_seq_num to 10368
+2021/12/8 20:35:1 : Retransmit: Retransmit tcp_seg 4608
+2021/12/8 20:35:1 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:1 : Start timer with timeout_interval = 2
+2021/12/8 20:35:1 : Send Handler: checksum is 0x7271
+2021/12/8 20:35:1 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:1 : Send Handler: append tcp_seg into self.buffer_q with seq_num:10368
+2021/12/8 20:35:1 : Send Handler: Sampling with seq_num = 10368, current time = 1639013701.5290482
+2021/12/8 20:35:1 : Send handler: Send the tcp_seg
+2021/12/8 20:35:1 : Send Handler: Update self.next_seq_num to 10944
+2021/12/8 20:35:1 : Send Handler: checksum is 0x4342
+2021/12/8 20:35:1 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:1 : Send Handler: append tcp_seg into self.buffer_q with seq_num:10944
+2021/12/8 20:35:1 : Send handler: Send the tcp_seg
+2021/12/8 20:35:1 : Send Handler: Update self.next_seq_num to 11520
+2021/12/8 20:35:7 : Timeout occurs for seq_num = 5760
+2021/12/8 20:35:7 : Retransmit: Retransmit tcp_seg 5760
+2021/12/8 20:35:7 : Retransmit: Double the timeout_interval: 12.395779132843018
+2021/12/8 20:35:7 : Start timer with timeout_interval = 12.395779132843018
+2021/12/8 20:35:20 : Timeout occurs for seq_num = 5760
+2021/12/8 20:35:20 : Retransmit: Retransmit tcp_seg 5760
+2021/12/8 20:35:20 : Retransmit: Double the timeout_interval: 24.791558265686035
+2021/12/8 20:35:20 : Start timer with timeout_interval = 24.791558265686035
+2021/12/8 20:35:20 : Reset timeout_interval: 1
+2021/12/8 20:35:20 : Send Handler: checksum is 0x93b
+2021/12/8 20:35:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:11520
+2021/12/8 20:35:20 : Send handler: Send the tcp_seg
+2021/12/8 20:35:20 : Send Handler: Update self.next_seq_num to 12096
+2021/12/8 20:35:21 : Timeout occurs for seq_num = 6336
+2021/12/8 20:35:21 : Retransmit: Retransmit tcp_seg 6336
+2021/12/8 20:35:21 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:21 : Start timer with timeout_interval = 2
+2021/12/8 20:35:21 : Send Handler: checksum is 0xbc43
+2021/12/8 20:35:21 : Reset timeout_interval: 1
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:12096
+2021/12/8 20:35:21 : Send Handler: Sampling with seq_num = 12096, current time = 1639013721.1633136
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 12672
+2021/12/8 20:35:21 : Send Handler: checksum is 0x8077
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:12672
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 13248
+2021/12/8 20:35:21 : Send Handler: checksum is 0x8bd5
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:13248
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 13824
+2021/12/8 20:35:21 : Send Handler: checksum is 0x69be
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:13824
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 14400
+2021/12/8 20:35:21 : Send Handler: checksum is 0x5427
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:14400
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 14976
+2021/12/8 20:35:21 : Send Handler: checksum is 0x1e36
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:14976
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 15552
+2021/12/8 20:35:21 : Send Handler: checksum is 0xafed
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:15552
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 16128
+2021/12/8 20:35:21 : Send Handler: checksum is 0x4b80
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:16128
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 16704
+2021/12/8 20:35:21 : Send Handler: checksum is 0x3470
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:16704
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 17280
+2021/12/8 20:35:21 : Retransmit: Retransmit tcp_seg 11520
+2021/12/8 20:35:21 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:21 : Start timer with timeout_interval = 2
+2021/12/8 20:35:21 : Retransmit: Retransmit tcp_seg 11520
+2021/12/8 20:35:21 : Retransmit: Double the timeout_interval: 21.547062158584595
+2021/12/8 20:35:21 : Start timer with timeout_interval = 21.547062158584595
+2021/12/8 20:35:21 : Send Handler: checksum is 0xdf32
+2021/12/8 20:35:21 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:21 : Send Handler: append tcp_seg into self.buffer_q with seq_num:17280
+2021/12/8 20:35:21 : Send Handler: Sampling with seq_num = 17280, current time = 1639013721.2613428
+2021/12/8 20:35:21 : Send handler: Send the tcp_seg
+2021/12/8 20:35:21 : Send Handler: Update self.next_seq_num to 17856
+2021/12/8 20:35:42 : Timeout occurs for seq_num = 12096
+2021/12/8 20:35:42 : Retransmit: Retransmit tcp_seg 12096
+2021/12/8 20:35:42 : Retransmit: Double the timeout_interval: 43.09412431716919
+2021/12/8 20:35:42 : Start timer with timeout_interval = 43.09412431716919
+2021/12/8 20:35:42 : Reset timeout_interval: 1
+2021/12/8 20:35:42 : Send Handler: checksum is 0x969e
+2021/12/8 20:35:42 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:42 : Send Handler: append tcp_seg into self.buffer_q with seq_num:17856
+2021/12/8 20:35:42 : Send handler: Send the tcp_seg
+2021/12/8 20:35:42 : Send Handler: Update self.next_seq_num to 18432
+2021/12/8 20:35:42 : Send Handler: checksum is 0x9d67
+2021/12/8 20:35:42 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:42 : Send Handler: append tcp_seg into self.buffer_q with seq_num:18432
+2021/12/8 20:35:42 : Send handler: Send the tcp_seg
+2021/12/8 20:35:42 : Send Handler: Update self.next_seq_num to 19008
+2021/12/8 20:35:42 : Send Handler: checksum is 0x7089
+2021/12/8 20:35:42 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:42 : Send Handler: append tcp_seg into self.buffer_q with seq_num:19008
+2021/12/8 20:35:42 : Send handler: Send the tcp_seg
+2021/12/8 20:35:42 : Send Handler: Update self.next_seq_num to 19584
+2021/12/8 20:35:42 : Retransmit: Retransmit tcp_seg 13824
+2021/12/8 20:35:42 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:42 : Start timer with timeout_interval = 2
+2021/12/8 20:35:44 : Timeout occurs for seq_num = 13824
+2021/12/8 20:35:44 : Retransmit: Retransmit tcp_seg 13824
+2021/12/8 20:35:44 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:35:44 : Start timer with timeout_interval = 4
+2021/12/8 20:35:44 : Send Handler: checksum is 0xfc66
+2021/12/8 20:35:44 : Reset timeout_interval: 1
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:19584
+2021/12/8 20:35:44 : Send Handler: Sampling with seq_num = 19584, current time = 1639013744.8811822
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 20160
+2021/12/8 20:35:44 : Send Handler: checksum is 0xceba
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:20160
+2021/12/8 20:35:44 : Start timer with timeout_interval = 1
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 20736
+2021/12/8 20:35:44 : Send Handler: checksum is 0x3f36
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:20736
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 21312
+2021/12/8 20:35:44 : Send Handler: checksum is 0x7243
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:21312
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 21888
+2021/12/8 20:35:44 : Send Handler: checksum is 0x89ac
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:21888
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 22464
+2021/12/8 20:35:44 : Send Handler: checksum is 0xfdc0
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:22464
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 23040
+2021/12/8 20:35:44 : Send Handler: checksum is 0x79a5
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:23040
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 23616
+2021/12/8 20:35:44 : Send Handler: checksum is 0x4cbe
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:23616
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 24192
+2021/12/8 20:35:44 : Send Handler: checksum is 0x1990
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:24192
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 24768
+2021/12/8 20:35:44 : Send Handler: checksum is 0x157c
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:24768
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 25344
+2021/12/8 20:35:44 : Send Handler: checksum is 0xf6d4
+2021/12/8 20:35:44 : Reset timeout_interval: 1
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:25344
+2021/12/8 20:35:44 : Send Handler: Sampling with seq_num = 25344, current time = 1639013744.908547
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 25920
+2021/12/8 20:35:44 : Send Handler: Timeout.
+2021/12/8 20:35:44 : Retransmit: Retransmit tcp_seg 20160
+2021/12/8 20:35:44 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:44 : Start timer with timeout_interval = 2
+2021/12/8 20:35:44 : Retransmit: Retransmit tcp_seg 20160
+2021/12/8 20:35:44 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:35:44 : Start timer with timeout_interval = 4
+2021/12/8 20:35:44 : Send Handler: checksum is 0xce2f
+2021/12/8 20:35:44 : Reset timeout_interval: 1
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:25920
+2021/12/8 20:35:44 : Send Handler: Sampling with seq_num = 25920, current time = 1639013744.9557474
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 26496
+2021/12/8 20:35:44 : Send Handler: checksum is 0xf8cd
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:26496
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 27072
+2021/12/8 20:35:44 : Send Handler: checksum is 0x1b1c
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:27072
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 27648
+2021/12/8 20:35:44 : Send Handler: checksum is 0x8963
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:27648
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 28224
+2021/12/8 20:35:44 : Send Handler: checksum is 0x3be3
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:28224
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 28800
+2021/12/8 20:35:44 : Send Handler: checksum is 0x2581
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:28800
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 29376
+2021/12/8 20:35:44 : Send Handler: checksum is 0x535d
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:29376
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 29952
+2021/12/8 20:35:44 : Send Handler: checksum is 0xd183
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:29952
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 30528
+2021/12/8 20:35:44 : Send Handler: checksum is 0x21f2
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:30528
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 31104
+2021/12/8 20:35:44 : Send Handler: checksum is 0xa560
+2021/12/8 20:35:44 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:44 : Send Handler: append tcp_seg into self.buffer_q with seq_num:31104
+2021/12/8 20:35:44 : Send handler: Send the tcp_seg
+2021/12/8 20:35:44 : Send Handler: Update self.next_seq_num to 31680
+2021/12/8 20:35:45 : Retransmit: Retransmit tcp_seg 25920
+2021/12/8 20:35:45 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:45 : Start timer with timeout_interval = 2
+2021/12/8 20:35:45 : Reset timeout_interval: 1
+2021/12/8 20:35:45 : Send Handler: checksum is 0xfe3e
+2021/12/8 20:35:45 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:45 : Send Handler: append tcp_seg into self.buffer_q with seq_num:31680
+2021/12/8 20:35:45 : Send Handler: Sampling with seq_num = 31680, current time = 1639013745.020975
+2021/12/8 20:35:45 : Send handler: Send the tcp_seg
+2021/12/8 20:35:45 : Send Handler: Update self.next_seq_num to 32256
+2021/12/8 20:35:46 : Timeout occurs for seq_num = 26496
+2021/12/8 20:35:46 : Retransmit: Retransmit tcp_seg 26496
+2021/12/8 20:35:46 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:46 : Start timer with timeout_interval = 2
+2021/12/8 20:35:48 : Timeout occurs for seq_num = 26496
+2021/12/8 20:35:48 : Retransmit: Retransmit tcp_seg 26496
+2021/12/8 20:35:48 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:35:48 : Start timer with timeout_interval = 4
+2021/12/8 20:35:52 : Timeout occurs for seq_num = 26496
+2021/12/8 20:35:52 : Retransmit: Retransmit tcp_seg 26496
+2021/12/8 20:35:52 : Retransmit: Double the timeout_interval: 8
+2021/12/8 20:35:52 : Start timer with timeout_interval = 8
+2021/12/8 20:35:52 : Reset timeout_interval: 1
+2021/12/8 20:35:52 : Send Handler: checksum is 0x7244
+2021/12/8 20:35:52 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:52 : Send Handler: append tcp_seg into self.buffer_q with seq_num:32256
+2021/12/8 20:35:52 : Send handler: Send the tcp_seg
+2021/12/8 20:35:52 : Send Handler: Update self.next_seq_num to 32832
+2021/12/8 20:35:53 : Timeout occurs for seq_num = 27072
+2021/12/8 20:35:53 : Retransmit: Retransmit tcp_seg 27072
+2021/12/8 20:35:53 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:53 : Start timer with timeout_interval = 2
+2021/12/8 20:35:53 : Reset timeout_interval: 1
+2021/12/8 20:35:53 : Send Handler: checksum is 0x90fc
+2021/12/8 20:35:53 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:53 : Send Handler: append tcp_seg into self.buffer_q with seq_num:32832
+2021/12/8 20:35:53 : Send handler: Send the tcp_seg
+2021/12/8 20:35:53 : Send Handler: Update self.next_seq_num to 33408
+2021/12/8 20:35:54 : Timeout occurs for seq_num = 27648
+2021/12/8 20:35:54 : Retransmit: Retransmit tcp_seg 27648
+2021/12/8 20:35:54 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:54 : Start timer with timeout_interval = 2
+2021/12/8 20:35:54 : Send Handler: checksum is 0x7564
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:33408
+2021/12/8 20:35:54 : Send Handler: Sampling with seq_num = 33408, current time = 1639013754.0883322
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 33984
+2021/12/8 20:35:54 : Send Handler: checksum is 0xcfb6
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:33984
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 34560
+2021/12/8 20:35:54 : Send Handler: checksum is 0x71ed
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:34560
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 35136
+2021/12/8 20:35:54 : Send Handler: checksum is 0x768b
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:35136
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 35712
+2021/12/8 20:35:54 : Send Handler: checksum is 0xafa0
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:35712
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 36288
+2021/12/8 20:35:54 : Send Handler: checksum is 0xdfbd
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:36288
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 36864
+2021/12/8 20:35:54 : Send Handler: checksum is 0xda57
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:36864
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 37440
+2021/12/8 20:35:54 : Retransmit: Retransmit tcp_seg 31680
+2021/12/8 20:35:54 : Retransmit: Double the timeout_interval: 26.142086774110794
+2021/12/8 20:35:54 : Start timer with timeout_interval = 26.142086774110794
+2021/12/8 20:35:54 : Send Handler: checksum is 0x861
+2021/12/8 20:35:54 : Reset timeout_interval: 1
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:37440
+2021/12/8 20:35:54 : Send Handler: Sampling with seq_num = 37440, current time = 1639013754.1672277
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 38016
+2021/12/8 20:35:54 : Send Handler: checksum is 0xb19a
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:38016
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 38592
+2021/12/8 20:35:54 : Send Handler: checksum is 0x400a
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:38592
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 39168
+2021/12/8 20:35:54 : Send Handler: checksum is 0xf7db
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:39168
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 39744
+2021/12/8 20:35:54 : Retransmit: Retransmit tcp_seg 33984
+2021/12/8 20:35:54 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:54 : Start timer with timeout_interval = 2
+2021/12/8 20:35:54 : Reset timeout_interval: 1
+2021/12/8 20:35:54 : Send Handler: checksum is 0xab78
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:39744
+2021/12/8 20:35:54 : Send Handler: Sampling with seq_num = 39744, current time = 1639013754.238799
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 40320
+2021/12/8 20:35:54 : Send Handler: checksum is 0xb9a6
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:40320
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 40896
+2021/12/8 20:35:54 : Send Handler: checksum is 0x6dc
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:40896
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 41472
+2021/12/8 20:35:54 : Send Handler: checksum is 0x7684
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:41472
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 42048
+2021/12/8 20:35:54 : Send Handler: checksum is 0x113a
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:42048
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 42624
+2021/12/8 20:35:54 : Send Handler: checksum is 0xcd38
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:42624
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 43200
+2021/12/8 20:35:54 : Send Handler: checksum is 0x257e
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:43200
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 43776
+2021/12/8 20:35:54 : Send Handler: checksum is 0xff0e
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:43776
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 44352
+2021/12/8 20:35:54 : Send Handler: checksum is 0xebd9
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:44352
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 44928
+2021/12/8 20:35:54 : Retransmit: Retransmit tcp_seg 39168
+2021/12/8 20:35:54 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:54 : Start timer with timeout_interval = 2
+2021/12/8 20:35:54 : Reset timeout_interval: 1
+2021/12/8 20:35:54 : Send Handler: checksum is 0xc2ec
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:44928
+2021/12/8 20:35:54 : Send Handler: Sampling with seq_num = 44928, current time = 1639013754.3298979
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 45504
+2021/12/8 20:35:54 : Send Handler: checksum is 0x8632
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:45504
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 46080
+2021/12/8 20:35:54 : Send Handler: checksum is 0x6ae0
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:46080
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 46656
+2021/12/8 20:35:54 : Send Handler: checksum is 0x2222
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:46656
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 47232
+2021/12/8 20:35:54 : Send Handler: checksum is 0x75ef
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:47232
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 47808
+2021/12/8 20:35:54 : Send Handler: checksum is 0xf055
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:47808
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 48384
+2021/12/8 20:35:54 : Send Handler: checksum is 0xbe79
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:48384
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 48960
+2021/12/8 20:35:54 : Retransmit: Retransmit tcp_seg 43200
+2021/12/8 20:35:54 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:54 : Start timer with timeout_interval = 2
+2021/12/8 20:35:54 : Reset timeout_interval: 1
+2021/12/8 20:35:54 : Send Handler: checksum is 0xd04c
+2021/12/8 20:35:54 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:54 : Send Handler: append tcp_seg into self.buffer_q with seq_num:48960
+2021/12/8 20:35:54 : Send handler: Send the tcp_seg
+2021/12/8 20:35:54 : Send Handler: Update self.next_seq_num to 49536
+2021/12/8 20:35:55 : Timeout occurs for seq_num = 43776
+2021/12/8 20:35:55 : Retransmit: Retransmit tcp_seg 43776
+2021/12/8 20:35:55 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:35:55 : Start timer with timeout_interval = 2
+2021/12/8 20:35:55 : Send Handler: checksum is 0x3592
+2021/12/8 20:35:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:49536
+2021/12/8 20:35:55 : Send Handler: Sampling with seq_num = 49536, current time = 1639013755.4277315
+2021/12/8 20:35:55 : Send handler: Send the tcp_seg
+2021/12/8 20:35:55 : Send Handler: Update self.next_seq_num to 50112
+2021/12/8 20:35:55 : Send Handler: checksum is 0xec10
+2021/12/8 20:35:55 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:35:55 : Send Handler: append tcp_seg into self.buffer_q with seq_num:50112
+2021/12/8 20:35:55 : Send handler: Send the tcp_seg
+2021/12/8 20:35:55 : Send Handler: Update self.next_seq_num to 50688
+2021/12/8 20:36:10 : Timeout occurs for seq_num = 44928
+2021/12/8 20:36:10 : Retransmit: Retransmit tcp_seg 44928
+2021/12/8 20:36:10 : Retransmit: Double the timeout_interval: 29.738398529589176
+2021/12/8 20:36:10 : Start timer with timeout_interval = 29.738398529589176
+2021/12/8 20:36:10 : Reset timeout_interval: 1
+2021/12/8 20:36:10 : Send Handler: checksum is 0x8afa
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:50688
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 51264
+2021/12/8 20:36:10 : Send Handler: checksum is 0x3c7
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:51264
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 51840
+2021/12/8 20:36:10 : Send Handler: checksum is 0x7084
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:51840
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 52416
+2021/12/8 20:36:10 : Send Handler: checksum is 0xaba3
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:52416
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 52992
+2021/12/8 20:36:10 : Retransmit: Retransmit tcp_seg 47232
+2021/12/8 20:36:10 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:10 : Start timer with timeout_interval = 2
+2021/12/8 20:36:10 : Reset timeout_interval: 1
+2021/12/8 20:36:10 : Send Handler: checksum is 0xa53f
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:52992
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 53568
+2021/12/8 20:36:10 : Send Handler: checksum is 0x1324
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:53568
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 54144
+2021/12/8 20:36:10 : Send Handler: checksum is 0x3f44
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:54144
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 54720
+2021/12/8 20:36:10 : Retransmit: Retransmit tcp_seg 48960
+2021/12/8 20:36:10 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:10 : Start timer with timeout_interval = 2
+2021/12/8 20:36:10 : Send Handler: checksum is 0xe732
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:54720
+2021/12/8 20:36:10 : Reset timeout_interval: 1
+2021/12/8 20:36:10 : Send Handler: Sampling with seq_num = 54720, current time = 1639013770.4134686
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 55296
+2021/12/8 20:36:10 : Send Handler: checksum is 0xef56
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:55296
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 55872
+2021/12/8 20:36:10 : Send Handler: checksum is 0x3ac7
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:55872
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 56448
+2021/12/8 20:36:10 : Send Handler: checksum is 0xd102
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:56448
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 57024
+2021/12/8 20:36:10 : Send Handler: checksum is 0xfba6
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:57024
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 57600
+2021/12/8 20:36:10 : Send Handler: checksum is 0x596f
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:57600
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 58176
+2021/12/8 20:36:10 : Send Handler: checksum is 0x2bdb
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:58176
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 58752
+2021/12/8 20:36:10 : Send Handler: checksum is 0xd8a4
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:58752
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 59328
+2021/12/8 20:36:10 : Send Handler: checksum is 0x6f73
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:59328
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 59904
+2021/12/8 20:36:10 : Send Handler: checksum is 0x5d
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:59904
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 60480
+2021/12/8 20:36:10 : Reset timeout_interval: 1
+2021/12/8 20:36:10 : Retransmit: Retransmit tcp_seg 55296
+2021/12/8 20:36:10 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:10 : Start timer with timeout_interval = 2
+2021/12/8 20:36:10 : Send Handler: checksum is 0xb094
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:60480
+2021/12/8 20:36:10 : Send Handler: Sampling with seq_num = 60480, current time = 1639013770.4254727
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 61056
+2021/12/8 20:36:10 : Reset timeout_interval: 1
+2021/12/8 20:36:10 : Send Handler: checksum is 0xa518
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:61056
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 61632
+2021/12/8 20:36:10 : Send Handler: checksum is 0xb210
+2021/12/8 20:36:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:61632
+2021/12/8 20:36:10 : Send handler: Send the tcp_seg
+2021/12/8 20:36:10 : Send Handler: Update self.next_seq_num to 62208
+2021/12/8 20:36:11 : Timeout occurs for seq_num = 56448
+2021/12/8 20:36:11 : Retransmit: Retransmit tcp_seg 56448
+2021/12/8 20:36:11 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:11 : Start timer with timeout_interval = 2
+2021/12/8 20:36:11 : Reset timeout_interval: 1
+2021/12/8 20:36:11 : Send Handler: checksum is 0xa154
+2021/12/8 20:36:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:62208
+2021/12/8 20:36:11 : Send handler: Send the tcp_seg
+2021/12/8 20:36:11 : Send Handler: Update self.next_seq_num to 62784
+2021/12/8 20:36:11 : Send Handler: checksum is 0x313e
+2021/12/8 20:36:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:62784
+2021/12/8 20:36:11 : Send handler: Send the tcp_seg
+2021/12/8 20:36:11 : Send Handler: Update self.next_seq_num to 63360
+2021/12/8 20:36:11 : Send Handler: checksum is 0x563d
+2021/12/8 20:36:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:63360
+2021/12/8 20:36:11 : Send handler: Send the tcp_seg
+2021/12/8 20:36:11 : Send Handler: Update self.next_seq_num to 63936
+2021/12/8 20:36:11 : Retransmit: Retransmit tcp_seg 58176
+2021/12/8 20:36:11 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:11 : Start timer with timeout_interval = 2
+2021/12/8 20:36:11 : Reset timeout_interval: 1
+2021/12/8 20:36:11 : Send Handler: checksum is 0x31ef
+2021/12/8 20:36:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:63936
+2021/12/8 20:36:11 : Send handler: Send the tcp_seg
+2021/12/8 20:36:11 : Send Handler: Update self.next_seq_num to 64512
+2021/12/8 20:36:12 : Timeout occurs for seq_num = 58752
+2021/12/8 20:36:12 : Retransmit: Retransmit tcp_seg 58752
+2021/12/8 20:36:12 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:12 : Start timer with timeout_interval = 2
+2021/12/8 20:36:12 : Send Handler: checksum is 0xdd2
+2021/12/8 20:36:12 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:12 : Reset timeout_interval: 1
+2021/12/8 20:36:12 : Send Handler: append tcp_seg into self.buffer_q with seq_num:64512
+2021/12/8 20:36:12 : Send Handler: Sampling with seq_num = 64512, current time = 1639013772.5076125
+2021/12/8 20:36:12 : Send handler: Send the tcp_seg
+2021/12/8 20:36:12 : Send Handler: Update self.next_seq_num to 65088
+2021/12/8 20:36:12 : Send Handler: checksum is 0xea59
+2021/12/8 20:36:12 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:12 : Send Handler: append tcp_seg into self.buffer_q with seq_num:65088
+2021/12/8 20:36:12 : Send handler: Send the tcp_seg
+2021/12/8 20:36:12 : Send Handler: Update self.next_seq_num to 65664
+2021/12/8 20:36:12 : Send Handler: checksum is 0x3f13
+2021/12/8 20:36:12 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:12 : Send Handler: append tcp_seg into self.buffer_q with seq_num:65664
+2021/12/8 20:36:12 : Send handler: Send the tcp_seg
+2021/12/8 20:36:12 : Send Handler: Update self.next_seq_num to 66240
+2021/12/8 20:36:12 : Send Handler: checksum is 0xdfcb
+2021/12/8 20:36:12 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:12 : Send Handler: append tcp_seg into self.buffer_q with seq_num:66240
+2021/12/8 20:36:12 : Send handler: Send the tcp_seg
+2021/12/8 20:36:12 : Send Handler: Update self.next_seq_num to 66816
+2021/12/8 20:36:12 : Retransmit: Retransmit tcp_seg 61056
+2021/12/8 20:36:12 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:12 : Start timer with timeout_interval = 2
+2021/12/8 20:36:12 : Reset timeout_interval: 1
+2021/12/8 20:36:12 : Send Handler: checksum is 0x9f64
+2021/12/8 20:36:12 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:12 : Send Handler: append tcp_seg into self.buffer_q with seq_num:66816
+2021/12/8 20:36:12 : Send handler: Send the tcp_seg
+2021/12/8 20:36:12 : Send Handler: Update self.next_seq_num to 67392
+2021/12/8 20:36:13 : Timeout occurs for seq_num = 61632
+2021/12/8 20:36:13 : Retransmit: Retransmit tcp_seg 61632
+2021/12/8 20:36:13 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:13 : Start timer with timeout_interval = 2
+2021/12/8 20:36:15 : Timeout occurs for seq_num = 61632
+2021/12/8 20:36:15 : Retransmit: Retransmit tcp_seg 61632
+2021/12/8 20:36:15 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:36:15 : Start timer with timeout_interval = 4
+2021/12/8 20:36:15 : Reset timeout_interval: 1
+2021/12/8 20:36:15 : Send Handler: checksum is 0xfac1
+2021/12/8 20:36:15 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:15 : Send Handler: append tcp_seg into self.buffer_q with seq_num:67392
+2021/12/8 20:36:15 : Send handler: Send the tcp_seg
+2021/12/8 20:36:15 : Send Handler: Update self.next_seq_num to 67968
+2021/12/8 20:36:15 : Send Handler: checksum is 0xe47e
+2021/12/8 20:36:15 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:15 : Send Handler: append tcp_seg into self.buffer_q with seq_num:67968
+2021/12/8 20:36:15 : Send handler: Send the tcp_seg
+2021/12/8 20:36:15 : Send Handler: Update self.next_seq_num to 68544
+2021/12/8 20:36:15 : Send Handler: checksum is 0x3f6c
+2021/12/8 20:36:15 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:15 : Send Handler: append tcp_seg into self.buffer_q with seq_num:68544
+2021/12/8 20:36:15 : Send handler: Send the tcp_seg
+2021/12/8 20:36:15 : Send Handler: Update self.next_seq_num to 69120
+2021/12/8 20:36:15 : Send Handler: checksum is 0x2e12
+2021/12/8 20:36:15 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:15 : Send Handler: append tcp_seg into self.buffer_q with seq_num:69120
+2021/12/8 20:36:15 : Send handler: Send the tcp_seg
+2021/12/8 20:36:15 : Send Handler: Update self.next_seq_num to 69696
+2021/12/8 20:36:15 : Retransmit: Retransmit tcp_seg 63936
+2021/12/8 20:36:15 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:15 : Start timer with timeout_interval = 2
+2021/12/8 20:36:17 : Timeout occurs for seq_num = 63936
+2021/12/8 20:36:17 : Retransmit: Retransmit tcp_seg 63936
+2021/12/8 20:36:17 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:36:17 : Start timer with timeout_interval = 4
+2021/12/8 20:36:17 : Send Handler: checksum is 0x23c2
+2021/12/8 20:36:17 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:17 : Send Handler: append tcp_seg into self.buffer_q with seq_num:69696
+2021/12/8 20:36:17 : Reset timeout_interval: 1
+2021/12/8 20:36:17 : Send Handler: Sampling with seq_num = 69696, current time = 1639013777.6866353
+2021/12/8 20:36:17 : Send handler: Send the tcp_seg
+2021/12/8 20:36:17 : Send Handler: Update self.next_seq_num to 70272
+2021/12/8 20:36:17 : Send Handler: checksum is 0xe432
+2021/12/8 20:36:17 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:17 : Send Handler: append tcp_seg into self.buffer_q with seq_num:70272
+2021/12/8 20:36:17 : Send handler: Send the tcp_seg
+2021/12/8 20:36:17 : Send Handler: Update self.next_seq_num to 70848
+2021/12/8 20:36:17 : Send Handler: checksum is 0x61f8
+2021/12/8 20:36:17 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:36:17 : Send Handler: append tcp_seg into self.buffer_q with seq_num:70848
+2021/12/8 20:36:17 : Send handler: Send the tcp_seg
+2021/12/8 20:36:17 : Send Handler: Update self.next_seq_num to 71424
+2021/12/8 20:36:17 : Retransmit: Retransmit tcp_seg 65664
+2021/12/8 20:36:17 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:36:17 : Start timer with timeout_interval = 2
+2021/12/8 20:36:19 : Timeout occurs for seq_num = 65664
+2021/12/8 20:36:19 : Retransmit: Retransmit tcp_seg 65664
+2021/12/8 20:36:19 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:36:19 : Start timer with timeout_interval = 4
+2021/12/8 20:36:23 : Timeout occurs for seq_num = 65664
+2021/12/8 20:36:23 : Retransmit: Retransmit tcp_seg 65664
+2021/12/8 20:36:23 : Retransmit: Double the timeout_interval: 8
+2021/12/8 20:36:23 : Start timer with timeout_interval = 8
+2021/12/8 20:36:31 : Timeout occurs for seq_num = 65664
+2021/12/8 20:36:31 : Retransmit: Retransmit tcp_seg 65664
+2021/12/8 20:36:31 : Retransmit: Double the timeout_interval: 16
+2021/12/8 20:36:31 : Start timer with timeout_interval = 16
+2021/12/8 20:36:47 : Timeout occurs for seq_num = 65664
+2021/12/8 20:36:47 : Retransmit: Retransmit tcp_seg 65664
+2021/12/8 20:36:47 : Retransmit: Double the timeout_interval: 32
+2021/12/8 20:36:47 : Start timer with timeout_interval = 32
+2021/12/8 20:37:19 : Timeout occurs for seq_num = 65664
+2021/12/8 20:37:19 : Retransmit: Retransmit tcp_seg 65664
+2021/12/8 20:37:19 : Retransmit: Double the timeout_interval: 64
+2021/12/8 20:37:19 : Start timer with timeout_interval = 64
+2021/12/8 20:37:19 : Reset timeout_interval: 1
+2021/12/8 20:37:19 : Send Handler: checksum is 0x94a9
+2021/12/8 20:37:19 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:19 : Send Handler: append tcp_seg into self.buffer_q with seq_num:71424
+2021/12/8 20:37:19 : Send handler: Send the tcp_seg
+2021/12/8 20:37:19 : Send Handler: Update self.next_seq_num to 72000
+2021/12/8 20:37:19 : Send Handler: checksum is 0xce11
+2021/12/8 20:37:19 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:19 : Send Handler: append tcp_seg into self.buffer_q with seq_num:72000
+2021/12/8 20:37:19 : Send handler: Send the tcp_seg
+2021/12/8 20:37:19 : Send Handler: Update self.next_seq_num to 72576
+2021/12/8 20:37:20 : Timeout occurs for seq_num = 66816
+2021/12/8 20:37:20 : Retransmit: Retransmit tcp_seg 66816
+2021/12/8 20:37:20 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:37:20 : Start timer with timeout_interval = 2
+2021/12/8 20:37:20 : Reset timeout_interval: 1
+2021/12/8 20:37:20 : Send Handler: checksum is 0xcd8c
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:72576
+2021/12/8 20:37:20 : Send Handler: Sampling with seq_num = 72576, current time = 1639013840.7667072
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 73152
+2021/12/8 20:37:20 : Send Handler: checksum is 0x4fce
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:73152
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 73728
+2021/12/8 20:37:20 : Send Handler: checksum is 0x86c6
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:73728
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 74304
+2021/12/8 20:37:20 : Send Handler: checksum is 0x81eb
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:74304
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 74880
+2021/12/8 20:37:20 : Send Handler: checksum is 0x3e29
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:74880
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 75456
+2021/12/8 20:37:20 : Send Handler: checksum is 0x8b21
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:75456
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 76032
+2021/12/8 20:37:20 : Send Handler: checksum is 0xa079
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:76032
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 76608
+2021/12/8 20:37:20 : Send Handler: checksum is 0x2331
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:76608
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 77184
+2021/12/8 20:37:20 : Retransmit: Retransmit tcp_seg 71424
+2021/12/8 20:37:20 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:37:20 : Start timer with timeout_interval = 2
+2021/12/8 20:37:20 : Retransmit: Retransmit tcp_seg 71424
+2021/12/8 20:37:20 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:37:20 : Start timer with timeout_interval = 4
+2021/12/8 20:37:20 : Send Handler: checksum is 0x2b44
+2021/12/8 20:37:20 : Reset timeout_interval: 1
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:77184
+2021/12/8 20:37:20 : Send Handler: Sampling with seq_num = 77184, current time = 1639013840.8605542
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 77760
+2021/12/8 20:37:20 : Send Handler: checksum is 0x6b08
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:77760
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 78336
+2021/12/8 20:37:20 : Send Handler: checksum is 0xf6f1
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:78336
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 78912
+2021/12/8 20:37:20 : Send Handler: checksum is 0x6089
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:78912
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 79488
+2021/12/8 20:37:20 : Retransmit: Retransmit tcp_seg 73728
+2021/12/8 20:37:20 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:37:20 : Start timer with timeout_interval = 2
+2021/12/8 20:37:20 : Reset timeout_interval: 1
+2021/12/8 20:37:20 : Send Handler: checksum is 0xe02
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:79488
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 80064
+2021/12/8 20:37:20 : Send Handler: checksum is 0xa03d
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:80064
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 80640
+2021/12/8 20:37:20 : Send Handler: checksum is 0xb072
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:80640
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 81216
+2021/12/8 20:37:20 : Send Handler: checksum is 0xae1f
+2021/12/8 20:37:20 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:20 : Send Handler: append tcp_seg into self.buffer_q with seq_num:81216
+2021/12/8 20:37:20 : Send handler: Send the tcp_seg
+2021/12/8 20:37:20 : Send Handler: Update self.next_seq_num to 81792
+2021/12/8 20:37:21 : Retransmit: Retransmit tcp_seg 76032
+2021/12/8 20:37:21 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:37:21 : Start timer with timeout_interval = 2
+2021/12/8 20:37:23 : Timeout occurs for seq_num = 76032
+2021/12/8 20:37:23 : Retransmit: Retransmit tcp_seg 76032
+2021/12/8 20:37:23 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:37:23 : Start timer with timeout_interval = 4
+2021/12/8 20:37:23 : Send Handler: checksum is 0x9a3
+2021/12/8 20:37:23 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:23 : Send Handler: append tcp_seg into self.buffer_q with seq_num:81792
+2021/12/8 20:37:23 : Send Handler: Sampling with seq_num = 81792, current time = 1639013843.0215733
+2021/12/8 20:37:23 : Send handler: Send the tcp_seg
+2021/12/8 20:37:23 : Send Handler: Update self.next_seq_num to 82368
+2021/12/8 20:37:23 : Send Handler: checksum is 0x1ee1
+2021/12/8 20:37:23 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:37:23 : Send Handler: append tcp_seg into self.buffer_q with seq_num:82368
+2021/12/8 20:37:23 : Send handler: Send the tcp_seg
+2021/12/8 20:37:23 : Send Handler: Update self.next_seq_num to 82944
+2021/12/8 20:37:37 : Timeout occurs for seq_num = 77184
+2021/12/8 20:37:37 : Retransmit: Retransmit tcp_seg 77184
+2021/12/8 20:37:37 : Retransmit: Double the timeout_interval: 29.642989587038755
+2021/12/8 20:37:37 : Start timer with timeout_interval = 29.642989587038755
+2021/12/8 20:38:7 : Timeout occurs for seq_num = 77184
+2021/12/8 20:38:7 : Retransmit: Retransmit tcp_seg 77184
+2021/12/8 20:38:7 : Retransmit: Double the timeout_interval: 59.28597917407751
+2021/12/8 20:38:7 : Start timer with timeout_interval = 59.28597917407751
+2021/12/8 20:38:7 : Reset timeout_interval: 1
+2021/12/8 20:38:7 : Send Handler: checksum is 0xf94a
+2021/12/8 20:38:7 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:7 : Send Handler: append tcp_seg into self.buffer_q with seq_num:82944
+2021/12/8 20:38:7 : Send handler: Send the tcp_seg
+2021/12/8 20:38:7 : Send Handler: Update self.next_seq_num to 83520
+2021/12/8 20:38:7 : Send Handler: checksum is 0xb300
+2021/12/8 20:38:7 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:7 : Send Handler: append tcp_seg into self.buffer_q with seq_num:83520
+2021/12/8 20:38:7 : Send handler: Send the tcp_seg
+2021/12/8 20:38:7 : Send Handler: Update self.next_seq_num to 84096
+2021/12/8 20:38:7 : Send Handler: checksum is 0xfaaa
+2021/12/8 20:38:7 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:7 : Send Handler: append tcp_seg into self.buffer_q with seq_num:84096
+2021/12/8 20:38:7 : Send handler: Send the tcp_seg
+2021/12/8 20:38:7 : Send Handler: Update self.next_seq_num to 84672
+2021/12/8 20:38:7 : Send Handler: checksum is 0x8676
+2021/12/8 20:38:7 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:7 : Send Handler: append tcp_seg into self.buffer_q with seq_num:84672
+2021/12/8 20:38:7 : Send handler: Send the tcp_seg
+2021/12/8 20:38:7 : Send Handler: Update self.next_seq_num to 85248
+2021/12/8 20:38:7 : Send Handler: checksum is 0xe4e9
+2021/12/8 20:38:7 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:7 : Send Handler: append tcp_seg into self.buffer_q with seq_num:85248
+2021/12/8 20:38:7 : Send handler: Send the tcp_seg
+2021/12/8 20:38:7 : Send Handler: Update self.next_seq_num to 85824
+2021/12/8 20:38:7 : Send Handler: checksum is 0xd348
+2021/12/8 20:38:7 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:7 : Send Handler: append tcp_seg into self.buffer_q with seq_num:85824
+2021/12/8 20:38:7 : Send handler: Send the tcp_seg
+2021/12/8 20:38:7 : Send Handler: Update self.next_seq_num to 86400
+2021/12/8 20:38:7 : Send Handler: checksum is 0x164d
+2021/12/8 20:38:7 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:7 : Send Handler: append tcp_seg into self.buffer_q with seq_num:86400
+2021/12/8 20:38:7 : Send handler: Send the tcp_seg
+2021/12/8 20:38:7 : Send Handler: Update self.next_seq_num to 86976
+2021/12/8 20:38:7 : Retransmit: Retransmit tcp_seg 81216
+2021/12/8 20:38:7 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:7 : Start timer with timeout_interval = 2
+2021/12/8 20:38:9 : Timeout occurs for seq_num = 81216
+2021/12/8 20:38:9 : Retransmit: Retransmit tcp_seg 81216
+2021/12/8 20:38:9 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:38:9 : Start timer with timeout_interval = 4
+2021/12/8 20:38:9 : Send Handler: checksum is 0x39cb
+2021/12/8 20:38:9 : Reset timeout_interval: 1
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:86976
+2021/12/8 20:38:9 : Send Handler: Sampling with seq_num = 86976, current time = 1639013889.5776544
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 87552
+2021/12/8 20:38:9 : Send Handler: checksum is 0x2537
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:87552
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 88128
+2021/12/8 20:38:9 : Send Handler: checksum is 0xff32
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:88128
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 88704
+2021/12/8 20:38:9 : Send Handler: checksum is 0xb9d0
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:88704
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 89280
+2021/12/8 20:38:9 : Send Handler: checksum is 0x799a
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:89280
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 89856
+2021/12/8 20:38:9 : Send Handler: checksum is 0x5430
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:89856
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 90432
+2021/12/8 20:38:9 : Send Handler: checksum is 0xfed0
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:90432
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 91008
+2021/12/8 20:38:9 : Send Handler: checksum is 0xdacc
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:91008
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 91584
+2021/12/8 20:38:9 : Retransmit: Retransmit tcp_seg 85824
+2021/12/8 20:38:9 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:9 : Start timer with timeout_interval = 2
+2021/12/8 20:38:9 : Retransmit: Retransmit tcp_seg 85824
+2021/12/8 20:38:9 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:38:9 : Start timer with timeout_interval = 4
+2021/12/8 20:38:9 : Reset timeout_interval: 1
+2021/12/8 20:38:9 : Send Handler: checksum is 0x204c
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:91584
+2021/12/8 20:38:9 : Send Handler: Sampling with seq_num = 91584, current time = 1639013889.6796467
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 92160
+2021/12/8 20:38:9 : Send Handler: checksum is 0xd0d2
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:92160
+2021/12/8 20:38:9 : Start timer with timeout_interval = 1
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 92736
+2021/12/8 20:38:9 : Send Handler: checksum is 0xa722
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:92736
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 93312
+2021/12/8 20:38:9 : Send Handler: checksum is 0x3ca8
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:93312
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 93888
+2021/12/8 20:38:9 : Send Handler: checksum is 0x6b92
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:93888
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 94464
+2021/12/8 20:38:9 : Send Handler: checksum is 0x8acf
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:94464
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 95040
+2021/12/8 20:38:9 : Send Handler: checksum is 0x9ea1
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:95040
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 95616
+2021/12/8 20:38:9 : Send Handler: checksum is 0x5688
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:95616
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 96192
+2021/12/8 20:38:9 : Send Handler: checksum is 0xfecd
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:96192
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 96768
+2021/12/8 20:38:9 : Send Handler: checksum is 0x63
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:96768
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 97344
+2021/12/8 20:38:9 : Retransmit: Retransmit tcp_seg 91584
+2021/12/8 20:38:9 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:9 : Start timer with timeout_interval = 2
+2021/12/8 20:38:9 : Retransmit: Retransmit tcp_seg 91584
+2021/12/8 20:38:9 : Retransmit: Double the timeout_interval: 4
+2021/12/8 20:38:9 : Start timer with timeout_interval = 4
+2021/12/8 20:38:9 : Reset timeout_interval: 1
+2021/12/8 20:38:9 : Send Handler: checksum is 0x4169
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:97344
+2021/12/8 20:38:9 : Send Handler: Sampling with seq_num = 97344, current time = 1639013889.8036685
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 97920
+2021/12/8 20:38:9 : Send Handler: checksum is 0xfcf4
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:97920
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 98496
+2021/12/8 20:38:9 : Send Handler: checksum is 0x1676
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:98496
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 99072
+2021/12/8 20:38:9 : Send Handler: checksum is 0xa9c4
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:99072
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 99648
+2021/12/8 20:38:9 : Send Handler: checksum is 0x342c
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:99648
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 100224
+2021/12/8 20:38:9 : Send Handler: checksum is 0x9456
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:100224
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 100800
+2021/12/8 20:38:9 : Retransmit: Retransmit tcp_seg 95040
+2021/12/8 20:38:9 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:9 : Start timer with timeout_interval = 2
+2021/12/8 20:38:9 : Reset timeout_interval: 1
+2021/12/8 20:38:9 : Send Handler: checksum is 0x7ff0
+2021/12/8 20:38:9 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:9 : Send Handler: append tcp_seg into self.buffer_q with seq_num:100800
+2021/12/8 20:38:9 : Send handler: Send the tcp_seg
+2021/12/8 20:38:9 : Send Handler: Update self.next_seq_num to 101376
+2021/12/8 20:38:10 : Timeout occurs for seq_num = 95616
+2021/12/8 20:38:10 : Retransmit: Retransmit tcp_seg 95616
+2021/12/8 20:38:10 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:10 : Start timer with timeout_interval = 2
+2021/12/8 20:38:10 : Send Handler: checksum is 0x801d
+2021/12/8 20:38:10 : Reset timeout_interval: 1
+2021/12/8 20:38:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:101376
+2021/12/8 20:38:10 : Send Handler: Sampling with seq_num = 101376, current time = 1639013890.8840523
+2021/12/8 20:38:10 : Send handler: Send the tcp_seg
+2021/12/8 20:38:10 : Send Handler: Update self.next_seq_num to 101952
+2021/12/8 20:38:10 : Send Handler: checksum is 0x6b3b
+2021/12/8 20:38:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:101952
+2021/12/8 20:38:10 : Send handler: Send the tcp_seg
+2021/12/8 20:38:10 : Send Handler: Update self.next_seq_num to 102528
+2021/12/8 20:38:10 : Send Handler: checksum is 0x9c04
+2021/12/8 20:38:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:102528
+2021/12/8 20:38:10 : Send handler: Send the tcp_seg
+2021/12/8 20:38:10 : Send Handler: Update self.next_seq_num to 103104
+2021/12/8 20:38:10 : Send Handler: checksum is 0xa055
+2021/12/8 20:38:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:103104
+2021/12/8 20:38:10 : Send handler: Send the tcp_seg
+2021/12/8 20:38:10 : Send Handler: Update self.next_seq_num to 103680
+2021/12/8 20:38:10 : Send Handler: checksum is 0x49c7
+2021/12/8 20:38:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:103680
+2021/12/8 20:38:10 : Send handler: Send the tcp_seg
+2021/12/8 20:38:10 : Send Handler: Update self.next_seq_num to 104256
+2021/12/8 20:38:10 : Send Handler: checksum is 0x7349
+2021/12/8 20:38:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:104256
+2021/12/8 20:38:10 : Send handler: Send the tcp_seg
+2021/12/8 20:38:10 : Send Handler: Update self.next_seq_num to 104832
+2021/12/8 20:38:10 : Retransmit: Retransmit tcp_seg 99072
+2021/12/8 20:38:10 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:10 : Start timer with timeout_interval = 2
+2021/12/8 20:38:10 : Reset timeout_interval: 1
+2021/12/8 20:38:10 : Send Handler: checksum is 0x87a5
+2021/12/8 20:38:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:104832
+2021/12/8 20:38:10 : Send handler: Send the tcp_seg
+2021/12/8 20:38:10 : Send Handler: Update self.next_seq_num to 105408
+2021/12/8 20:38:10 : Send Handler: checksum is 0xebad
+2021/12/8 20:38:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:105408
+2021/12/8 20:38:10 : Send handler: Send the tcp_seg
+2021/12/8 20:38:10 : Send Handler: Update self.next_seq_num to 105984
+2021/12/8 20:38:10 : Send Handler: checksum is 0x6140
+2021/12/8 20:38:10 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:10 : Send Handler: append tcp_seg into self.buffer_q with seq_num:105984
+2021/12/8 20:38:10 : Send handler: Send the tcp_seg
+2021/12/8 20:38:10 : Send Handler: Update self.next_seq_num to 106560
+2021/12/8 20:38:10 : Retransmit: Retransmit tcp_seg 100800
+2021/12/8 20:38:10 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:10 : Start timer with timeout_interval = 2
+2021/12/8 20:38:11 : Send Handler: checksum is 0x9788
+2021/12/8 20:38:11 : Reset timeout_interval: 1
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:106560
+2021/12/8 20:38:11 : Send Handler: Sampling with seq_num = 106560, current time = 1639013891.0047731
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 107136
+2021/12/8 20:38:11 : Send Handler: checksum is 0xda50
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:107136
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 107712
+2021/12/8 20:38:11 : Send Handler: checksum is 0xa0b7
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:107712
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 108288
+2021/12/8 20:38:11 : Send Handler: checksum is 0xfd3e
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:108288
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 108864
+2021/12/8 20:38:11 : Send Handler: checksum is 0x78e2
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:108864
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 109440
+2021/12/8 20:38:11 : Send Handler: checksum is 0xc567
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:109440
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 110016
+2021/12/8 20:38:11 : Send Handler: checksum is 0x916b
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:110016
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 110592
+2021/12/8 20:38:11 : Send Handler: checksum is 0xebae
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:110592
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 111168
+2021/12/8 20:38:11 : Send Handler: checksum is 0xc86a
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:111168
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 111744
+2021/12/8 20:38:11 : Send Handler: checksum is 0x35c4
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:111744
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 112320
+2021/12/8 20:38:11 : Reset timeout_interval: 1
+2021/12/8 20:38:11 : Send Handler: checksum is 0xbcbb
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:112320
+2021/12/8 20:38:11 : Send Handler: Sampling with seq_num = 112320, current time = 1639013891.029768
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 112896
+2021/12/8 20:38:11 : Send Handler: Timeout.
+2021/12/8 20:38:11 : Retransmit: Retransmit tcp_seg 107136
+2021/12/8 20:38:11 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:11 : Start timer with timeout_interval = 2
+2021/12/8 20:38:11 : Reset timeout_interval: 1
+2021/12/8 20:38:11 : Send Handler: checksum is 0xd066
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:112896
+2021/12/8 20:38:11 : Reset timeout_interval: 1
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 113472
+2021/12/8 20:38:11 : Send Handler: checksum is 0x758e
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:113472
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 114048
+2021/12/8 20:38:11 : Send Handler: checksum is 0x61ef
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:114048
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 114624
+2021/12/8 20:38:11 : Send Handler: checksum is 0xddbf
+2021/12/8 20:38:11 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:11 : Send Handler: append tcp_seg into self.buffer_q with seq_num:114624
+2021/12/8 20:38:11 : Send handler: Send the tcp_seg
+2021/12/8 20:38:11 : Send Handler: Update self.next_seq_num to 114764
+2021/12/8 20:38:11 : Retransmit: Retransmit tcp_seg 109440
+2021/12/8 20:38:11 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:11 : Start timer with timeout_interval = 2
+2021/12/8 20:38:27 : Timeout occurs for seq_num = 112320
+2021/12/8 20:38:27 : Retransmit: Retransmit tcp_seg 112320
+2021/12/8 20:38:27 : Retransmit: Double the timeout_interval: 31.949365089880303
+2021/12/8 20:38:27 : Start timer with timeout_interval = 31.949365089880303
+2021/12/8 20:38:27 : Reset timeout_interval: 1
+2021/12/8 20:38:28 : Timeout occurs for seq_num = 113472
+2021/12/8 20:38:28 : Retransmit: Retransmit tcp_seg 113472
+2021/12/8 20:38:28 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:28 : Start timer with timeout_interval = 2
+2021/12/8 20:38:28 : Reset timeout_interval: 1
+2021/12/8 20:38:29 : Timeout occurs for seq_num = 114624
+2021/12/8 20:38:29 : Retransmit: Retransmit tcp_seg 114624
+2021/12/8 20:38:29 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:29 : Start timer with timeout_interval = 2
+2021/12/8 20:38:29 : Reset timeout_interval: 1
+2021/12/8 20:38:29 : Send Handler: Sending a FIN...
+2021/12/8 20:38:29 : Send Handler: checksum is 0x279f
+2021/12/8 20:38:29 : Send Handler: Generate_tcp_seg.
+2021/12/8 20:38:29 : Send Handler: append tcp_seg into self.buffer_q with seq_num:114764
+2021/12/8 20:38:29 : Start timer with timeout_interval = 1
+2021/12/8 20:38:29 : Send handler: Send the tcp_seg
+2021/12/8 20:38:29 : Send Handler: Update self.next_seq_num to 114764
+2021/12/8 20:38:30 : Timeout occurs for seq_num = 114764
+2021/12/8 20:38:30 : Retransmit: Retransmit tcp_seg 114764
+2021/12/8 20:38:30 : Retransmit: Double the timeout_interval: 2
+2021/12/8 20:38:30 : Start timer with timeout_interval = 2
+2021/12/8 20:38:30 : Close Logger

@@ -22,7 +22,7 @@ class Sender:
     def __init__(self,file_path = 'files/read_from.txt',
                  dest_ip = '192.168.192.134',
                  dest_port = 41192,
-                 windowsize = MSS * 5,
+                 windowsize = MSS * 10,
                  recv_port = 12114):
 
         self.file_path = file_path
@@ -40,6 +40,7 @@ class Sender:
         self.full_tcp_seg_size = self.MSS + 20
         self.ALPHA = 0.125
         self.BETA = 0.25
+        self.DEFAULT_TIMEOUT_INTERVAL = 1
 
         # window parameter
         self.send_base = 0
@@ -53,9 +54,10 @@ class Sender:
         # timeout_interval
         self.ALPHA = 0.125
         self.BETA = 0.25
-        self.estimated_rtt = 1
+        self.estimated_rtt = 0
         self.dev_rtt = 0
-        self.timeout_interval = 1
+        self.timeout_interval = self.DEFAULT_TIMEOUT_INTERVAL
+        self.if_first_update = True
 
         # tcp header
         self.src_port = 10025
@@ -304,12 +306,12 @@ class Sender:
         seq_num, retrans_seg = self.buffer_q.queue[0]
 
         # # if seq_num == sample_tuple[0], set sample_tuple to (-1, -1)
-        # with self.sample_tuple_lock:
-        #     if seq_num == self.sample_tuple[0]:
-        #         self.sample_tuple = (-1, -1)
+        with self.sample_tuple_lock:
+            if seq_num == self.sample_tuple[0]:
+                self.sample_tuple = (-1, -1)
 
         # 2. double the time_interval and restart timer
-        self.update_timeout_interval(-1)
+        self.double_timeout_interval()
         self.start_timer('s')
 
         # 3. retransmit the data
@@ -333,7 +335,7 @@ class Sender:
         cur_time = time.time()
 
         if cur_time - self.get_timer_start_time() > self.get_timeout_interval():
-            self.send_logger.write("Timeout occurs for seq_num = {seq_num}".format(
+            self.logger_write('s', "Timeout occurs for seq_num = {seq_num}".format(
                 seq_num = self.get_send_base()
             ))
             return True
@@ -437,15 +439,22 @@ class Sender:
                 # 3. lookup for a sample hit. Check whether this segment is sampled before
                 with self.sample_tuple_lock:
                     if self.sample_tuple[0] != -1 and ack_num >= self.sample_tuple[0]:
-                        cur_time = time.time()
-                        sample_rtt = cur_time - self.sample_tuple[1]
-                        self.update_timeout_interval(sample_rtt)
+                        self.logger_write('a', "ACK Handler: sample hit: ack_num = {ack_num},"
+                                               "seq_num = {seq_num}".format(
+                            ack_num=ack_num, seq_num=self.sample_tuple[0],))
 
-                        self.logger_write('a', "ACK Handler: sample hit: ack_num = {ack_num}, seq_num = {seq_num}".format(
-                            ack_num = ack_num, seq_num = self.sample_tuple[0],
-                        ))
+                        if ack_num == self.sample_tuple[0]:
+                            cur_time = time.time()
+                            sample_rtt = cur_time - self.sample_tuple[1]
+                            self.update_timeout_interval(sample_rtt)
+
+                        else:
+                            self.reset_timeout_interval()
                         # clear self.sample_tuple
                         self.sample_tuple = (-1, -1)
+                    else:
+                        self.reset_timeout_interval()
+
 
                 # 4. deal with packets pool: poll packets from the buffer until the
                 # queue.peek.sequence_number > ack_num
@@ -461,6 +470,25 @@ class Sender:
                 else:
                     self.set_is_timer_on(False)
 
+    def reset_timeout_interval(self):
+
+        # no sample hit
+        with self.timeout_interval_lock:
+
+            self.timeout_interval = self.DEFAULT_TIMEOUT_INTERVAL
+
+            self.logger_write('s', "Reset timeout_interval: {timeout_interval}".format(
+                timeout_interval=self.timeout_interval))
+
+            return
+
+    def double_timeout_interval(self):
+        with self.timeout_interval_lock:
+            self.timeout_interval = 2 * self.timeout_interval
+
+            self.logger_write('s', "Retransmit: Double the timeout_interval: {timeout_interval}".format(
+                timeout_interval=self.timeout_interval))
+            return
 
     def update_timeout_interval(self, sample_rtt):
         """
@@ -471,22 +499,31 @@ class Sender:
         """
 
         with self.timeout_interval_lock:
-            if sample_rtt != -1:  # not retrans
-                self.estimated_rtt = (1 - self.ALPHA) * self.estimated_rtt + self.ALPHA * sample_rtt
-                self.dev_rtt = (1 - self.BETA) * self.dev_rtt + self.BETA * abs(sample_rtt - self.estimated_rtt)
+
+            if self.if_first_update:
+                self.if_first_update = False
+                self.estimated_rtt = sample_rtt
+                self.dev_rtt = 0
                 self.timeout_interval = self.estimated_rtt + 4 * self.dev_rtt
-                if self.timeout_interval > 3:
-                    self.timeout_interval = 3
 
-                self.logger_write('a', "ACK Handler: Update timeout_interval: {timeout_interval}".format(
-                    timeout_interval = self.timeout_interval))
-            else:
-                self.timeout_interval = 2 * self.timeout_interval
-                if self.timeout_interval > 3:
-                    self.timeout_interval = 3
+                self.logger_write('a', "Initialize estimatedRTT = {esrtt}, devRTT = 0, timeout_interval"
+                                       " = {timeout_interval}".format(
+                    esrtt = self.estimated_rtt, timeout_interval = self.timeout_interval
+                ))
+                return
 
-                self.logger_write('s', "Retransmit: Update timeout_interval: {timeout_interval}".format(
-                    timeout_interval = self.timeout_interval))
+            # not retrans
+            self.logger_write('a', "sampleRTT = {sprtt}, original estimatedRTT = {esrtt}, "
+                                   "original devRTT = {dvrtt}".format(
+                sprtt=sample_rtt, esrtt=self.estimated_rtt, dvrtt=self.dev_rtt
+            ))
+            self.estimated_rtt = (1 - self.ALPHA) * self.estimated_rtt + self.ALPHA * sample_rtt
+            self.dev_rtt = (1 - self.BETA) * self.dev_rtt + self.BETA * abs(sample_rtt - self.estimated_rtt)
+            self.timeout_interval = self.estimated_rtt + 4 * self.dev_rtt
+
+            self.logger_write('a', "Update timeout_interval = {timeout_interval}".format(
+                timeout_interval = self.timeout_interval))
+
 
 
 
