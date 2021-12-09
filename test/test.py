@@ -135,34 +135,34 @@ from collections import deque
 # print(type(c))
 # print(c)
 
-# multi-thread test
-class A:
-
-    def __init__(self):
-        self.send_logger = open('../logger/send_logger.txt', 'w')
-        self.ack_logger = open('../logger/ack_logger.txt', 'w')
-        print("init")
-
-    def t1(self):
-        self.send_logger.write("send_logger")
-
-    def t2(self):
-        self.ack_logger.write("ack_logger")
-
-
-def test_multi_thread():
-    obj = A()
-
-    t1 = Thread(target=obj.t1)
-    # t1.setDaemon(True)
-
-    t2 = Thread(target=obj.t2)
-    # t2.setDaemon(True)
-
-    t1.start()
-    t2.start()
-
-test_multi_thread()
+# # multi-thread test
+# class A:
+#
+#     def __init__(self):
+#         self.send_logger = open('../logger/send_logger.txt', 'w')
+#         self.ack_logger = open('../logger/ack_logger.txt', 'w')
+#         print("init")
+#
+#     def t1(self):
+#         self.send_logger.write("send_logger")
+#
+#     def t2(self):
+#         self.ack_logger.write("ack_logger")
+#
+#
+# def test_multi_thread():
+#     obj = A()
+#
+#     t1 = Thread(target=obj.t1)
+#     # t1.setDaemon(True)
+#
+#     t2 = Thread(target=obj.t2)
+#     # t2.setDaemon(True)
+#
+#     t1.start()
+#     t2.start()
+#
+# test_multi_thread()
 
 
 # # # read() test
@@ -209,29 +209,32 @@ test_multi_thread()
 # print(a1)
 
 
-# # test Queue
-# q = queue.Queue()
-# q.put(5)
-# q.put(7)
-#
-# """
-# dir() is helpful if you don't want to read the documentation
-# and just want a quick reminder of what attributes are in your object
-# It shows us there is an attribute named queue in the Queue class
-# """
-# for attr in dir(q):
-#     print(attr)
+# test Queue
+q = queue.Queue()
+q.put(5)
+q.put(7)
+
+"""
+dir() is helpful if you don't want to read the documentation
+and just want a quick reminder of what attributes are in your object
+It shows us there is an attribute named queue in the Queue class
+"""
+for attr in dir(q):
+    print(attr)
 
 
-# # Print first element in queue
-# print("\nLooking at the first element")
-# print(q.queue[0])
-#
-# print("\nGetting the first element")
-# print(q.get())
-#
-# print("\nLooking again at the first element")
-# print(q.queue[0])
+# Print first element in queue
+print(q.qsize())
+print("\nLooking at the first element")
+print(q.queue[0])
+
+print(q.qsize())
+print("\nGetting the first element")
+print(q.get())
+
+print(q.qsize())
+print("\nLooking again at the first element")
+print(q.queue[0])
 
 
 
