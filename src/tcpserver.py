@@ -22,9 +22,11 @@ class Receiver:
         self.UN_4BYTES_MOD = 4294967296
 
         # receive
-        self.src_port = 11113
+        self.src_port = 12113
         self.client_address = (dest_ip, dest_port)
         self.data_recv = None
+
+        # buffer
         self.buffer_d = {}
 
         # header
@@ -32,7 +34,9 @@ class Receiver:
         self.is_ack = 1
         self.is_fin = 0
 
+        # window
         self.expected_seq_num = 0
+
 
         # initialize socket
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -46,7 +50,7 @@ class Receiver:
 
     def recv_handler(self):
         """
-        Server works on this method. It calls self.recv_work() to do real receive.
+        Server works on this method. It calls self.recv_work() to receive packets from client.
         :return:
         """
 
@@ -55,6 +59,7 @@ class Receiver:
             self.recv_worker()
 
         self.recv_exit()
+
 
     def recv_worker(self):
         """
@@ -117,7 +122,8 @@ class Receiver:
             self.expected_seq_num += len(payload)
             self.expected_seq_num = self.expected_seq_num % self.UN_4BYTES_MOD
 
-            # look for a buffer hit, which is saved before when receiving disordered packets
+            # Search segments with consecutive sequence numbers in the buffer,
+            # which is saved when receiving disordered packets
             while self.expected_seq_num in self.buffer_d.keys():
 
                 print("Get a buffer hit with seq_num = {seq_num}".format(
@@ -169,10 +175,10 @@ class Receiver:
         """
         Generate the tcp segment based on the current status
         :param payload: bytes form of the content string
-        :return: the ACK segment to be sent
+        :return: the TCP segment to be sent
         """
 
-        # 1. generate the 16 bits h_len value which contains header_length, ACK and FIN
+        # 1. generate the 16-bits field which contains header_length, ACK and FIN
         h_len = (self.header_length << 12) + (self.is_ack << 4) + self.is_fin
 
         # 2. no need to compute checksum because the return path is reliable
@@ -232,7 +238,7 @@ class Receiver:
 
     def recv_exit(self):
         """
-        Define things when the server process is about to exit.
+        Define things to do when the server thread is about to exit.
         Close the output file.
         :return:
         """
