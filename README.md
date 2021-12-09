@@ -1,16 +1,18 @@
-#### Overview
+### Overview
 
-CSEE4119 project.
+CSEE 4119 PA2
 
-#### File Structure
+Implement a simple version of TCP on top of UDP.
+
+### File Structure
 
 ```bash
 ├── src					 
 │   ├── tcpclient.py              # Source code of tcp client
 │   ├── tcpserver.py			  # Source code of tcp server
 ├── files							
-│   ├── read_from_5000.txt		  # txt file to be sent, 5000 bytes
-│   ├── read_from.txt			  # txt file to be sent, 110000 bytes
+│   ├── read_from_5000.txt		  # txt file to be sent, 5000+ bytes
+│   ├── read_from.txt			  # txt file to be sent, 110000+ bytes
 │   ├── write_to.txt			  # Server write content to this file
 ├── logger
 │   ├── send_logger.txt			  # Log file of thread send_handler in tcpclient.py
@@ -18,11 +20,29 @@ CSEE4119 project.
 ├── test
 │   ├── test.py					  # Some little test methods for learning, you can ignore it.
 │   ├── unitest.py				  # Simple unitest of some methods in src/, you can ignore it.
+├── screen_dump
+│   ├── newudpl_result.png		  # Screenshot of results of newudpl
+│   ├── server_result_head		  # Screenshot of the head of the results of tcpserver.py
+│   ├── server_result_tail		  # Screenshot of the tail of the results of tcpserver.py
 ├── SUMMARY.md				 	  # Design considerations of the whole program
 └── README.md				      # README	
 ```
 
-#### Test Command
+##### To run our code:
+
+visit `src/` folder
+
+##### For program design documentation:
+
+open `summary.md`
+
+##### For screen dumps:
+
+open `logger/` for the output of tcpclient.py 
+
+open `screen_dumps/` for the output screenshot of newudpl and tcpserver.py
+
+### Test Command
 
 This is my test command. I think it also works well with different ip addresses, port numbers, windowsize. 
 
@@ -44,7 +64,7 @@ tcpclient files/read_from.txt 192.168.192.134 41192 5760 12114
 tcpserver files/write_to.txt 12112 192.168.192.1 12114
 ```
 
-#### Bugs
+### Bugs
 
 There is a **exponential explosion of timeout interval** when the link is easy to make errors. I use `-L 10 -O 10 -B 10` as the test parameter and it works well. However when you improve these numbers, such as `-L 50`, the program appears stopped. However, it is not stopped. The reanson is that the timeout interval is toooo large and both the client and server are waiting for the single packet to be transmitted.
 
@@ -52,4 +72,11 @@ I want to add a timeout interval limitation in the program, such as when the  ti
 
 **For a good test result, use my parameter or use the file with smaller number of bytes: files/read_from_5000.txt.**
 
-#### 
+### Features
+
+Mainly basd on the basic features of TCP	
+
+fast retransmission
+
+
+

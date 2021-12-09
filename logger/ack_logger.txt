@@ -1,37 +1,815 @@
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 0
-2021/12/9 0:36:46 : ACK Handler: Receive 0 1 times
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 0
-2021/12/9 0:36:46 : ACK Handler: Receive 0 2 times
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 0
-2021/12/9 0:36:46 : ACK Handler: Receive 0 3 times
-2021/12/9 0:36:46 : ACK Handler: Need dup retrans
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 0
-2021/12/9 0:36:46 : ACK Handler: Receive 0 1 times
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 0
-2021/12/9 0:36:46 : ACK Handler: Receive 0 2 times
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 0
-2021/12/9 0:36:46 : ACK Handler: Receive 0 3 times
-2021/12/9 0:36:46 : ACK Handler: Need dup retrans
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 0
-2021/12/9 0:36:46 : ACK Handler: Receive 0 1 times
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 0
-2021/12/9 0:36:46 : ACK Handler: Receive 0 2 times
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 2880
-2021/12/9 0:36:46 : Update send_base = 2880, Update boundary = 8640
-2021/12/9 0:36:46 : ack_num = 2880, pop seg 0
-2021/12/9 0:36:46 : ack_num = 2880, pop seg 576
-2021/12/9 0:36:46 : ack_num = 2880, pop seg 1152
-2021/12/9 0:36:46 : ack_num = 2880, pop seg 1728
-2021/12/9 0:36:46 : ack_num = 2880, pop seg 2304
-2021/12/9 0:36:46 : Start timer with timeout_interval = 1
-2021/12/9 0:36:46 : Receive packets from server with ack_num = 2880
-2021/12/9 0:36:46 : ACK Handler: Receive 2880 1 times
-2021/12/9 0:36:49 : Receive packets from server with ack_num = 4689
-2021/12/9 0:36:49 : Update send_base = 4689, Update boundary = 10449
-2021/12/9 0:36:49 : ack_num = 4689, pop seg 2880
-2021/12/9 0:36:49 : ack_num = 4689, pop seg 3456
-2021/12/9 0:36:49 : ack_num = 4689, pop seg 4032
-2021/12/9 0:36:49 : ack_num = 4689, pop seg 4608
-2021/12/9 0:36:49 : ACK Handler: receive fin_ack from server, ack_handler exit
-2021/12/9 0:36:49 : ACK Handler: Close the file: files/read_from_5000.txt
-2021/12/9 0:36:49 : Close the timer.
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 576
+2021/12/9 1:12:17 : Update send_base = 576, Update boundary = 6336
+2021/12/9 1:12:17 : ACK Handler: sample hit: ack_num = 576,seq_num = 0
+2021/12/9 1:12:17 : ack_num = 576, pop seg 0
+2021/12/9 1:12:17 : Start timer with timeout_interval = 1
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 576
+2021/12/9 1:12:17 : ACK Handler: Receive 576 1 times
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 576
+2021/12/9 1:12:17 : ACK Handler: Receive 576 2 times
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 576
+2021/12/9 1:12:17 : ACK Handler: Receive 576 3 times
+2021/12/9 1:12:17 : ACK Handler: Need dup retrans
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 576
+2021/12/9 1:12:17 : ACK Handler: Receive 576 4 times
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 576
+2021/12/9 1:12:17 : ACK Handler: Receive 576 5 times
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 1728
+2021/12/9 1:12:17 : Update send_base = 1728, Update boundary = 7488
+2021/12/9 1:12:17 : ack_num = 1728, pop seg 576
+2021/12/9 1:12:17 : ack_num = 1728, pop seg 1152
+2021/12/9 1:12:17 : Start timer with timeout_interval = 1
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 1728
+2021/12/9 1:12:17 : ACK Handler: Receive 1728 1 times
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 1728
+2021/12/9 1:12:17 : ACK Handler: Receive 1728 2 times
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 1728
+2021/12/9 1:12:17 : ACK Handler: Receive 1728 3 times
+2021/12/9 1:12:17 : ACK Handler: Need dup retrans
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 1728
+2021/12/9 1:12:17 : ACK Handler: Receive 1728 1 times
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 4032
+2021/12/9 1:12:17 : Update send_base = 4032, Update boundary = 9792
+2021/12/9 1:12:17 : ack_num = 4032, pop seg 1728
+2021/12/9 1:12:17 : ack_num = 4032, pop seg 2304
+2021/12/9 1:12:17 : ack_num = 4032, pop seg 2880
+2021/12/9 1:12:17 : ack_num = 4032, pop seg 3456
+2021/12/9 1:12:17 : Start timer with timeout_interval = 1
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 4032
+2021/12/9 1:12:17 : ACK Handler: Receive 4032 1 times
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 4032
+2021/12/9 1:12:17 : ACK Handler: Receive 4032 2 times
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 4032
+2021/12/9 1:12:17 : ACK Handler: Receive 4032 3 times
+2021/12/9 1:12:17 : ACK Handler: Need dup retrans
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 4608
+2021/12/9 1:12:17 : Update send_base = 4608, Update boundary = 10368
+2021/12/9 1:12:17 : ack_num = 4608, pop seg 4032
+2021/12/9 1:12:17 : Start timer with timeout_interval = 1
+2021/12/9 1:12:17 : Receive packets from server with ack_num = 4608
+2021/12/9 1:12:17 : ACK Handler: Receive 4608 1 times
+2021/12/9 1:12:18 : Receive packets from server with ack_num = 5184
+2021/12/9 1:12:18 : Update send_base = 5184, Update boundary = 10944
+2021/12/9 1:12:18 : ack_num = 5184, pop seg 4608
+2021/12/9 1:12:18 : Start timer with timeout_interval = 1
+2021/12/9 1:12:18 : Receive packets from server with ack_num = 5184
+2021/12/9 1:12:18 : ACK Handler: Receive 5184 1 times
+2021/12/9 1:12:19 : Receive packets from server with ack_num = 7488
+2021/12/9 1:12:19 : Update send_base = 7488, Update boundary = 13248
+2021/12/9 1:12:19 : ACK Handler: sample hit: ack_num = 7488,seq_num = 5760
+2021/12/9 1:12:19 : ack_num = 7488, pop seg 5184
+2021/12/9 1:12:19 : ack_num = 7488, pop seg 5760
+2021/12/9 1:12:19 : ack_num = 7488, pop seg 6336
+2021/12/9 1:12:19 : ack_num = 7488, pop seg 6912
+2021/12/9 1:12:19 : Start timer with timeout_interval = 1
+2021/12/9 1:12:19 : Receive packets from server with ack_num = 7488
+2021/12/9 1:12:19 : ACK Handler: Receive 7488 1 times
+2021/12/9 1:12:19 : Receive packets from server with ack_num = 7488
+2021/12/9 1:12:19 : ACK Handler: Receive 7488 2 times
+2021/12/9 1:12:19 : Receive packets from server with ack_num = 7488
+2021/12/9 1:12:19 : ACK Handler: Receive 7488 3 times
+2021/12/9 1:12:19 : ACK Handler: Need dup retrans
+2021/12/9 1:12:19 : Receive packets from server with ack_num = 7488
+2021/12/9 1:12:19 : ACK Handler: Receive 7488 4 times
+2021/12/9 1:12:19 : Receive packets from server with ack_num = 8064
+2021/12/9 1:12:19 : Update send_base = 8064, Update boundary = 13824
+2021/12/9 1:12:19 : ack_num = 8064, pop seg 7488
+2021/12/9 1:12:19 : Start timer with timeout_interval = 1
+2021/12/9 1:12:19 : Receive packets from server with ack_num = 8064
+2021/12/9 1:12:19 : ACK Handler: Receive 8064 1 times
+2021/12/9 1:12:22 : Receive packets from server with ack_num = 8640
+2021/12/9 1:12:22 : Update send_base = 8640, Update boundary = 14400
+2021/12/9 1:12:22 : ack_num = 8640, pop seg 8064
+2021/12/9 1:12:22 : Start timer with timeout_interval = 1
+2021/12/9 1:12:22 : Receive packets from server with ack_num = 8640
+2021/12/9 1:12:22 : ACK Handler: Receive 8640 1 times
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 12672
+2021/12/9 1:12:23 : Update send_base = 12672, Update boundary = 18432
+2021/12/9 1:12:23 : ACK Handler: sample hit: ack_num = 12672,seq_num = 10944
+2021/12/9 1:12:23 : ack_num = 12672, pop seg 8640
+2021/12/9 1:12:23 : ack_num = 12672, pop seg 9216
+2021/12/9 1:12:23 : ack_num = 12672, pop seg 9792
+2021/12/9 1:12:23 : ack_num = 12672, pop seg 10368
+2021/12/9 1:12:23 : ack_num = 12672, pop seg 10944
+2021/12/9 1:12:23 : ack_num = 12672, pop seg 11520
+2021/12/9 1:12:23 : ack_num = 12672, pop seg 12096
+2021/12/9 1:12:23 : Start timer with timeout_interval = 1
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 12672
+2021/12/9 1:12:23 : ACK Handler: Receive 12672 1 times
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 12672
+2021/12/9 1:12:23 : ACK Handler: Receive 12672 2 times
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 12672
+2021/12/9 1:12:23 : ACK Handler: Receive 12672 3 times
+2021/12/9 1:12:23 : ACK Handler: Need dup retrans
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 12672
+2021/12/9 1:12:23 : ACK Handler: Receive 12672 4 times
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 12672
+2021/12/9 1:12:23 : ACK Handler: Receive 12672 1 times
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 12672
+2021/12/9 1:12:23 : ACK Handler: Receive 12672 2 times
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 13824
+2021/12/9 1:12:23 : Update send_base = 13824, Update boundary = 19584
+2021/12/9 1:12:23 : ack_num = 13824, pop seg 12672
+2021/12/9 1:12:23 : ack_num = 13824, pop seg 13248
+2021/12/9 1:12:23 : Start timer with timeout_interval = 1
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 13824
+2021/12/9 1:12:23 : ACK Handler: Receive 13824 1 times
+2021/12/9 1:12:23 : Receive packets from server with ack_num = 13824
+2021/12/9 1:12:23 : ACK Handler: Receive 13824 2 times
+2021/12/9 1:12:24 : Receive packets from server with ack_num = 14976
+2021/12/9 1:12:24 : Update send_base = 14976, Update boundary = 20736
+2021/12/9 1:12:24 : ACK Handler: sample hit: ack_num = 14976,seq_num = 14400
+2021/12/9 1:12:24 : ack_num = 14976, pop seg 13824
+2021/12/9 1:12:24 : ack_num = 14976, pop seg 14400
+2021/12/9 1:12:24 : Start timer with timeout_interval = 1
+2021/12/9 1:12:24 : Receive packets from server with ack_num = 14976
+2021/12/9 1:12:24 : ACK Handler: Receive 14976 1 times
+2021/12/9 1:12:24 : Receive packets from server with ack_num = 14976
+2021/12/9 1:12:24 : ACK Handler: Receive 14976 2 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 20736
+2021/12/9 1:12:25 : Update send_base = 20736, Update boundary = 26496
+2021/12/9 1:12:25 : ACK Handler: sample hit: ack_num = 20736,seq_num = 19584
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 14976
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 15552
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 16128
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 16704
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 17280
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 17856
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 18432
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 19008
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 19584
+2021/12/9 1:12:25 : ack_num = 20736, pop seg 20160
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 21312
+2021/12/9 1:12:25 : Update send_base = 21312, Update boundary = 27072
+2021/12/9 1:12:25 : ACK Handler: sample hit: ack_num = 21312,seq_num = 20736
+2021/12/9 1:12:25 : ack_num = 21312, pop seg 20736
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 21888
+2021/12/9 1:12:25 : Update send_base = 21888, Update boundary = 27648
+2021/12/9 1:12:25 : ack_num = 21888, pop seg 21312
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 22464
+2021/12/9 1:12:25 : Update send_base = 22464, Update boundary = 28224
+2021/12/9 1:12:25 : ack_num = 22464, pop seg 21888
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 23040
+2021/12/9 1:12:25 : Update send_base = 23040, Update boundary = 28800
+2021/12/9 1:12:25 : ack_num = 23040, pop seg 22464
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 23616
+2021/12/9 1:12:25 : Update send_base = 23616, Update boundary = 29376
+2021/12/9 1:12:25 : ack_num = 23616, pop seg 23040
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 24192
+2021/12/9 1:12:25 : Update send_base = 24192, Update boundary = 29952
+2021/12/9 1:12:25 : ack_num = 24192, pop seg 23616
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 24768
+2021/12/9 1:12:25 : Update send_base = 24768, Update boundary = 30528
+2021/12/9 1:12:25 : ack_num = 24768, pop seg 24192
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 25344
+2021/12/9 1:12:25 : Update send_base = 25344, Update boundary = 31104
+2021/12/9 1:12:25 : ack_num = 25344, pop seg 24768
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 25920
+2021/12/9 1:12:25 : Update send_base = 25920, Update boundary = 31680
+2021/12/9 1:12:25 : ack_num = 25920, pop seg 25344
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 26496
+2021/12/9 1:12:25 : Update send_base = 26496, Update boundary = 32256
+2021/12/9 1:12:25 : ACK Handler: sample hit: ack_num = 26496,seq_num = 26496
+2021/12/9 1:12:25 : Initialize estimatedRTT = 0.0020055770874023438, devRTT = 0, timeout_interval = 0.0020055770874023438
+2021/12/9 1:12:25 : ack_num = 26496, pop seg 25920
+2021/12/9 1:12:25 : Start timer with timeout_interval = 0.0020055770874023438
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 27072
+2021/12/9 1:12:25 : Update send_base = 27072, Update boundary = 32832
+2021/12/9 1:12:25 : ack_num = 27072, pop seg 26496
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 27648
+2021/12/9 1:12:25 : Update send_base = 27648, Update boundary = 33408
+2021/12/9 1:12:25 : ack_num = 27648, pop seg 27072
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 28224
+2021/12/9 1:12:25 : Update send_base = 28224, Update boundary = 33984
+2021/12/9 1:12:25 : ack_num = 28224, pop seg 27648
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 28800
+2021/12/9 1:12:25 : Update send_base = 28800, Update boundary = 34560
+2021/12/9 1:12:25 : ACK Handler: sample hit: ack_num = 28800,seq_num = 28800
+2021/12/9 1:12:25 : sampleRTT = 0.02000117301940918, original estimatedRTT = 0.0020055770874023438, original devRTT = 0
+2021/12/9 1:12:25 : Update timeout_interval = 0.02000117301940918
+2021/12/9 1:12:25 : ack_num = 28800, pop seg 28224
+2021/12/9 1:12:25 : Start timer with timeout_interval = 0.02000117301940918
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 29376
+2021/12/9 1:12:25 : Update send_base = 29376, Update boundary = 35136
+2021/12/9 1:12:25 : ack_num = 29376, pop seg 28800
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 29952
+2021/12/9 1:12:25 : Update send_base = 29952, Update boundary = 35712
+2021/12/9 1:12:25 : ack_num = 29952, pop seg 29376
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : Update send_base = 30528, Update boundary = 36288
+2021/12/9 1:12:25 : ack_num = 30528, pop seg 29952
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 1 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 2 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 3 times
+2021/12/9 1:12:25 : ACK Handler: Need dup retrans
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 4 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 5 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 1 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 2 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 3 times
+2021/12/9 1:12:25 : ACK Handler: Need dup retrans
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 4 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 30528
+2021/12/9 1:12:25 : ACK Handler: Receive 30528 5 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 31680
+2021/12/9 1:12:25 : Update send_base = 31680, Update boundary = 37440
+2021/12/9 1:12:25 : ack_num = 31680, pop seg 30528
+2021/12/9 1:12:25 : ack_num = 31680, pop seg 31104
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 31680
+2021/12/9 1:12:25 : ACK Handler: Receive 31680 1 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 31680
+2021/12/9 1:12:25 : ACK Handler: Receive 31680 2 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 31680
+2021/12/9 1:12:25 : ACK Handler: Receive 31680 3 times
+2021/12/9 1:12:25 : ACK Handler: Need dup retrans
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36288
+2021/12/9 1:12:25 : Update send_base = 36288, Update boundary = 42048
+2021/12/9 1:12:25 : ACK Handler: sample hit: ack_num = 36288,seq_num = 33408
+2021/12/9 1:12:25 : ack_num = 36288, pop seg 31680
+2021/12/9 1:12:25 : ack_num = 36288, pop seg 32256
+2021/12/9 1:12:25 : ack_num = 36288, pop seg 32832
+2021/12/9 1:12:25 : ack_num = 36288, pop seg 33408
+2021/12/9 1:12:25 : ack_num = 36288, pop seg 33984
+2021/12/9 1:12:25 : ack_num = 36288, pop seg 34560
+2021/12/9 1:12:25 : ack_num = 36288, pop seg 35136
+2021/12/9 1:12:25 : ack_num = 36288, pop seg 35712
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36288
+2021/12/9 1:12:25 : ACK Handler: Receive 36288 1 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36288
+2021/12/9 1:12:25 : ACK Handler: Receive 36288 2 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36288
+2021/12/9 1:12:25 : ACK Handler: Receive 36288 3 times
+2021/12/9 1:12:25 : ACK Handler: Need dup retrans
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36288
+2021/12/9 1:12:25 : ACK Handler: Receive 36288 4 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36288
+2021/12/9 1:12:25 : ACK Handler: Receive 36288 5 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36288
+2021/12/9 1:12:25 : ACK Handler: Receive 36288 6 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36288
+2021/12/9 1:12:25 : ACK Handler: Receive 36288 1 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36288
+2021/12/9 1:12:25 : ACK Handler: Receive 36288 2 times
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36864
+2021/12/9 1:12:25 : Update send_base = 36864, Update boundary = 42624
+2021/12/9 1:12:25 : ack_num = 36864, pop seg 36288
+2021/12/9 1:12:25 : Start timer with timeout_interval = 1
+2021/12/9 1:12:25 : Receive packets from server with ack_num = 36864
+2021/12/9 1:12:25 : ACK Handler: Receive 36864 1 times
+2021/12/9 1:12:26 : Receive packets from server with ack_num = 36864
+2021/12/9 1:12:26 : ACK Handler: Receive 36864 1 times
+2021/12/9 1:12:32 : Receive packets from server with ack_num = 37440
+2021/12/9 1:12:32 : Update send_base = 37440, Update boundary = 43200
+2021/12/9 1:12:32 : ACK Handler: sample hit: ack_num = 37440,seq_num = 37440
+2021/12/9 1:12:32 : sampleRTT = 7.093581438064575, original estimatedRTT = 0.004255026578903198, original devRTT = 0.003936536610126495
+2021/12/9 1:12:32 : Update timeout_interval = 7.105391047894955
+2021/12/9 1:12:32 : ack_num = 37440, pop seg 36864
+2021/12/9 1:12:32 : Start timer with timeout_interval = 7.105391047894955
+2021/12/9 1:12:32 : Receive packets from server with ack_num = 37440
+2021/12/9 1:12:32 : ACK Handler: Receive 37440 1 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 39168
+2021/12/9 1:12:54 : Update send_base = 39168, Update boundary = 44928
+2021/12/9 1:12:54 : ack_num = 39168, pop seg 37440
+2021/12/9 1:12:54 : ack_num = 39168, pop seg 38016
+2021/12/9 1:12:54 : ack_num = 39168, pop seg 38592
+2021/12/9 1:12:54 : Start timer with timeout_interval = 1
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 39168
+2021/12/9 1:12:54 : ACK Handler: Receive 39168 1 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 39168
+2021/12/9 1:12:54 : ACK Handler: Receive 39168 2 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 39168
+2021/12/9 1:12:54 : ACK Handler: Receive 39168 3 times
+2021/12/9 1:12:54 : ACK Handler: Need dup retrans
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 44928
+2021/12/9 1:12:54 : Update send_base = 44928, Update boundary = 50688
+2021/12/9 1:12:54 : ACK Handler: sample hit: ack_num = 44928,seq_num = 42624
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 39168
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 39744
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 40320
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 40896
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 41472
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 42048
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 42624
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 43200
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 43776
+2021/12/9 1:12:54 : ack_num = 44928, pop seg 44352
+2021/12/9 1:12:54 : Start timer with timeout_interval = 1
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 45504
+2021/12/9 1:12:54 : Update send_base = 45504, Update boundary = 51264
+2021/12/9 1:12:54 : ACK Handler: sample hit: ack_num = 45504,seq_num = 44928
+2021/12/9 1:12:54 : ack_num = 45504, pop seg 44928
+2021/12/9 1:12:54 : Start timer with timeout_interval = 1
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 46080
+2021/12/9 1:12:54 : Update send_base = 46080, Update boundary = 51840
+2021/12/9 1:12:54 : ack_num = 46080, pop seg 45504
+2021/12/9 1:12:54 : Start timer with timeout_interval = 1
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 46080
+2021/12/9 1:12:54 : ACK Handler: Receive 46080 1 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 46080
+2021/12/9 1:12:54 : ACK Handler: Receive 46080 2 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 46080
+2021/12/9 1:12:54 : ACK Handler: Receive 46080 3 times
+2021/12/9 1:12:54 : ACK Handler: Need dup retrans
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 46080
+2021/12/9 1:12:54 : ACK Handler: Receive 46080 4 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 46080
+2021/12/9 1:12:54 : ACK Handler: Receive 46080 5 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 46080
+2021/12/9 1:12:54 : ACK Handler: Receive 46080 1 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 46080
+2021/12/9 1:12:54 : ACK Handler: Receive 46080 2 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 50688
+2021/12/9 1:12:54 : Update send_base = 50688, Update boundary = 56448
+2021/12/9 1:12:54 : ACK Handler: sample hit: ack_num = 50688,seq_num = 50688
+2021/12/9 1:12:54 : sampleRTT = 0.05001091957092285, original estimatedRTT = 0.8904208280146122, original devRTT = 1.5537425549700856
+2021/12/9 1:12:54 : Update timeout_interval = 6.181955924257636
+2021/12/9 1:12:54 : ack_num = 50688, pop seg 46080
+2021/12/9 1:12:54 : ack_num = 50688, pop seg 46656
+2021/12/9 1:12:54 : ack_num = 50688, pop seg 47232
+2021/12/9 1:12:54 : ack_num = 50688, pop seg 47808
+2021/12/9 1:12:54 : ack_num = 50688, pop seg 48384
+2021/12/9 1:12:54 : ack_num = 50688, pop seg 48960
+2021/12/9 1:12:54 : ack_num = 50688, pop seg 49536
+2021/12/9 1:12:54 : ack_num = 50688, pop seg 50112
+2021/12/9 1:12:54 : Start timer with timeout_interval = 6.181955924257636
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 51264
+2021/12/9 1:12:54 : Update send_base = 51264, Update boundary = 57024
+2021/12/9 1:12:54 : ack_num = 51264, pop seg 50688
+2021/12/9 1:12:54 : Start timer with timeout_interval = 1
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 51840
+2021/12/9 1:12:54 : Update send_base = 51840, Update boundary = 57600
+2021/12/9 1:12:54 : ACK Handler: sample hit: ack_num = 51840,seq_num = 51840
+2021/12/9 1:12:54 : sampleRTT = 0.0010001659393310547, original estimatedRTT = 0.785369589459151, original devRTT = 1.3491465836996213
+2021/12/9 1:12:54 : Update timeout_interval = 5.42108640819788
+2021/12/9 1:12:54 : ack_num = 51840, pop seg 51264
+2021/12/9 1:12:54 : Start timer with timeout_interval = 5.42108640819788
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 51840
+2021/12/9 1:12:54 : ACK Handler: Receive 51840 1 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : Update send_base = 52416, Update boundary = 58176
+2021/12/9 1:12:54 : ack_num = 52416, pop seg 51840
+2021/12/9 1:12:54 : Start timer with timeout_interval = 1
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : ACK Handler: Receive 52416 1 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : ACK Handler: Receive 52416 2 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : ACK Handler: Receive 52416 3 times
+2021/12/9 1:12:54 : ACK Handler: Need dup retrans
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : ACK Handler: Receive 52416 4 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : ACK Handler: Receive 52416 5 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : ACK Handler: Receive 52416 1 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : ACK Handler: Receive 52416 2 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : ACK Handler: Receive 52416 3 times
+2021/12/9 1:12:54 : ACK Handler: Need dup retrans
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52416
+2021/12/9 1:12:54 : ACK Handler: Receive 52416 4 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52992
+2021/12/9 1:12:54 : Update send_base = 52992, Update boundary = 58752
+2021/12/9 1:12:54 : ACK Handler: sample hit: ack_num = 52992,seq_num = 52992
+2021/12/9 1:12:54 : sampleRTT = 0.07602238655090332, original estimatedRTT = 0.6873234115191735, original devRTT = 1.1834407491696766
+2021/12/9 1:12:54 : Update timeout_interval = 4.696121427754406
+2021/12/9 1:12:54 : ack_num = 52992, pop seg 52416
+2021/12/9 1:12:54 : Start timer with timeout_interval = 4.696121427754406
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52992
+2021/12/9 1:12:54 : ACK Handler: Receive 52992 1 times
+2021/12/9 1:12:54 : Receive packets from server with ack_num = 52992
+2021/12/9 1:12:54 : ACK Handler: Receive 52992 2 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : Update send_base = 58752, Update boundary = 64512
+2021/12/9 1:12:59 : ACK Handler: sample hit: ack_num = 58752,seq_num = 58176
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 52992
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 53568
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 54144
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 54720
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 55296
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 55872
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 56448
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 57024
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 57600
+2021/12/9 1:12:59 : ack_num = 58752, pop seg 58176
+2021/12/9 1:12:59 : Start timer with timeout_interval = 1
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 1 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 2 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 3 times
+2021/12/9 1:12:59 : ACK Handler: Need dup retrans
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 4 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 5 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 1 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 2 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 3 times
+2021/12/9 1:12:59 : ACK Handler: Need dup retrans
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 4 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 5 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 58752
+2021/12/9 1:12:59 : ACK Handler: Receive 58752 6 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 62784
+2021/12/9 1:12:59 : Update send_base = 62784, Update boundary = 68544
+2021/12/9 1:12:59 : ack_num = 62784, pop seg 58752
+2021/12/9 1:12:59 : ack_num = 62784, pop seg 59328
+2021/12/9 1:12:59 : ack_num = 62784, pop seg 59904
+2021/12/9 1:12:59 : ack_num = 62784, pop seg 60480
+2021/12/9 1:12:59 : ack_num = 62784, pop seg 61056
+2021/12/9 1:12:59 : ack_num = 62784, pop seg 61632
+2021/12/9 1:12:59 : ack_num = 62784, pop seg 62208
+2021/12/9 1:12:59 : Start timer with timeout_interval = 1
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 62784
+2021/12/9 1:12:59 : ACK Handler: Receive 62784 1 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 62784
+2021/12/9 1:12:59 : ACK Handler: Receive 62784 2 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 62784
+2021/12/9 1:12:59 : ACK Handler: Receive 62784 3 times
+2021/12/9 1:12:59 : ACK Handler: Need dup retrans
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 62784
+2021/12/9 1:12:59 : ACK Handler: Receive 62784 4 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 62784
+2021/12/9 1:12:59 : ACK Handler: Receive 62784 5 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 62784
+2021/12/9 1:12:59 : ACK Handler: Receive 62784 6 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 62784
+2021/12/9 1:12:59 : ACK Handler: Receive 62784 1 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 63936
+2021/12/9 1:12:59 : Update send_base = 63936, Update boundary = 69696
+2021/12/9 1:12:59 : ack_num = 63936, pop seg 62784
+2021/12/9 1:12:59 : ack_num = 63936, pop seg 63360
+2021/12/9 1:12:59 : Start timer with timeout_interval = 1
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 63936
+2021/12/9 1:12:59 : ACK Handler: Receive 63936 1 times
+2021/12/9 1:12:59 : Receive packets from server with ack_num = 63936
+2021/12/9 1:12:59 : ACK Handler: Receive 63936 2 times
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 69120
+2021/12/9 1:13:0 : Update send_base = 69120, Update boundary = 74880
+2021/12/9 1:13:0 : ACK Handler: sample hit: ack_num = 69120,seq_num = 64512
+2021/12/9 1:13:0 : ack_num = 69120, pop seg 63936
+2021/12/9 1:13:0 : ack_num = 69120, pop seg 64512
+2021/12/9 1:13:0 : ack_num = 69120, pop seg 65088
+2021/12/9 1:13:0 : ack_num = 69120, pop seg 65664
+2021/12/9 1:13:0 : ack_num = 69120, pop seg 66240
+2021/12/9 1:13:0 : ack_num = 69120, pop seg 66816
+2021/12/9 1:13:0 : ack_num = 69120, pop seg 67392
+2021/12/9 1:13:0 : ack_num = 69120, pop seg 67968
+2021/12/9 1:13:0 : ack_num = 69120, pop seg 68544
+2021/12/9 1:13:0 : Start timer with timeout_interval = 1
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 69120
+2021/12/9 1:13:0 : ACK Handler: Receive 69120 1 times
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 69120
+2021/12/9 1:13:0 : ACK Handler: Receive 69120 2 times
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 69120
+2021/12/9 1:13:0 : ACK Handler: Receive 69120 3 times
+2021/12/9 1:13:0 : ACK Handler: Need dup retrans
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 69120
+2021/12/9 1:13:0 : ACK Handler: Receive 69120 4 times
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 69120
+2021/12/9 1:13:0 : ACK Handler: Receive 69120 5 times
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 69120
+2021/12/9 1:13:0 : ACK Handler: Receive 69120 6 times
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 69120
+2021/12/9 1:13:0 : ACK Handler: Receive 69120 1 times
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 69120
+2021/12/9 1:13:0 : ACK Handler: Receive 69120 2 times
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 70272
+2021/12/9 1:13:0 : Update send_base = 70272, Update boundary = 76032
+2021/12/9 1:13:0 : ACK Handler: sample hit: ack_num = 70272,seq_num = 69696
+2021/12/9 1:13:0 : ack_num = 70272, pop seg 69120
+2021/12/9 1:13:0 : ack_num = 70272, pop seg 69696
+2021/12/9 1:13:0 : Start timer with timeout_interval = 1
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 70272
+2021/12/9 1:13:0 : ACK Handler: Receive 70272 1 times
+2021/12/9 1:13:0 : Receive packets from server with ack_num = 70272
+2021/12/9 1:13:0 : ACK Handler: Receive 70272 2 times
+2021/12/9 1:13:1 : Receive packets from server with ack_num = 71424
+2021/12/9 1:13:1 : Update send_base = 71424, Update boundary = 77184
+2021/12/9 1:13:1 : ack_num = 71424, pop seg 70272
+2021/12/9 1:13:1 : ack_num = 71424, pop seg 70848
+2021/12/9 1:13:1 : Start timer with timeout_interval = 1
+2021/12/9 1:13:1 : Receive packets from server with ack_num = 71424
+2021/12/9 1:13:1 : ACK Handler: Receive 71424 1 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 76032
+2021/12/9 1:13:2 : Update send_base = 76032, Update boundary = 81792
+2021/12/9 1:13:2 : ACK Handler: sample hit: ack_num = 76032,seq_num = 74880
+2021/12/9 1:13:2 : ack_num = 76032, pop seg 71424
+2021/12/9 1:13:2 : ack_num = 76032, pop seg 72000
+2021/12/9 1:13:2 : ack_num = 76032, pop seg 72576
+2021/12/9 1:13:2 : ack_num = 76032, pop seg 73152
+2021/12/9 1:13:2 : ack_num = 76032, pop seg 73728
+2021/12/9 1:13:2 : ack_num = 76032, pop seg 74304
+2021/12/9 1:13:2 : ack_num = 76032, pop seg 74880
+2021/12/9 1:13:2 : ack_num = 76032, pop seg 75456
+2021/12/9 1:13:2 : Start timer with timeout_interval = 1
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 76032
+2021/12/9 1:13:2 : ACK Handler: Receive 76032 1 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 76032
+2021/12/9 1:13:2 : ACK Handler: Receive 76032 2 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 76032
+2021/12/9 1:13:2 : ACK Handler: Receive 76032 3 times
+2021/12/9 1:13:2 : ACK Handler: Need dup retrans
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 76032
+2021/12/9 1:13:2 : ACK Handler: Receive 76032 4 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 76032
+2021/12/9 1:13:2 : ACK Handler: Receive 76032 5 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 76032
+2021/12/9 1:13:2 : ACK Handler: Receive 76032 1 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 76032
+2021/12/9 1:13:2 : ACK Handler: Receive 76032 2 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 76032
+2021/12/9 1:13:2 : ACK Handler: Receive 76032 3 times
+2021/12/9 1:13:2 : ACK Handler: Need dup retrans
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 77184
+2021/12/9 1:13:2 : Update send_base = 77184, Update boundary = 82944
+2021/12/9 1:13:2 : ACK Handler: sample hit: ack_num = 77184,seq_num = 77184
+2021/12/9 1:13:2 : sampleRTT = 0.05201101303100586, original estimatedRTT = 0.6109107833981398, original devRTT = 1.0213026610890665
+2021/12/9 1:13:2 : Update timeout_interval = 4.09399359444069
+2021/12/9 1:13:2 : ack_num = 77184, pop seg 76032
+2021/12/9 1:13:2 : ack_num = 77184, pop seg 76608
+2021/12/9 1:13:2 : Start timer with timeout_interval = 4.09399359444069
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 77184
+2021/12/9 1:13:2 : ACK Handler: Receive 77184 1 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 77184
+2021/12/9 1:13:2 : ACK Handler: Receive 77184 2 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 77184
+2021/12/9 1:13:2 : ACK Handler: Receive 77184 3 times
+2021/12/9 1:13:2 : ACK Handler: Need dup retrans
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 79488
+2021/12/9 1:13:2 : Update send_base = 79488, Update boundary = 85248
+2021/12/9 1:13:2 : ack_num = 79488, pop seg 77184
+2021/12/9 1:13:2 : ack_num = 79488, pop seg 77760
+2021/12/9 1:13:2 : ack_num = 79488, pop seg 78336
+2021/12/9 1:13:2 : ack_num = 79488, pop seg 78912
+2021/12/9 1:13:2 : Start timer with timeout_interval = 1
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 79488
+2021/12/9 1:13:2 : ACK Handler: Receive 79488 1 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 79488
+2021/12/9 1:13:2 : ACK Handler: Receive 79488 2 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 79488
+2021/12/9 1:13:2 : ACK Handler: Receive 79488 3 times
+2021/12/9 1:13:2 : ACK Handler: Need dup retrans
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 79488
+2021/12/9 1:13:2 : ACK Handler: Receive 79488 4 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 81792
+2021/12/9 1:13:2 : Update send_base = 81792, Update boundary = 87552
+2021/12/9 1:13:2 : ACK Handler: sample hit: ack_num = 81792,seq_num = 81792
+2021/12/9 1:13:2 : sampleRTT = 0.14803361892700195, original estimatedRTT = 0.541048312102248, original devRTT = 0.8882363205846104
+2021/12/9 1:13:2 : Update timeout_interval = 3.500518293737514
+2021/12/9 1:13:2 : ack_num = 81792, pop seg 79488
+2021/12/9 1:13:2 : ack_num = 81792, pop seg 80064
+2021/12/9 1:13:2 : ack_num = 81792, pop seg 80640
+2021/12/9 1:13:2 : ack_num = 81792, pop seg 81216
+2021/12/9 1:13:2 : Start timer with timeout_interval = 3.500518293737514
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 81792
+2021/12/9 1:13:2 : ACK Handler: Receive 81792 1 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 81792
+2021/12/9 1:13:2 : ACK Handler: Receive 81792 2 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 81792
+2021/12/9 1:13:2 : ACK Handler: Receive 81792 3 times
+2021/12/9 1:13:2 : ACK Handler: Need dup retrans
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 81792
+2021/12/9 1:13:2 : ACK Handler: Receive 81792 4 times
+2021/12/9 1:13:2 : Receive packets from server with ack_num = 81792
+2021/12/9 1:13:2 : ACK Handler: Receive 81792 1 times
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 87552
+2021/12/9 1:13:9 : Update send_base = 87552, Update boundary = 93312
+2021/12/9 1:13:9 : ACK Handler: sample hit: ack_num = 87552,seq_num = 85248
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 81792
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 82368
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 82944
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 83520
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 84096
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 84672
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 85248
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 85824
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 86400
+2021/12/9 1:13:9 : ack_num = 87552, pop seg 86976
+2021/12/9 1:13:9 : Start timer with timeout_interval = 1
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 88128
+2021/12/9 1:13:9 : Update send_base = 88128, Update boundary = 93888
+2021/12/9 1:13:9 : ACK Handler: sample hit: ack_num = 88128,seq_num = 87552
+2021/12/9 1:13:9 : ack_num = 88128, pop seg 87552
+2021/12/9 1:13:9 : Start timer with timeout_interval = 1
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 88128
+2021/12/9 1:13:9 : ACK Handler: Receive 88128 1 times
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 88128
+2021/12/9 1:13:9 : ACK Handler: Receive 88128 2 times
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 88128
+2021/12/9 1:13:9 : ACK Handler: Receive 88128 3 times
+2021/12/9 1:13:9 : ACK Handler: Need dup retrans
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 88128
+2021/12/9 1:13:9 : ACK Handler: Receive 88128 4 times
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 88128
+2021/12/9 1:13:9 : ACK Handler: Receive 88128 5 times
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 88128
+2021/12/9 1:13:9 : ACK Handler: Receive 88128 6 times
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 88704
+2021/12/9 1:13:9 : Update send_base = 88704, Update boundary = 94464
+2021/12/9 1:13:9 : ack_num = 88704, pop seg 88128
+2021/12/9 1:13:9 : Start timer with timeout_interval = 1
+2021/12/9 1:13:9 : Receive packets from server with ack_num = 88704
+2021/12/9 1:13:9 : ACK Handler: Receive 88704 1 times
+2021/12/9 1:13:10 : Receive packets from server with ack_num = 91008
+2021/12/9 1:13:10 : Update send_base = 91008, Update boundary = 96768
+2021/12/9 1:13:10 : ack_num = 91008, pop seg 88704
+2021/12/9 1:13:10 : ack_num = 91008, pop seg 89280
+2021/12/9 1:13:10 : ack_num = 91008, pop seg 89856
+2021/12/9 1:13:10 : ack_num = 91008, pop seg 90432
+2021/12/9 1:13:10 : Start timer with timeout_interval = 1
+2021/12/9 1:13:10 : Receive packets from server with ack_num = 91008
+2021/12/9 1:13:10 : ACK Handler: Receive 91008 1 times
+2021/12/9 1:13:10 : Receive packets from server with ack_num = 91008
+2021/12/9 1:13:10 : ACK Handler: Receive 91008 2 times
+2021/12/9 1:13:10 : Receive packets from server with ack_num = 91008
+2021/12/9 1:13:10 : ACK Handler: Receive 91008 3 times
+2021/12/9 1:13:10 : ACK Handler: Need dup retrans
+2021/12/9 1:13:10 : Receive packets from server with ack_num = 91008
+2021/12/9 1:13:10 : ACK Handler: Receive 91008 4 times
+2021/12/9 1:13:10 : Receive packets from server with ack_num = 92160
+2021/12/9 1:13:10 : Update send_base = 92160, Update boundary = 97920
+2021/12/9 1:13:10 : ack_num = 92160, pop seg 91008
+2021/12/9 1:13:10 : ack_num = 92160, pop seg 91584
+2021/12/9 1:13:10 : Start timer with timeout_interval = 1
+2021/12/9 1:13:10 : Receive packets from server with ack_num = 92160
+2021/12/9 1:13:10 : ACK Handler: Receive 92160 1 times
+2021/12/9 1:13:10 : Receive packets from server with ack_num = 92160
+2021/12/9 1:13:10 : ACK Handler: Receive 92160 2 times
+2021/12/9 1:13:11 : Receive packets from server with ack_num = 92160
+2021/12/9 1:13:11 : ACK Handler: Receive 92160 1 times
+2021/12/9 1:13:13 : Receive packets from server with ack_num = 93312
+2021/12/9 1:13:13 : Update send_base = 93312, Update boundary = 99072
+2021/12/9 1:13:13 : ACK Handler: sample hit: ack_num = 93312,seq_num = 93312
+2021/12/9 1:13:13 : sampleRTT = 4.101930379867554, original estimatedRTT = 0.49192147545534226, original devRTT = 0.7521492045705429
+2021/12/9 1:13:13 : Update timeout_interval = 6.358377993579182
+2021/12/9 1:13:13 : ack_num = 93312, pop seg 92160
+2021/12/9 1:13:13 : ack_num = 93312, pop seg 92736
+2021/12/9 1:13:13 : Start timer with timeout_interval = 6.358377993579182
+2021/12/9 1:13:13 : Receive packets from server with ack_num = 93312
+2021/12/9 1:13:13 : ACK Handler: Receive 93312 1 times
+2021/12/9 1:13:13 : Receive packets from server with ack_num = 93312
+2021/12/9 1:13:13 : ACK Handler: Receive 93312 2 times
+2021/12/9 1:13:20 : Receive packets from server with ack_num = 93888
+2021/12/9 1:13:20 : Update send_base = 93888, Update boundary = 99648
+2021/12/9 1:13:20 : ack_num = 93888, pop seg 93312
+2021/12/9 1:13:20 : Start timer with timeout_interval = 1
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : Update send_base = 99072, Update boundary = 104832
+2021/12/9 1:13:21 : ACK Handler: sample hit: ack_num = 99072,seq_num = 97920
+2021/12/9 1:13:21 : ack_num = 99072, pop seg 93888
+2021/12/9 1:13:21 : ack_num = 99072, pop seg 94464
+2021/12/9 1:13:21 : ack_num = 99072, pop seg 95040
+2021/12/9 1:13:21 : ack_num = 99072, pop seg 95616
+2021/12/9 1:13:21 : ack_num = 99072, pop seg 96192
+2021/12/9 1:13:21 : ack_num = 99072, pop seg 96768
+2021/12/9 1:13:21 : ack_num = 99072, pop seg 97344
+2021/12/9 1:13:21 : ack_num = 99072, pop seg 97920
+2021/12/9 1:13:21 : ack_num = 99072, pop seg 98496
+2021/12/9 1:13:21 : Start timer with timeout_interval = 1
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 1 times
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 2 times
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 3 times
+2021/12/9 1:13:21 : ACK Handler: Need dup retrans
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 4 times
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 1 times
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 2 times
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 3 times
+2021/12/9 1:13:21 : ACK Handler: Need dup retrans
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 4 times
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 5 times
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 99072
+2021/12/9 1:13:21 : ACK Handler: Receive 99072 1 times
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 100224
+2021/12/9 1:13:21 : Update send_base = 100224, Update boundary = 105984
+2021/12/9 1:13:21 : ACK Handler: sample hit: ack_num = 100224,seq_num = 99648
+2021/12/9 1:13:21 : ack_num = 100224, pop seg 99072
+2021/12/9 1:13:21 : ack_num = 100224, pop seg 99648
+2021/12/9 1:13:21 : Start timer with timeout_interval = 1
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 100224
+2021/12/9 1:13:21 : ACK Handler: Receive 100224 1 times
+2021/12/9 1:13:21 : Receive packets from server with ack_num = 100224
+2021/12/9 1:13:21 : ACK Handler: Receive 100224 2 times
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 105984
+2021/12/9 1:13:22 : Update send_base = 105984, Update boundary = 111744
+2021/12/9 1:13:22 : ACK Handler: sample hit: ack_num = 105984,seq_num = 104832
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 100224
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 100800
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 101376
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 101952
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 102528
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 103104
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 103680
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 104256
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 104832
+2021/12/9 1:13:22 : ack_num = 105984, pop seg 105408
+2021/12/9 1:13:22 : Start timer with timeout_interval = 1
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 106560
+2021/12/9 1:13:22 : Update send_base = 106560, Update boundary = 112320
+2021/12/9 1:13:22 : ACK Handler: sample hit: ack_num = 106560,seq_num = 105984
+2021/12/9 1:13:22 : ack_num = 106560, pop seg 105984
+2021/12/9 1:13:22 : Start timer with timeout_interval = 1
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 106560
+2021/12/9 1:13:22 : ACK Handler: Receive 106560 1 times
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 106560
+2021/12/9 1:13:22 : ACK Handler: Receive 106560 2 times
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 106560
+2021/12/9 1:13:22 : ACK Handler: Receive 106560 3 times
+2021/12/9 1:13:22 : ACK Handler: Need dup retrans
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 106560
+2021/12/9 1:13:22 : ACK Handler: Receive 106560 4 times
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 106560
+2021/12/9 1:13:22 : ACK Handler: Receive 106560 5 times
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 106560
+2021/12/9 1:13:22 : ACK Handler: Receive 106560 6 times
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 106560
+2021/12/9 1:13:22 : ACK Handler: Receive 106560 1 times
+2021/12/9 1:13:22 : Receive packets from server with ack_num = 106560
+2021/12/9 1:13:22 : ACK Handler: Receive 106560 2 times
+2021/12/9 1:13:28 : Receive packets from server with ack_num = 107136
+2021/12/9 1:13:28 : Update send_base = 107136, Update boundary = 112896
+2021/12/9 1:13:28 : ack_num = 107136, pop seg 106560
+2021/12/9 1:13:28 : Start timer with timeout_interval = 1
+2021/12/9 1:13:28 : Receive packets from server with ack_num = 107136
+2021/12/9 1:13:28 : ACK Handler: Receive 107136 1 times
+2021/12/9 1:13:29 : Receive packets from server with ack_num = 109440
+2021/12/9 1:13:29 : Update send_base = 109440, Update boundary = 115200
+2021/12/9 1:13:29 : ack_num = 109440, pop seg 107136
+2021/12/9 1:13:29 : ack_num = 109440, pop seg 107712
+2021/12/9 1:13:29 : ack_num = 109440, pop seg 108288
+2021/12/9 1:13:29 : ack_num = 109440, pop seg 108864
+2021/12/9 1:13:29 : Start timer with timeout_interval = 1
+2021/12/9 1:13:29 : Receive packets from server with ack_num = 109440
+2021/12/9 1:13:29 : ACK Handler: Receive 109440 1 times
+2021/12/9 1:13:29 : Receive packets from server with ack_num = 109440
+2021/12/9 1:13:29 : ACK Handler: Receive 109440 2 times
+2021/12/9 1:13:29 : Receive packets from server with ack_num = 109440
+2021/12/9 1:13:29 : ACK Handler: Receive 109440 3 times
+2021/12/9 1:13:29 : ACK Handler: Need dup retrans
+2021/12/9 1:13:29 : Receive packets from server with ack_num = 109440
+2021/12/9 1:13:29 : ACK Handler: Receive 109440 4 times
+2021/12/9 1:13:29 : Receive packets from server with ack_num = 109440
+2021/12/9 1:13:29 : ACK Handler: Receive 109440 1 times
+2021/12/9 1:13:31 : Receive packets from server with ack_num = 110016
+2021/12/9 1:13:31 : Update send_base = 110016, Update boundary = 115776
+2021/12/9 1:13:31 : ack_num = 110016, pop seg 109440
+2021/12/9 1:13:31 : Start timer with timeout_interval = 1
+2021/12/9 1:13:32 : Receive packets from server with ack_num = 114764
+2021/12/9 1:13:32 : Update send_base = 114764, Update boundary = 120524
+2021/12/9 1:13:32 : ACK Handler: sample hit: ack_num = 114764,seq_num = 111744
+2021/12/9 1:13:32 : ack_num = 114764, pop seg 110016
+2021/12/9 1:13:32 : ack_num = 114764, pop seg 110592
+2021/12/9 1:13:32 : ack_num = 114764, pop seg 111168
+2021/12/9 1:13:32 : ack_num = 114764, pop seg 111744
+2021/12/9 1:13:32 : ack_num = 114764, pop seg 112320
+2021/12/9 1:13:32 : ack_num = 114764, pop seg 112896
+2021/12/9 1:13:32 : ack_num = 114764, pop seg 113472
+2021/12/9 1:13:32 : ack_num = 114764, pop seg 114048
+2021/12/9 1:13:32 : ack_num = 114764, pop seg 114624
+2021/12/9 1:13:32 : ACK Handler: receive fin_ack from server, ack_handler exit
+2021/12/9 1:13:32 : ACK Handler: Close the file: files/read_from.txt
+2021/12/9 1:13:32 : Close the timer.
