@@ -6,41 +6,34 @@ Implement a simple version of TCP on top of UDP.
 
 ### File Structure
 
-```bash
+```
+Simple-TCP-on-top-of-UDP
 ├── src					 
 │   ├── tcpclient.py              # Source code of tcp client
-│   ├── tcpserver.py			  # Source code of tcp server
+│   ├── tcpserver.py              # Source code of tcp server
 ├── files							
-│   ├── read_from_5000.txt		  # txt file to be sent, 5000+ bytes
-│   ├── read_from.txt			  # txt file to be sent, 110000+ bytes
-│   ├── write_to.txt			  # Server write content to this file
+│   ├── read_from_5000.txt        # txt file to be sent, 5000+ bytes
+│   ├── read_from.txt             # txt file to be sent, 110000+ bytes
+│   ├── write_to.txt              # Server write content to this file
 ├── logger
-│   ├── send_logger.txt			  # Log file of thread send_handler in tcpclient.py
-│   ├── ack_logger.txt			  # Log file of thread ack_handler in tcpclient.py
+│   ├── send_logger.txt           # Log file of thread send_handler in tcpclient.py
+│   ├── ack_logger.txt            # Log file of thread ack_handler in tcpclient.py
 ├── test
-│   ├── test.py					  # Some little test methods for learning, you can ignore it.
-│   ├── unitest.py				  # Simple unitest of some methods in src/, you can ignore it.
+│   ├── test.py                   # Some little test methods for learning, you can ignore it.
+│   ├── unitest.py                # Simple unitest of some methods in src/, you can ignore it.
 ├── screen_dump
-│   ├── newudpl_result.png		  # Screenshot of results of newudpl
-│   ├── server_result_head		  # Screenshot of the head of the results of tcpserver.py
-│   ├── server_result_tail		  # Screenshot of the tail of the results of tcpserver.py
-├── SUMMARY.md				 	  # Design considerations of the whole program
-└── README.md				      # README	
+│   ├── newudpl_result.png        # Screenshot of results of newudpl
+│   ├── server_result_head        # Screenshot of the head of the results of tcpserver.py
+│   ├── server_result_tail        # Screenshot of the tail of the results of tcpserver.py
+├── SUMMARY.md                    # Design considerations of the whole program
+└── README.md                     # README	
 ```
 
-##### To run our code:
+##### For source code: [source code](./src)
 
-visit `src/` folder
+##### For program design documentation: [Program Design](summary.md)
 
-##### For program design documentation:
-
-open `summary.md`
-
-##### For screen dumps:
-
-open `logger/` for the output of tcpclient.py 
-
-open `screen_dumps/` for the output screenshot of newudpl and tcpserver.py
+##### For Log info: [Log of client](./logger)   [Log of server and newudpl](./screen_dump)
 
 ### Test Command
 
@@ -64,7 +57,7 @@ tcpclient files/read_from.txt 192.168.192.134 41192 5760 12114
 tcpserver files/write_to.txt 12112 192.168.192.1 12114
 ```
 
-### Bugs
+### Known Bugs
 
 There is a **exponential explosion of timeout interval** when the link is easy to make errors. I use `-L 10 -O 10 -B 10` as the test parameter and it works well. However when you improve these numbers, such as `-L 50`, the program appears stopped. However, it is not stopped. The reanson is that the timeout interval is toooo large and both the client and server are waiting for the single packet to be transmitted.
 
@@ -74,9 +67,8 @@ I want to add a timeout interval limitation in the program, such as when the  ti
 
 ### Features
 
-Mainly basd on the basic features of TCP	
-
-fast retransmission
+- Mainly basd on the basic features of TCP	
 
 
+- fast retransmission
 

@@ -426,6 +426,7 @@ class Sender:
             # if (self.windowsize > ack_num - self.send_base + 1 > 0) or \
             #         self.UN_4BYTES_MOD - self.send_base + ack_num < self.windowsize:
             else:
+
                 # 1. update send_base and send_boundary
                 with self.window_lock:
                     self.send_base = ack_num
@@ -580,7 +581,6 @@ class Sender:
 
 
     def set_dup_num(self, num):
-
         with self.dup_lock:
             self.dup_num = num
 

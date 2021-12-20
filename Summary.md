@@ -20,7 +20,7 @@ There are mainly 4 steps when generating a complete TCP segment.
 I implement a buffer which saves all the segments that has been sent but not yet ACKed. I use a `queue.Queue()` to prove multi-thread safe.
 
 - Every time before sending a segment, push the segment to the queue
-- When client receives an valid ACK, pop all the element from the queue whose segment number is smaller than the ACK number
+- When client receives a valid ACK, pop all the elements from the queue whose segment number is smaller than the ACK number
 - When a retransmission occurs, get segment at the top of the queue and resend it
 
 ###### Sample 
@@ -31,13 +31,13 @@ We need to do sampling to implement dynamic timeout interval mechanism. It works
 - When the sender is going to send a packet, it will check if a segment has already been sampled. If the answer is false, sender will sample this segment, record it as `t`.
 - When a retransmission occurs, it will check whether the retransmitted segment is sampled. If it is, clear the sample record, because we don't want to do sampling with retransmission segments. 
 - The client receive an valid ACK whose ACK number `y` is equal to or bigger than the lower bound `s` of the current window. 
-  - If `y` == `s` and `y` == `t`, update the timeout interval with EWMA formular.
-  - If `y` == `s` and `y` > `t`, reset the timeout interval to default value, clear the sample record.
+  - If `y` >= `s` and `y` == `t`, update the timeout interval with EWMA formular.
+  - If `y` >= `s` and `y` > `t`, reset the timeout interval to default value, clear the sample record.
   - Else, reset the timeout interval to default value.
 
 ##### Part II: Retransmission
 
-The retransmission part works on the same thread with part1. The basic idea here is Round-Robin the part1 and part2. Each time after a segment is sent, the thread will check whether there's a retransmission sign. At any time, only one part is working. The reason I do this is to make code logic easier and avoid more concerns about the multi-thread synchronized. In addition, this could  also achieve good performance. 
+The retransmission part works on the same thread with part1. The basic idea here is Round-Robin the part1 and part2. Each time after a segment is sent, the thread will check whether there's a retransmission signal. At any time, only one part is working. The reason I do this is to make code logic easier and avoid more concerns about the multi-thread synchronized. In addition, this could  also achieve good performance. 
 
 In TCP, there are 2 conditions that will trigger the retransmission: timer timeout and duplicate more than 3 times.
 
@@ -63,7 +63,7 @@ The client will record number of duplicate ACK number it has received. If it is 
 
 ##### Part III: ACK receipt
 
-The ACK receipt works on a different thread `ack_handler`. It receive ACKs from the server and update the status of teh client.
+The ACK receipt works on a different thread `ack_handler`. It receive ACKs from the server and update the status of the client.
 
 ###### Thread synchronization
 
