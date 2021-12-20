@@ -29,11 +29,11 @@ Simple-TCP-on-top-of-UDP
 └── README.md                     # README	
 ```
 
-##### For source code: [source code](./src)
+##### For source code: [Code](./src)
 
-##### For program design documentation: [Program Design](summary.md)
+##### For program design documentation: [Program Design](./Summary.md)
 
-##### For Log info: [Log of client](./logger)   [Log of server and newudpl](./screen_dump)
+##### For Log info: [Log of client](./logger)     [Log of server and newudpl](./screen_dump)
 
 ### Test Command
 
